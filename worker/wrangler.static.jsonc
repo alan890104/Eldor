@@ -1,0 +1,11 @@
+// Static-only deploy (no cloud backup): uploads just dist/, no D1 needed. npm run deploy uses this file.
+// To turn on cloud backup later, switch to wrangler.jsonc (npm run cloud:deploy); the Worker name is the same, so the URL does not change.
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "eldor",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "../dist",
+    "not_found_handling": "single-page-application"
+  }
+}

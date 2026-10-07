@@ -1,0 +1,335 @@
+/*
+ * Menu look: gold-framed panels, engraved buttons, gem-socket icons, ledger-style lists.
+ * Loaded last; overrides the shared component look in style.css / screens.css (look only, layout positions unchanged).
+ */
+:root {
+  --gilt: #e6c27a;
+  --gilt-hi: #fff0c4;
+  --gilt-lo: #8a6326;
+  --abyss: #120d2a;
+  --abyss-hi: #2a2060;
+  --frame-line: rgba(230, 194, 122, 0.75);
+}
+
+/* ── Panel: double gold frame + gold corner ornaments ── */
+.panel {
+  border: 1px solid var(--frame-line);
+  border-radius: 10px;
+  background:
+    linear-gradient(var(--gilt), var(--gilt)) left 5px top 5px / 16px 2px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) left 5px top 5px / 2px 16px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) right 5px top 5px / 16px 2px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) right 5px top 5px / 2px 16px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) left 5px bottom 5px / 16px 2px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) left 5px bottom 5px / 2px 16px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) right 5px bottom 5px / 16px 2px no-repeat,
+    linear-gradient(var(--gilt), var(--gilt)) right 5px bottom 5px / 2px 16px no-repeat,
+    radial-gradient(130% 70% at 50% 0%, rgba(150, 120, 255, 0.2), transparent 70%),
+    linear-gradient(180deg, rgba(36, 27, 84, 0.93), rgba(15, 10, 36, 0.95));
+  box-shadow:
+    inset 0 0 0 3px rgba(10, 6, 26, 0.85),
+    inset 0 0 0 4px rgba(230, 194, 122, 0.22),
+    0 14px 40px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Button: thick plate with a metal border, lit on the upper half ── */
+.btn {
+  border-radius: 8px;
+  font-family: var(--serif);
+  background: linear-gradient(180deg, #7361dc 0%, #4f3cb4 46%, #34268a 54%, #3f2f9a 100%);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+    inset 0 -3px 0 rgba(10, 4, 40, 0.35),
+    0 0 0 1.5px var(--gilt),
+    0 0 0 3px rgba(12, 8, 30, 0.85),
+    0 6px 16px rgba(0, 0, 0, 0.45);
+}
+.btn.gold {
+  color: #3a2200;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55);
+  background: linear-gradient(180deg, #fff3c6 0%, #f6cf68 44%, #dc9d2c 56%, #ecb84c 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.8),
+    inset 0 -3px 0 rgba(130, 70, 0, 0.35),
+    0 0 0 1.5px var(--gilt-hi),
+    0 0 0 3px rgba(80, 44, 0, 0.75),
+    0 6px 22px rgba(255, 180, 60, 0.4);
+}
+.btn.ghost {
+  background: linear-gradient(180deg, rgba(48, 36, 104, 0.8), rgba(20, 14, 50, 0.85));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 0 0 1px rgba(230, 194, 122, 0.5),
+    0 0 0 2.5px rgba(12, 8, 30, 0.7),
+    0 4px 12px rgba(0, 0, 0, 0.35);
+}
+/* Diamond studs on both sides of the large button */
+.btn:not(.small)::before,
+.btn:not(.small)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  transform: rotate(45deg);
+  background: currentColor;
+  opacity: 0.55;
+  pointer-events: none;
+}
+.btn:not(.small)::before { left: 10px; }
+.btn:not(.small)::after { right: 10px; }
+.btn:focus-visible { outline: 2px solid var(--gilt-hi); outline-offset: 4px; }
+
+/* ── Top bar: nameplate title, gold line, enamel currency plates ── */
+.topbar {
+  background: linear-gradient(180deg, rgba(10, 7, 28, 0.94) 0%, rgba(10, 7, 28, 0.62) 72%, rgba(10, 7, 28, 0));
+}
+.topbar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 52px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(230, 194, 122, 0.55) 18%, rgba(230, 194, 122, 0.55) 82%, transparent);
+  pointer-events: none;
+}
+.back {
+  position: relative;
+  padding: 6px 14px 6px 12px;
+  border-radius: 6px;
+  font-family: var(--serif);
+  color: var(--gilt-hi);
+  background: linear-gradient(180deg, rgba(58, 44, 120, 0.95), rgba(26, 18, 62, 0.95));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 0 0 1px var(--frame-line), 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+.back:hover { background: linear-gradient(180deg, rgba(80, 62, 160, 0.95), rgba(34, 24, 80, 0.95)); }
+.tb-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 21px;
+  color: var(--gilt-hi);
+  text-shadow: 0 0 12px rgba(255, 200, 100, 0.35), 0 2px 3px rgba(0, 0, 0, 0.9);
+}
+.tb-title::before {
+  content: '';
+  flex: none;
+  width: 9px;
+  height: 9px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, var(--gilt-hi), var(--gilt) 55%, var(--gilt-lo));
+  box-shadow: 0 0 8px rgba(255, 200, 100, 0.6);
+}
+.res .item-amt {
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(34, 25, 74, 0.92), rgba(12, 8, 30, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px color-mix(in srgb, var(--ic) 45%, var(--gilt)), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Dialog ── */
+.modal { background: radial-gradient(ellipse at center, rgba(12, 6, 36, 0.45), rgba(4, 2, 12, 0.78)); }
+.modal-body h3 { font-size: 20px; color: var(--gilt-hi); text-shadow: 0 0 12px rgba(255, 200, 100, 0.4); }
+.modal-body h3::after {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 10px auto 0;
+  width: 70%;
+  background: linear-gradient(90deg, transparent, var(--gilt), transparent);
+}
+
+/* ── Tabs and segmented buttons: engraved stone slabs, the selected one gilded ── */
+.tabs button,
+.seg button,
+.banner-tabs button {
+  border-radius: 6px;
+  font-family: var(--serif);
+  color: #d8cff5;
+  background: linear-gradient(180deg, rgba(44, 34, 96, 0.9), rgba(18, 12, 44, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 0 1px rgba(230, 194, 122, 0.35);
+}
+.tabs button.on,
+.seg button.on,
+.banner-tabs button.on {
+  color: #3a2200;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background: linear-gradient(180deg, #fff1c0, #f0c45c 50%, #d99d30);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), 0 0 0 1.5px var(--gilt-hi), 0 0 14px rgba(255, 200, 90, 0.45);
+}
+
+/* ── Hub town menu: nameplate buttons + gem-socket icons ── */
+.hub-btn {
+  border-radius: 10px;
+  padding-right: 34px;
+  background:
+    radial-gradient(90% 120% at 0% 50%, rgba(140, 110, 255, 0.28), transparent 60%),
+    linear-gradient(180deg, rgba(40, 30, 92, 0.94), rgba(16, 11, 40, 0.95));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 0 0 1px var(--frame-line),
+    inset 0 0 0 3px rgba(10, 6, 26, 0.8),
+    inset 0 0 0 4px rgba(230, 194, 122, 0.16),
+    0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.hub-btn::after {
+  content: '';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  border-top: 2px solid var(--gilt);
+  border-right: 2px solid var(--gilt);
+  transform: rotate(45deg);
+  opacity: 0.7;
+  transition: transform 0.12s, opacity 0.12s;
+}
+.hub-btn:hover {
+  transform: translateX(-4px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 0 0 1.5px var(--gilt-hi),
+    inset 0 0 0 3px rgba(10, 6, 26, 0.8),
+    0 0 22px rgba(255, 200, 90, 0.35),
+    0 6px 18px rgba(0, 0, 0, 0.45);
+}
+.hub-btn:hover::after { opacity: 1; transform: translateX(3px) rotate(45deg); }
+.hb-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--gilt-hi);
+  filter: none;
+  background: radial-gradient(circle at 50% 30%, #6c58d8, #2a1d6a 62%, #150e3a);
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 0.25),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.45),
+    0 0 0 2px var(--gilt),
+    0 0 0 4px rgba(12, 8, 30, 0.9),
+    0 0 0 5px rgba(230, 194, 122, 0.35),
+    0 0 14px rgba(150, 120, 255, 0.45);
+}
+.hb-icon .menu-ico { filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.6)); }
+.hb-text b { color: #fff6e0; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.7); }
+.hub-btn.hot .hb-icon {
+  color: #3a2200;
+  background: radial-gradient(circle at 50% 30%, #fff3c8, #f2c24e 60%, #b67a1c);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.6), inset 0 -3px 6px rgba(90, 40, 0, 0.4), 0 0 0 2px var(--gilt-hi), 0 0 0 4px rgba(60, 30, 0, 0.8), 0 0 18px rgba(255, 200, 80, 0.7);
+}
+.hub-btn.hot .hb-icon .menu-ico { filter: none; }
+.hb-next { border-radius: 4px; }
+
+/* ── Gold diamond between text segments (replaces the '·' separator) ── */
+.gsep > * + *::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 0.7em 0 0.4em;
+  vertical-align: middle;
+  transform: rotate(45deg);
+  background: var(--gilt);
+  opacity: 0.7;
+}
+
+/* ── Place-name plates on the world map ── */
+.map-label {
+  border-radius: 6px;
+  background: linear-gradient(180deg, rgba(40, 30, 92, 0.92), rgba(16, 11, 40, 0.92));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12), 0 0 0 1px var(--frame-line), 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+.ml-name { font-family: var(--serif); letter-spacing: 1px; }
+
+/* ── Arena and quests: ledger-style list, the color bar on the left shows status ── */
+.arena-row,
+.quest {
+  border-radius: 6px;
+  background: linear-gradient(90deg, rgba(60, 46, 130, 0.55), rgba(18, 12, 44, 0.7) 60%);
+  box-shadow: inset 3px 0 0 rgba(150, 125, 255, 0.8), inset 0 0 0 1px rgba(230, 194, 122, 0.2);
+}
+.arena-row:hover:not(.locked) { box-shadow: inset 3px 0 0 var(--gilt), inset 0 0 0 1.5px var(--gilt-hi), 0 0 14px rgba(255, 200, 90, 0.3); }
+.arena-row.done,
+.quest.claimed { background: linear-gradient(90deg, rgba(120, 96, 40, 0.4), rgba(18, 12, 44, 0.7) 60%); box-shadow: inset 3px 0 0 var(--gilt), inset 0 0 0 1px rgba(230, 194, 122, 0.25); }
+.arena-row.locked { box-shadow: inset 3px 0 0 rgba(120, 110, 150, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.08); }
+.ar-rank {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+  color: var(--gilt-hi);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 30%, #5a48c8, #1e1450 70%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25), 0 0 0 1.5px var(--gilt), 0 0 0 3px rgba(12, 8, 30, 0.8);
+}
+.arena-row.done .ar-rank { color: #3a2200; background: radial-gradient(circle at 50% 30%, #fff3c8, #e0a838 70%); }
+.quest.ready {
+  background: linear-gradient(90deg, rgba(200, 150, 50, 0.35), rgba(30, 20, 60, 0.75) 65%);
+  box-shadow: inset 3px 0 0 var(--gilt-hi), inset 0 0 0 1.5px var(--gilt), 0 0 16px rgba(255, 200, 80, 0.35);
+}
+.q-name { font-family: var(--serif); letter-spacing: 1px; }
+.q-bar { height: 10px; border-radius: 2px; background: rgba(6, 4, 18, 0.8); box-shadow: inset 0 0 0 1px rgba(230, 194, 122, 0.3); }
+.q-bar > div { border-radius: 1px; background: linear-gradient(90deg, #7a5cff, #b89aff 60%, var(--gilt)); box-shadow: 0 0 8px rgba(160, 130, 255, 0.6); }
+
+/* ── Settings: tick-mark sliders, diamond knobs ── */
+.settings label { font-family: var(--serif); letter-spacing: 1px; }
+.settings input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+.settings input[type='range']::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #5a44d0, #b89aff 70%, var(--gilt));
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(230, 194, 122, 0.45);
+}
+.settings input[type='range']::-moz-range-track {
+  height: 6px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, #5a44d0, #b89aff 70%, var(--gilt));
+  box-shadow: 0 0 0 1px rgba(230, 194, 122, 0.45);
+}
+.settings input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  margin-top: -5px;
+  border: 0;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  background: linear-gradient(135deg, #fff6d8, var(--gilt) 55%, var(--gilt-lo));
+  box-shadow: 0 0 0 1.5px #2a1a00, 0 0 10px rgba(255, 200, 90, 0.7);
+}
+.settings input[type='range']::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 0;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  background: linear-gradient(135deg, #fff6d8, var(--gilt) 55%, var(--gilt-lo));
+  box-shadow: 0 0 0 1.5px #2a1a00, 0 0 10px rgba(255, 200, 90, 0.7);
+}
+.settings-foot { border-top: 1px solid rgba(230, 194, 122, 0.3); }
+
+/* ── Pity hint on the summon screen ── */
+.pity { border-radius: 6px; background: rgba(12, 8, 30, 0.72); box-shadow: 0 0 0 1px rgba(230, 194, 122, 0.35); color: #e6dcff; }
+
+@media (max-height: 560px) and (orientation: landscape) {
+  .hb-icon { width: 30px; height: 30px; }
+  .hb-icon .menu-ico { width: 17px; height: 17px; }
+  .hub-btn { padding-right: 24px; }
+  .hub-btn::after { right: 10px; width: 6px; height: 6px; margin-top: -4px; }
+}

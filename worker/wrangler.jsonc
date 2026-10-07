@@ -1,0 +1,22 @@
+// Cloudflare Worker config: one Worker serves both the static site (dist/) and the cloud save API (/api/*).
+// For deploy steps see the README section "Cloud save". Replace database_id with the id printed by `wrangler d1 create eldor`.
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "eldor",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-06-01",
+  "assets": {
+    "directory": "../dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "eldor",
+      "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+    }
+  ],
+  "observability": { "enabled": true }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "eldor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Eldor: make pacts with spirits and mend a shattered world. A spirit-collecting battle RPG for the browser.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "report": "node sim/report.ts",
+    "kits": "node sim/kit-status.ts",
+    "duel": "node sim/duel.ts",
+    "tiers": "node sim/tiers.ts",
+    "test": "node --test \"sim/**/*.test.ts\" \"src/**/*.test.ts\"",
+    "typecheck": "tsc --noEmit -p . && tsc --noEmit -p worker",
+    "dev": "vite",
+    "music": "vite --config vite.musiccheck.config.ts --open /?music",
+    "build": "vite build",
+    "preview": "vite preview",
+    "cloud:dev": "wrangler dev -c worker/wrangler.jsonc --port 8787",
+    "cloud:db:local": "wrangler d1 execute eldor -c worker/wrangler.jsonc --local --file worker/schema.sql",
+    "cloud:db": "wrangler d1 execute eldor -c worker/wrangler.jsonc --remote --file worker/schema.sql",
+    "deploy": "npm run build && wrangler deploy -c worker/wrangler.static.jsonc",
+    "cloud:deploy": "VITE_CLOUD=1 npm run build && wrangler deploy -c worker/wrangler.jsonc"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260925.2",
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "wrangler": "^4.140.0"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1"
+  }
+}

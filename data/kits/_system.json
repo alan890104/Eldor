@@ -1,0 +1,20 @@
+{
+  "spirits": {},
+  "skills": [
+    {
+      "id": "guard",
+      "name": "格擋",
+      "en": "Guard",
+      "element": "neutral",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 3,
+      "text": "系統行動（不佔技能欄）：本回合免疫攻擊技能與奧義的傷害及附加效果（伏技仍可發動）。消耗 1 靈能、先制 +3；連續回合使用必定失敗。",
+      "tags": {
+        "block": 1
+      }
+    }
+  ]
+}

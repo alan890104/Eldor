@@ -1,0 +1,847 @@
+{
+  "spirits": {
+    "skyreign": {
+      "concept": "兩下快啄、一記重擊：〔拍〕技能每數到第三段就是「強拍」。算準拍子，讓最重的一擊落在強拍上。",
+      "mechanic": {
+        "name": "三拍子",
+        "text": "寫著〔拍〕的技能每命中一段，記下一拍（顯示在身上，離場歸零；被格擋、打在替身上不算）。每數到第三拍就是「強拍」：那一段傷害 +50%，之後重新從第一拍數起。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "skyreign_peck" },
+        { "lv": 1, "id": "strike" },
+        { "lv": 5, "id": "skyreign_swoop" },
+        { "lv": 9, "id": "skyreign_ruffle" },
+        { "lv": 13, "id": "skyreign_flurry" },
+        { "lv": 17, "id": "skyreign_dive" },
+        { "lv": 20, "id": "sky_slash" },
+        { "lv": 24, "id": "wind_stance" },
+        { "lv": 27, "id": "skyreign_flit" },
+        { "lv": 32, "id": "skyreign_falcon" },
+        { "lv": 38, "id": "skyreign_skyfall" }
+      ],
+      "ultimate": "u_skyreign",
+      "core": ["skyreign_skyfall", "skyreign_dive", "skyreign_peck", "skyreign_flurry", "skyreign_swoop", "skyreign_ruffle", "skyreign_falcon"]
+    },
+    "gale_weasel": {
+      "concept": "三隻鼬輪番出手：「絆」住對手讓牠無法格擋，「斬」出必定暴擊，再以「藥」完成連環，三鐮合一追斬一刀。",
+      "mechanic": {
+        "name": "三鐮連環",
+        "text": "專屬技能分為〔絆〕〔斬〕〔藥〕三式。依 絆 → 斬 → 藥 的順序使用並命中，「連環」逐段推進（顯示在身上）：接在絆之後的〔斬〕必定暴擊；接在斬之後的〔藥〕觸發「三鐮合一」，立刻以剛才的〔斬〕再追擊一次。三式順序錯誤、攻擊落空或被格擋、離場時連環中斷；使用其他技能不影響連環。"
+      },
+      "trait": {
+        "name": "伏鼬",
+        "text": "接在〔絆〕之後的〔斬〕傷害 +20%。替換或補位入場時（開場不算），「連環」直接進到〔絆〕。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "gale_weasel_trip" },
+        { "lv": 1, "id": "gale_weasel_slash" },
+        { "lv": 4, "id": "wind_cutter" },
+        { "lv": 8, "id": "gale_weasel_salve" },
+        { "lv": 12, "id": "gale_weasel_snare" },
+        { "lv": 16, "id": "gale_weasel_chase" },
+        { "lv": 18, "id": "gale_weasel_blade_salve" },
+        { "lv": 20, "id": "sky_slash" },
+        { "lv": 24, "id": "gale_weasel_rend" },
+        { "lv": 29, "id": "gale_weasel_hook" },
+        { "lv": 38, "id": "gale_weasel_whirl" },
+        { "lv": 45, "id": "gale_weasel_tri_salve" }
+      ],
+      "ultimate": "u_gale_weasel",
+      "core": ["gale_weasel_trip", "gale_weasel_rend", "gale_weasel_tri_salve", "gale_weasel_snare", "gale_weasel_blade_salve", "gale_weasel_slash", "gale_weasel_salve"]
+    },
+    "aeroth": {
+      "concept": "先手搶上高空：有高度時後手打來的攻擊變弱，蓄滿再「天墜」一擊定勝負；被搶先命中就會被擊落。",
+      "mechanic": {
+        "name": "天穹高度",
+        "text": "「高度」0～3（離場歸零）：「掠空」「乘風而上」等技能使高度上升。有高度時，在自身本回合行動之後才命中的攻擊，每層高度傷害 −15%；自身行動前就被攻擊命中則被「擊落」，高度歸零。「天墜」技能消耗全部高度，每層大幅提升威力。"
+      },
+      "trait": {
+        "name": "天穹主宰",
+        "text": "入場時展開「疾風」3 回合。以「天墜」技能擊倒對手時，不消耗高度。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "aeroth_skim" },
+        { "lv": 1, "id": "aeroth_stoop" },
+        { "lv": 4, "id": "wind_cutter" },
+        { "lv": 8, "id": "aeroth_updraft" },
+        { "lv": 12, "id": "aeroth_turbulence" },
+        { "lv": 16, "id": "aeroth_plumes" },
+        { "lv": 20, "id": "aeroth_clear_sky" },
+        { "lv": 24, "id": "aeroth_cloudsplit" },
+        { "lv": 28, "id": "aeroth_soar_strike" },
+        { "lv": 32, "id": "aeroth_headwind" },
+        { "lv": 37, "id": "aeroth_circling" },
+        { "lv": 44, "id": "aeroth_empyrean" },
+        { "lv": 50, "id": "aeroth_sunpierce" }
+      ],
+      "ultimate": "u_aeroth",
+      "core": ["aeroth_cloudsplit", "aeroth_skim", "aeroth_updraft", "aeroth_plumes", "aeroth_stoop"]
+    },
+    "dandelion": {
+      "concept": "把絮種撒進對手陣地：站在上面的精靈會被「寄生」，吸來的生命養活我方；打一下就乘風離場，換人也逃不掉。",
+      "mechanic": {
+        "name": "絮種",
+        "text": "寫著〔撒種〕的技能在對手陣地撒下「絮種」（最多 3 層，顯示在對手陣地；5 回合沒有撒種或發芽就散去）。每回合結束時，對手在場的精靈沒有「寄生」的話，1 層絮種在牠身上發芽：「寄生」3 回合（每回合結束失去 4% 最大生命，由我方在場的精靈吸收）。"
+      },
+      "trait": {
+        "name": "隨風而去",
+        "text": "替換離場時回復 20% 最大生命，並在對手陣地撒下 1 層絮種。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "dandelion_puff" },
+        { "lv": 1, "id": "dandelion_drift" },
+        { "lv": 5, "id": "dandelion_sow" },
+        { "lv": 9, "id": "dandelion_sap" },
+        { "lv": 13, "id": "dandelion_puffball" },
+        { "lv": 16, "id": "petal_storm" },
+        { "lv": 20, "id": "dandelion_glide" },
+        { "lv": 24, "id": "cyclone" },
+        { "lv": 28, "id": "dandelion_bloom" },
+        { "lv": 33, "id": "dandelion_web" },
+        { "lv": 38, "id": "dandelion_squall" }
+      ],
+      "ultimate": "u_dandelion",
+      "core": ["dandelion_squall", "dandelion_bloom", "dandelion_drift", "dandelion_sap", "dandelion_puff", "dandelion_glide", "dandelion_sow", "dandelion_puffball"]
+    },
+    "papercrane": {
+      "concept": "一邊攻擊一邊寫信，寫好就乘風離場：接手的隊友收下信，攻擊隨封數變強。沒人可寄時，千羽鶴自己拆信。",
+      "mechanic": {
+        "name": "信",
+        "text": "寫著〔寫信〕的技能使千羽鶴的「信」增加（最多 3 封，顯示在身上）。千羽鶴替換離場或倒下時把信寄出：我方陣地「收信」，在場精靈的攻擊傷害每封 +20%（4 回合，含寄出的那一回合）。沒有後備隊友時，信寫滿 3 封就由千羽鶴自己收下。"
+      },
+      "trait": {
+        "name": "託付",
+        "text": "被擊倒時，信多附 1 封（最多 3 封）再寄出。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "papercrane_cut" },
+        { "lv": 1, "id": "papercrane_fold" },
+        { "lv": 5, "id": "papercrane_relay" },
+        { "lv": 9, "id": "papercrane_charm" },
+        { "lv": 13, "id": "papercrane_gust" },
+        { "lv": 17, "id": "arcane_blast" },
+        { "lv": 21, "id": "papercrane_wish" },
+        { "lv": 24, "id": "cyclone" },
+        { "lv": 28, "id": "papercrane_screen" },
+        { "lv": 34, "id": "papercrane_thousand" }
+      ],
+      "ultimate": "u_papercrane",
+      "core": ["papercrane_relay", "papercrane_thousand", "papercrane_fold", "papercrane_gust", "papercrane_cut", "papercrane_charm", "papercrane_wish"]
+    },
+    "lyrebird": {
+      "concept": "先唱一首〔歌〕留下餘音，再以「和聲」讓它再響一次：回復、強化或削弱加倍，歌聲還會治癒後備的隊友。",
+      "mechanic": {
+        "name": "餘音",
+        "text": "琴鳥唱完〔歌〕之後，那首歌留下「餘音」（顯示在身上；唱新的歌會取代，離場時消失）。寫著「和聲」的技能命中時，餘音再響一次：重複那首歌「曲：」後面的效果，之後餘音消散。"
+      },
+      "trait": {
+        "name": "天籟",
+        "text": "「和聲」讓餘音再響時，歌聲傳到後備席：我方每隻後備精靈回復 8% 最大生命。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "lyrebird_trill" },
+        { "lv": 1, "id": "lyrebird_refrain" },
+        { "lv": 4, "id": "holy_ray" },
+        { "lv": 8, "id": "lyrebird_hymn" },
+        { "lv": 11, "id": "lyrebird_lament" },
+        { "lv": 15, "id": "lyrebird_wingsong" },
+        { "lv": 20, "id": "cyclone" },
+        { "lv": 24, "id": "lyrebird_rondo" },
+        { "lv": 29, "id": "lyrebird_answer" },
+        { "lv": 35, "id": "lyrebird_serenade" },
+        { "lv": 42, "id": "lyrebird_aria" }
+      ],
+      "ultimate": "u_lyrebird",
+      "core": ["lyrebird_rondo", "lyrebird_aria", "lyrebird_lament", "lyrebird_hymn", "lyrebird_trill", "lyrebird_refrain", "lyrebird_wingsong"]
+    },
+    "tornado": {
+      "concept": "坐鎮風暴中心：暴風圈逐回合擴大，入場的對手被撕扯、後備被颳傷；把最虛弱的對手捲上場，再收束風暴重創全隊。",
+      "mechanic": {
+        "name": "暴風圈",
+        "text": "「暴風圈」0～3 級（顯示在身上）：颶風之眼在場時每回合結束 +1，離場時歸零；每級使颶風之眼的攻擊傷害 +10%。對手的精靈入場時（替換、被捲入、補位）受到「暴風圈 × 4%」最大生命的傷害；每回合結束，對手每隻後備精靈受到「暴風圈 × 2%」最大生命的傷害（不會因此倒下）。「捲入」：把對手生命比例最低的後備精靈拉上場。「無處可躲」：對手沒有後備時，颳向後備的傷害改為颳在場的精靈，「捲入」改為使牠受到入場傷害。"
+      },
+      "trait": {
+        "name": "風眼",
+        "text": "入場時「暴風圈」+1。對手的精靈入場後，暴風圈 +1。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "wind_bolt" },
+        { "lv": 1, "id": "whirl_in" },
+        { "lv": 5, "id": "tornado_squall" },
+        { "lv": 9, "id": "tornado_vortex" },
+        { "lv": 13, "id": "tornado_lash" },
+        { "lv": 17, "id": "tornado_calm_eye" },
+        { "lv": 20, "id": "thunderbolt" },
+        { "lv": 24, "id": "tornado_collapse" },
+        { "lv": 29, "id": "tornado_scatter" },
+        { "lv": 34, "id": "tornado_courier" },
+        { "lv": 39, "id": "tornado_eye_rest" },
+        { "lv": 45, "id": "tornado_maelstrom" }
+      ],
+      "ultimate": "u_tornado",
+      "core": ["tornado_maelstrom", "tornado_collapse", "tornado_vortex", "tornado_squall", "whirl_in", "tornado_lash"]
+    }
+  },
+  "skills": [
+    {
+      "id": "aeroth_skim", "name": "掠空", "en": "Skyskim",
+      "element": "wind", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "命中後「高度」+1。",
+      "tags": { "custom": 20 },
+      "note": "高度 +1 估 20：凌空減傷約 8 ＋ 之後天墜每層威力的一半約 12（天墜本身的 cond 算另一半）"
+    },
+    {
+      "id": "aeroth_stoop", "name": "鷹墜", "en": "Stoop",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "「天墜」：每層「高度」威力 +40，之後高度歸零。",
+      "tags": { "cond": 35 },
+      "note": "使用時期望高度約 1.75 × 40 × 0.5（另一半算在上升技能）≈ 35"
+    },
+    {
+      "id": "aeroth_updraft", "name": "乘風而上", "en": "Updraft",
+      "element": "wind", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "「高度」+2，速度 +1 階。",
+      "tags": { "self.spd": 1, "custom": 40 },
+      "note": "高度 +2 估 40（每層 20，同掠空）"
+    },
+    {
+      "id": "aeroth_turbulence", "name": "亂流", "en": "Turbulence",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "命中後，對手下回合所有行動先制 −3（「格擋」也一樣）。",
+      "tags": { "custom": 35 },
+      "note": "持續效果（對手身上，2 回合含本回合）：下回合來不及搶在天鷹前格擋或用先制擊落，估 35；替換可解除"
+    },
+    {
+      "id": "aeroth_plumes", "name": "千羽", "en": "Thousand Plumes",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "連擊「2 ＋ 高度」次，每次威力 25（不消耗高度）。",
+      "tags": { "hits": 4 },
+      "note": "段數 2～5（高度 0～3），列出的 4 段 100 威力 ≈ 期望值；多段可打穿護盾與替身"
+    },
+    {
+      "id": "aeroth_clear_sky", "name": "掃空", "en": "Sky Sweep",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "「破壞」對手的伏技，並吹散我方陣地的「入場陷阱」。",
+      "tags": { "destroyTrap": 1, "custom": 15 },
+      "note": "風系的破伏技答案；吹散入場陷阱估 15"
+    },
+    {
+      "id": "aeroth_cloudsplit", "name": "天墜・裂雲", "en": "Cloudsplitter",
+      "element": "wind", "category": "physical",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "「天墜」：每層「高度」威力 +45；高度 3 時必定暴擊。之後高度歸零。",
+      "tags": { "sig": 1, "cond": 60 },
+      "note": "期望高度 2 × 45 × 0.5 = 45；高度 3 必定暴擊的期望約 15"
+    },
+    {
+      "id": "aeroth_soar_strike", "name": "翔擊", "en": "Soaring Strike",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "命中後「高度」+2。",
+      "tags": { "custom": 40 },
+      "note": "高度 +2 估 40（每層 20）"
+    },
+    {
+      "id": "aeroth_headwind", "name": "逆風擊", "en": "Headwind Counter",
+      "element": "wind", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "蒼穹天鷹在本回合行動之前受到攻擊時",
+      "exclusive": "aeroth",
+      "text": "不會被「擊落」，並立刻以「掠空」反擊（威力 ×2）。",
+      "tags": { "custom": 140, "odds": 0.55 },
+      "note": "保住高度（期望 1.5 層 × 20 = 30）＋ 掠空 ×2（90 威力＋高度 +1 估 20）= 140；對手較快或有先制時才會觸發，機率 0.55"
+    },
+    {
+      "id": "aeroth_circling", "name": "迴翔", "en": "Circling Pivot",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "攻擊後與後備精靈替換。「盤旋」：保留目前的「高度」，下次入場時恢復。",
+      "tags": { "pivot": 1, "custom": 10 },
+      "note": "盤旋保留高度估 10（只在 3 對 3 有用）"
+    },
+    {
+      "id": "aeroth_empyrean", "name": "凌霄", "en": "Empyrean Ascent",
+      "element": "wind", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "3 回合內，自身不會被「擊落」，「天墜」也不會讓高度歸零。",
+      "tags": { "sig": 1, "custom": 160 },
+      "note": "回合類效果（可被消除回合類效果移除）。保住高度估 40；3 回合內第二次天墜不必重新爬升，期望多約 120 威力"
+    },
+    {
+      "id": "aeroth_sunpierce", "name": "貫日", "en": "Sunpiercer",
+      "element": "wind", "category": "physical",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "aeroth",
+      "text": "無視「格擋」。每層「高度」威力 +20（不消耗高度）。",
+      "tags": { "ignoreGuard": 1, "cond": 25 },
+      "note": "期望高度 1.5 × 20 × 0.8 ≈ 25。對手預判天墜而格擋時的讀心選項"
+    },
+    {
+      "id": "u_aeroth", "name": "蒼穹斷界", "en": "Skybreaker",
+      "element": "wind", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 130, "accuracy": 100, "priority": 2,
+      "exclusive": "aeroth",
+      "text": "先制 +2。無視「格擋」。「天墜」：每層「高度」威力 +50，之後高度歸零。",
+      "tags": { "ignoreGuard": 1, "cond": 60 },
+      "note": "期望高度 2 × 50 × 0.6 = 60。高度 3 時 280 威力、格擋擋不住：對策是事先擊落、伏技、替身與屬性抗性"
+    },
+    {
+      "id": "gale_weasel_trip", "name": "絆足", "en": "Tripping Sweep",
+      "element": "neutral", "category": "physical",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔絆〕命中後對手「失衡」：下一回合無法「格擋」。",
+      "tags": { "custom": 15 },
+      "note": "失衡＝下一回合的格擋無效（只在對手想格擋時有價值），估 15。無屬性：不吃疾風的先制"
+    },
+    {
+      "id": "gale_weasel_slash", "name": "鐮斬", "en": "Sickle Slash",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔斬〕30% 使對手「裂傷」。「連環」：必定暴擊。",
+      "tags": { "status.bleed": 0.3, "cond": 15 },
+      "note": "連環（接在絆之後）必定暴擊：約一半的使用 × 60 × 0.5 = 15"
+    },
+    {
+      "id": "gale_weasel_salve", "name": "敷藥", "en": "Sickle Salve",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔藥〕回復 20% 最大生命。「連環」：「三鐮合一」。",
+      "tags": { "heal": 20, "custom": 40 },
+      "note": "三鐮合一＝以剛才的〔斬〕追擊一次（期望約 65 威力 × 連環成功率 0.6 ≈ 40）"
+    },
+    {
+      "id": "gale_weasel_snare", "name": "伏鐮", "en": "Lurking Sickle",
+      "element": "wind", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手攻擊我方時",
+      "exclusive": "gale_weasel",
+      "text": "〔絆〕該次傷害 −40%，攻擊者「失衡」；嵐斬鼬在場時，「連環」進到〔絆〕。",
+      "tags": { "reduce": 0.4, "custom": 20, "odds": 0.85 },
+      "note": "減傷 40%（35）＋ 失衡並開啟連環（20）；對手幾乎每回合都會攻擊，機率 0.85"
+    },
+    {
+      "id": "gale_weasel_chase", "name": "追風斬", "en": "Pursuit Gale",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔斬〕對手替換時，在牠離場前先攻擊（威力 ×2）。「連環」：必定暴擊。",
+      "tags": { "custom": 25, "cond": 15 },
+      "note": "追擊（對手替換時威力 ×2，約 1/3 的使用）估 25；連環必定暴擊 70 × 0.5 × 0.45 ≈ 15。專屬的追擊：對付靠替換躲連環的對手"
+    },
+    {
+      "id": "gale_weasel_rend", "name": "裂風鐮", "en": "Rending Gale",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔斬〕30% 使對手「裂傷」。「連環」：必定暴擊，並必定使對手「裂傷」5 回合。",
+      "tags": { "status.bleed": 0.3, "cond": 47, "sig": 1 },
+      "note": "連環（約一半的使用）：必定暴擊 80 × 0.5 × 0.5 = 20 ＋ 裂傷補到必定 0.5 × 0.7 × 50 ≈ 17 ＋ 多 2 回合 10"
+    },
+    {
+      "id": "gale_weasel_hook", "name": "鉤足", "en": "Hooking Kick",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔絆〕命中後對手「失衡」，速度 −1 階。",
+      "tags": { "custom": 25, "foe.spd": -1 },
+      "note": "失衡並開啟連環 25（同絆足）＋ 速度 −1 階"
+    },
+    {
+      "id": "gale_weasel_blade_salve", "name": "藥刃", "en": "Salve Blade",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔藥〕吸取造成傷害的 50%。「連環」：「三鐮合一」。",
+      "tags": { "drain": 0.5, "custom": 40 },
+      "note": "攻擊型的〔藥〕：吸取 22 ＋ 三鐮合一（同敷藥，估 40）"
+    },
+    {
+      "id": "gale_weasel_whirl", "name": "旋鐮", "en": "Whirling Sickles",
+      "element": "wind", "category": "physical",
+      "cost": 3, "power": 105, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔斬〕連擊 3 次，每次威力 35。「連環」：每一擊都必定暴擊。",
+      "tags": { "hits": 3, "cond": 30 },
+      "note": "連環時三段都暴擊：105 × 0.5 × 0.55 ≈ 30"
+    },
+    {
+      "id": "gale_weasel_tri_salve", "name": "秘藥鐮", "en": "Trinity Salve",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "〔藥〕吸取造成傷害的 50%。「連環」：「三鐮合一」，之後連環回到〔絆〕，對手「失衡」。",
+      "tags": { "drain": 0.5, "custom": 70, "sig": 1 },
+      "note": "藥刃的完成版：吸取 20 ＋ 三鐮合一 40 ＋ 連環循環（下一個〔斬〕直接暴擊、對手無法格擋，省下一次絆）30"
+    },
+    {
+      "id": "u_gale_weasel", "name": "無形旋風", "en": "Unseen Whirlwind",
+      "element": "wind", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 140, "accuracy": 100, "priority": 0,
+      "exclusive": "gale_weasel",
+      "text": "必定暴擊。命中後「三鐮合一」：以上一次使用的〔斬〕追擊一次（沒有時為「鐮斬」）。",
+      "tags": { "critRate": 1, "custom": 60 },
+      "note": "必定暴擊 70 ＋ 追擊（約 65 威力，估 60）"
+    },
+    {
+      "id": "whirl_in", "name": "捲入", "en": "Whirl In",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": -1,
+      "exclusive": "tornado",
+      "text": "先制 −1。「捲入」：命中後把對手生命比例最低的後備精靈拉上場（強制替換）。",
+      "tags": { "forceSwitch": 1, "custom": 10 },
+      "note": "改寫舊技能：強制替換 50 ＋ 指定換上最虛弱的精靈 10（會先吃到暴風圈的入場傷害）；「無處可躲」時改為在場的精靈受到入場傷害"
+    },
+    {
+      "id": "tornado_squall", "name": "颳襲", "en": "Squall Lash",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "命中後，對手每隻後備精靈受到「暴風圈 × 3%」最大生命的傷害（不會因此倒下；「無處可躲」時改為在場的精靈）。",
+      "tags": { "custom": 30 },
+      "note": "3 對 3 期望暴風圈 2、後備 1.5 隻 → 9% × 3 ≈ 27；單挑改颳在場的精靈（約 6%，18）；估 30"
+    },
+    {
+      "id": "tornado_lash", "name": "雷鞭", "en": "Thunder Lash",
+      "element": "thunder", "category": "magic",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "對手在本回合或上一回合入場時，威力 ×2。",
+      "tags": { "cond": 30 },
+      "note": "捲入的下一回合、對手替換或補位時成立（約 55%）：55 × 0.55 ≈ 30"
+    },
+    {
+      "id": "tornado_scatter", "name": "吹散", "en": "Scattering Gust",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "清除對手的能力提升與回合類效果。「暴風圈」+1。",
+      "tags": { "dispel": 1, "dispelTurns": 1, "custom": 25 },
+      "note": "消強（25）＋ 消回合（35）＋ 暴風圈 +1（25）。專屬的反制：吹散對手的強化"
+    },
+    {
+      "id": "tornado_calm_eye", "name": "無風之眼", "en": "Calm Eye",
+      "element": "wind", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手以先制 +1 以上的攻擊攻擊我方時",
+      "exclusive": "tornado",
+      "text": "使那次攻擊無效；「暴風圈」+2。",
+      "tags": { "negateSkill": 1, "custom": 40, "odds": 0.5 },
+      "note": "舊特性「風眼」改成一次性的伏技：無效一次先制攻擊（90）＋ 暴風圈 +2（40）；只有先制攻擊會觸發，機率 0.5"
+    },
+    {
+      "id": "tornado_collapse", "name": "風暴收束", "en": "Storm Collapse",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 40, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "消耗全部「暴風圈」：每級使對手在場的精靈與每隻後備精靈各受到 7% 最大生命的傷害（後備不會因此倒下；「無處可躲」時後備那份改為在場的精靈）。",
+      "tags": { "custom": 100, "sig": 1 },
+      "note": "期望 2.5 級：在場 17.5%（52）＋ 後備那份（對手 2／1／0 隻後備平均：後備 × 0.6 折算，沒有後備時「無處可躲」全額加在在場的精靈 ≈ 16%，48）≈ 100；代價是暴風圈歸零"
+    },
+    {
+      "id": "tornado_vortex", "name": "渦旋", "en": "Vortex",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "命中後「暴風圈」+1。",
+      "tags": { "custom": 30 },
+      "note": "暴風圈 +1：入場傷害 +4%、後備每回合 +2%、收束 +7%，估 30"
+    },
+    {
+      "id": "tornado_courier", "name": "託風", "en": "Storm Courier",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "與後備精靈替換；替換上場的精靈獲得「暴風圈 × 10%」最大生命的護盾。",
+      "tags": { "pivot": 1, "custom": 55 },
+      "note": "替換 30 ＋ 護盾（期望 2.5 級 × 10% × 2.2 = 55）；離場時暴風圈照樣歸零"
+    },
+    {
+      "id": "tornado_eye_rest", "name": "風眼寧靜", "en": "Eye of Calm",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "回復 35% 最大生命。「暴風圈」−1。",
+      "tags": { "heal": 35, "custom": -10 },
+      "note": "回復 35%（87.5）；暴風圈 −1 是代價（−10）"
+    },
+    {
+      "id": "tornado_maelstrom", "name": "大漩渦", "en": "Maelstrom",
+      "element": "wind", "category": "magic",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": -1,
+      "exclusive": "tornado",
+      "text": "先制 −1。命中後「暴風圈」變為 3，並「捲入」對手生命比例最低的後備精靈。",
+      "tags": { "forceSwitch": 1, "custom": 50, "sig": 1 },
+      "note": "強制替換 50 ＋ 指定最虛弱 10 ＋ 暴風圈直接到 3（期望 +1.5 級 ≈ 40）；被捲入的精靈先吃 12% 入場傷害"
+    },
+    {
+      "id": "u_tornado", "name": "天災之眼", "en": "Eye of Calamity",
+      "element": "wind", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "tornado",
+      "text": "命中後，對手每隻後備精靈受到 20% 最大生命的傷害（不會因此倒下；「無處可躲」時改為在場的精靈）；「暴風圈」變為 3。",
+      "tags": { "custom": 85 },
+      "note": "後備 20%（3 對 3 平均 1.2 隻 × 60 × 0.6 ≈ 45）＋ 暴風圈直接到 3（40）"
+    },
+    {
+      "id": "lyrebird_trill", "name": "清啼", "en": "Clear Trill",
+      "element": "wind", "category": "magic",
+      "cost": 0, "power": 40, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：對手速度 −1 階。",
+      "tags": { "foe.spd": -1 },
+      "note": "曲的效果由掛勾結算（和聲時再響一次，價值算在和聲技能上）"
+    },
+    {
+      "id": "lyrebird_refrain", "name": "副歌", "en": "Refrain",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "「和聲」：命中後，餘音再響一次。",
+      "tags": { "custom": 30 },
+      "note": "餘音再響一次：曲的平均價值約 40 × 有餘音的機率 0.75 = 30"
+    },
+    {
+      "id": "lyrebird_hymn", "name": "光明頌", "en": "Radiant Hymn",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：回復 20% 最大生命，並解除自身的異常狀態。",
+      "tags": { "heal": 20, "cleanse": 1 },
+      "note": "回復 50 ＋ 淨化 25。專屬的淨化：和聲時可以再淨化一次"
+    },
+    {
+      "id": "lyrebird_wingsong", "name": "振羽歌", "en": "Wingbeat Song",
+      "element": "wind", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：魔力 +1 階，回復 8% 最大生命。",
+      "tags": { "self.mag": 1, "heal": 8 },
+      "note": "魔力 40 ＋ 回復 20"
+    },
+    {
+      "id": "lyrebird_lament", "name": "哀歌", "en": "Lament",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：對手力量與魔力中較高的一項 −1 階。",
+      "tags": { "foe.atk": -1 },
+      "note": "對手主要攻擊能力 −1 階 40（以 foe.atk 計價）"
+    },
+    {
+      "id": "lyrebird_rondo", "name": "迴旋曲", "en": "Rondo",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "「和聲」：命中後，餘音再響一次。",
+      "tags": { "custom": 30 },
+      "note": "副歌的完成版：威力 85 ＋ 餘音再響一次（30）"
+    },
+    {
+      "id": "lyrebird_answer", "name": "應和", "en": "Answering Call",
+      "element": "wind", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手攻擊我方時",
+      "exclusive": "lyrebird",
+      "text": "該次傷害 −30%；琴鳥在場時「和聲」：餘音再響一次。",
+      "tags": { "reduce": 0.3, "custom": 30, "odds": 0.85 },
+      "note": "減傷 30%（26）＋ 和聲一次（30）；對手幾乎每回合都會攻擊，機率 0.85"
+    },
+    {
+      "id": "lyrebird_serenade", "name": "星夜小夜曲", "en": "Starlit Serenade",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：我方全隊（含後備）回復 8% 最大生命。",
+      "tags": { "teamHeal": 8 },
+      "note": "全隊回復 8%（30）"
+    },
+    {
+      "id": "lyrebird_aria", "name": "詠嘆調", "en": "Heavenly Aria",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "〔歌〕曲：魔力 +1 階，回復 10% 最大生命。",
+      "tags": { "self.mag": 1, "heal": 10, "sig": 1 },
+      "note": "魔力 40 ＋ 回復 25"
+    },
+    {
+      "id": "u_lyrebird", "name": "天籟終章", "en": "Heavenly Finale",
+      "element": "wind", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 130, "accuracy": 100, "priority": 0,
+      "exclusive": "lyrebird",
+      "text": "我方全隊（含後備）回復 15% 最大生命。「和聲」：命中後，餘音連響兩次。",
+      "tags": { "teamHeal": 15, "custom": 60 },
+      "note": "改寫舊奧義：全隊回復 15%（56）＋ 餘音再響兩次（60）"
+    },
+    {
+      "id": "skyreign_peck", "name": "啄擊", "en": "Quick Peck",
+      "element": "wind", "category": "physical",
+      "cost": 0, "power": 40, "accuracy": 100, "priority": 1,
+      "exclusive": "skyreign",
+      "text": "〔拍〕先制 +1，2 段。",
+      "tags": { "hits": 2 }
+    },
+    {
+      "id": "skyreign_swoop", "name": "掠擊", "en": "Swoop",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "〔拍〕落在「強拍」時，對手速度 −1 階。",
+      "tags": { "cond": 22 },
+      "note": "強拍 +50% × 約 40% 機會（12）＋ 強拍時對手速度 −1（25 × 0.4 = 10）"
+    },
+    {
+      "id": "skyreign_ruffle", "name": "抖羽", "en": "Ruffle",
+      "element": "wind", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "速度 +1 階；拍子跳到第二拍（下一段〔拍〕就是「強拍」）。",
+      "tags": { "self.spd": 1, "custom": 30 },
+      "note": "保證下一記重擊落在強拍（+50% × 約 60 威力 ≈ 30）"
+    },
+    {
+      "id": "skyreign_flurry", "name": "三連啄", "en": "Triple Peck",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 72, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "〔拍〕3 段。對手有護盾或替身時，威力 +30。",
+      "tags": { "hits": 3, "cond": 19 },
+      "note": "3 段必有一段強拍（+11）＋ 對手有護盾或替身時 +30（× 0.25 ≈ 8）；連擊拆護盾與替身"
+    },
+    {
+      "id": "skyreign_dive", "name": "俯衝", "en": "Dive",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "〔拍〕單段。",
+      "tags": { "cond": 20 },
+      "note": "單段重擊，照著拍子用：強拍 +50% × 約 40% 機會 ≈ 20"
+    },
+    {
+      "id": "skyreign_flit", "name": "掠影", "en": "Flit Away",
+      "element": "wind", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "〔拍〕命中後與後備替換。",
+      "tags": { "pivot": 1, "cond": 10 },
+      "note": "強拍 +50% × 約 40% 機會 ≈ 10；代價：離場時拍子歸零"
+    },
+    {
+      "id": "skyreign_falcon", "name": "疾隼擊", "en": "Falcon Strike",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 1,
+      "exclusive": "skyreign",
+      "text": "〔拍〕先制 +1，單段。",
+      "tags": { "cond": 14 },
+      "note": "強拍 +50% × 約 40% 機會 ≈ 14"
+    },
+    {
+      "id": "skyreign_skyfall", "name": "蒼風裂空", "en": "Skyfall Rend",
+      "element": "wind", "category": "physical",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "skyreign",
+      "text": "〔拍〕單段；落在「強拍」時，拍子停在第二拍（下一段〔拍〕還是強拍）。",
+      "tags": { "cond": 45, "sig": 1 },
+      "note": "強拍 +50%（50 × 0.5 = 25）＋ 強拍後下一段還是強拍（約 +40 × 0.5 = 20）"
+    },
+    {
+      "id": "u_skyreign", "name": "隼王三擊", "en": "Falcon King's Triad",
+      "element": "wind", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 135, "accuracy": 100, "priority": 1,
+      "exclusive": "skyreign",
+      "text": "先制 +1，3 段；每一段都是「強拍」。",
+      "tags": { "hits": 3, "custom": 68 },
+      "note": "三段都 +50%（68）；不影響拍子"
+    },
+    {
+      "id": "dandelion_puff", "name": "絮彈", "en": "Fluff Shot",
+      "element": "wind", "category": "magic",
+      "cost": 0, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "對手「寄生」中：威力 +20。",
+      "tags": { "cond": 10 },
+      "note": "+20 × 約一半的時間 ≈ 10"
+    },
+    {
+      "id": "dandelion_drift", "name": "飄絮", "en": "Drifting Fluff",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "〔撒種〕2 層；對手沒有「寄生」時，立刻發芽。",
+      "tags": { "custom": 95 },
+      "note": "每層絮種 = 之後一次寄生（3 回合 × 4% 吸取 ≈ 66）× 約 0.6 兌現率 ≈ 40；立刻發芽 15"
+    },
+    {
+      "id": "dandelion_sow", "name": "播絮", "en": "Sow the Wind",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "〔撒種〕1 層。",
+      "tags": { "custom": 40 },
+      "note": "一層絮種 ≈ 40（見飄絮）"
+    },
+    {
+      "id": "dandelion_sap", "name": "吸芽", "en": "Sapping Sprout",
+      "element": "nature", "category": "magic",
+      "cost": 1, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "吸取傷害的 30%。對手「寄生」中：威力 +30。",
+      "tags": { "drain": 0.3, "cond": 15 },
+      "note": "+30 × 約一半的時間 ≈ 15"
+    },
+    {
+      "id": "dandelion_puffball", "name": "絮影", "en": "Puffball Double",
+      "element": "nature", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "消耗 20% 最大生命，製造等量的「替身」。",
+      "tags": { "decoy": 20 }
+    },
+    {
+      "id": "dandelion_glide", "name": "隨風", "en": "Ride the Breeze",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "命中後與後備替換。",
+      "tags": { "pivot": 1 }
+    },
+    {
+      "id": "dandelion_bloom", "name": "綻絮", "en": "Bursting Bloom",
+      "element": "nature", "category": "magic",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "對手「寄生」中：威力 +50。",
+      "tags": { "cond": 25 },
+      "note": "+50 × 約一半的時間 ≈ 25"
+    },
+    {
+      "id": "dandelion_web", "name": "絮網", "en": "Fluff Snare",
+      "element": "wind", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的精靈入場時",
+      "exclusive": "dandelion",
+      "text": "入場的精靈立刻「寄生」3 回合；對手陣地的絮種 +1 層。",
+      "tags": { "custom": 90, "odds": 0.5 },
+      "note": "立刻寄生（66 × 0.75 ≈ 50）＋ 一層絮種（40）；要對手換人才發動，機率 0.5"
+    },
+    {
+      "id": "dandelion_squall", "name": "千絮飛揚", "en": "Thousand-Seed Gale",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "〔撒種〕1 層；對手沒有「寄生」時，立刻發芽。",
+      "tags": { "custom": 55, "sig": 1 },
+      "note": "一層絮種（40）＋ 立刻發芽、不必等到回合結束（15）"
+    },
+    {
+      "id": "u_dandelion", "name": "千絮之冠", "en": "Crown of Seeds",
+      "element": "wind", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 130, "accuracy": 100, "priority": 0,
+      "exclusive": "dandelion",
+      "text": "〔撒種〕撒滿 3 層；對手沒有「寄生」時，立刻發芽。",
+      "tags": { "custom": 110 },
+      "note": "補滿絮種（平均補 2.5 層 ≈ 100）＋ 立刻發芽（10）"
+    },
+    {
+      "id": "papercrane_cut", "name": "紙刃", "en": "Paper Cut",
+      "element": "wind", "category": "magic",
+      "cost": 0, "power": 40, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "〔寫信〕1 封。",
+      "tags": { "custom": 25 },
+      "note": "一封信：接手的隊友 3 回合攻擊 +20%（約 60）× 約 0.4 兌現率 ≈ 25"
+    },
+    {
+      "id": "papercrane_fold", "name": "摺信", "en": "Fold a Letter",
+      "element": "neutral", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "〔寫信〕2 封；回復 5% 最大生命。",
+      "tags": { "custom": 50, "heal": 5 },
+      "note": "兩封信（50）＋ 回復 5%（12.5）"
+    },
+    {
+      "id": "papercrane_relay", "name": "送信", "en": "Special Delivery",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "命中後與後備替換。",
+      "tags": { "pivot": 1 }
+    },
+    {
+      "id": "papercrane_gust", "name": "信風", "en": "Letter Wind",
+      "element": "wind", "category": "magic",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "〔寫信〕1 封。",
+      "tags": { "custom": 25 },
+      "note": "一封信 ≈ 25（見紙刃）"
+    },
+    {
+      "id": "papercrane_charm", "name": "平安符", "en": "Paper Charm",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "解除我方全隊（含後備）的異常狀態，並回復 8% 最大生命（含後備）。",
+      "tags": { "teamCleanse": 1, "teamHeal": 8 }
+    },
+    {
+      "id": "papercrane_wish", "name": "千羽之願", "en": "Thousand-Crane Wish",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "「許願」：下回合結束時，我方在場精靈回復 35% 最大生命。",
+      "tags": { "wish": 35 }
+    },
+    {
+      "id": "papercrane_screen", "name": "紙屏", "en": "Paper Screen",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "我方陣地展開「晶壁」與「光幕」5 回合：受到的武技、魔法傷害各 −12%。",
+      "tags": { "screenPhys": 12, "screenMag": 12 }
+    },
+    {
+      "id": "papercrane_thousand", "name": "千羽信", "en": "Thousand Letters",
+      "element": "wind", "category": "magic",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "〔寫信〕2 封。",
+      "tags": { "custom": 50, "sig": 1 },
+      "note": "兩封信 ≈ 50"
+    },
+    {
+      "id": "u_papercrane", "name": "千羽鶴", "en": "Thousand Cranes",
+      "element": "wind", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 130, "accuracy": 100, "priority": 0,
+      "exclusive": "papercrane",
+      "text": "我方全隊（含後備）回復 15% 最大生命；信寫滿 3 封。",
+      "tags": { "teamHeal": 15, "custom": 60 },
+      "note": "全隊回復 15%（56）＋ 補滿信（平均約 2.4 封 ≈ 60）"
+    }
+  ]
+}

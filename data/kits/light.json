@@ -1,0 +1,830 @@
+{
+  "spirits": {
+    "chime_sprite": {
+      "concept": "晨鈴以三音祈禱：攻擊是「鳴」、秘術是「清」、伏技發動是「守」；三音湊齊便「和鳴」，一邊傷敵一邊療癒，越唱越響。",
+      "mechanic": { "name": "鈴律", "text": "晨鈴仙使用攻擊技能記下「鳴」、使用秘術記下「清」、自己的伏技發動時記下「守」（顯示在身上，離場清空）。三音湊齊時「和鳴」：清空三音，對手受到其最大生命 12% 的傷害，晨鈴仙回復 12% 最大生命。" },
+      "trait": { "name": "清音", "text": "入場時翻開對手設置中的伏技，並在「鈴律」記下「守」。" },
+      "learnset": [
+        { "lv": 1, "id": "chime_ring" },
+        { "lv": 1, "id": "chime_clear_bell" },
+        { "lv": 5, "id": "chime_ward_bell" },
+        { "lv": 9, "id": "healing_light" },
+        { "lv": 13, "id": "meditate" },
+        { "lv": 17, "id": "chime_dispel_toll" },
+        { "lv": 20, "id": "holy_lance" },
+        { "lv": 24, "id": "chime_matins" },
+        { "lv": 28, "id": "chime_bell_ward" },
+        { "lv": 32, "id": "chime_resonance" },
+        { "lv": 36, "id": "chime_silence_bell" },
+        { "lv": 40, "id": "chime_sanctus" },
+        { "lv": 46, "id": "chime_crescendo" }
+      ],
+      "ultimate": "u_chime_sprite",
+      "core": ["chime_crescendo", "chime_matins", "chime_ward_bell", "chime_ring", "chime_resonance"]
+    },
+    "luminael": {
+      "concept": "晨星是夜裡最後一顆星、也是第一道光：以「逆光」翻轉行動順序，讓負先制的審判搶先落下；不逆光時就後發制人，懲罰對手每一個不出手的回合。",
+      "mechanic": { "name": "逆光", "text": "「逆光」期間行動順序反轉：速度慢的先行動，攻擊技能的先制值正負顛倒（格擋、替換與秘術不變）。露米娜爾的攻擊多為負先制：平時最後出手（昏），逆光中搶先出手（晨）；技能依「先出手」或「後出手」發揮不同效果。" },
+      "learnset": [
+        { "lv": 1, "id": "luminael_dawn_plume" },
+        { "lv": 1, "id": "luminael_dawnlight" },
+        { "lv": 5, "id": "luminael_star_lance" },
+        { "lv": 9, "id": "luminael_sanctuary" },
+        { "lv": 13, "id": "luminael_dusk_judgment" },
+        { "lv": 17, "id": "healing_light" },
+        { "lv": 22, "id": "luminael_morningstar_verdict" },
+        { "lv": 26, "id": "luminael_daybreak" },
+        { "lv": 30, "id": "luminael_morningstar_inversion" },
+        { "lv": 35, "id": "luminael_meteor" },
+        { "lv": 42, "id": "luminael_radiant_cannon" },
+        { "lv": 47, "id": "luminael_morningstar_oath" },
+        { "lv": 52, "id": "luminael_twin_stars" }
+      ],
+      "ultimate": "u_luminael",
+      "core": ["luminael_morningstar_verdict", "luminael_morningstar_inversion", "luminael_dawn_plume", "luminael_radiant_cannon", "luminael_dawnlight"]
+    },
+    "candledove": {
+      "concept": "聖都鐘樓的和平之鴿：牠在場時，誰的強化都撐不過回合結束；以光幕守住隊伍，再銜著橄欖枝把位置交給同伴。",
+      "mechanic": { "name": "和平", "text": "光冠聖鴿在場時，每回合結束，雙方在場精靈的能力提升（正的能力階級）全部消除；能力下降保留。" },
+      "learnset": [
+        { "lv": 1, "id": "holy_ray" },
+        { "lv": 1, "id": "dawn_prayer" },
+        { "lv": 5, "id": "wind_cutter" },
+        { "lv": 9, "id": "holy_lance" },
+        { "lv": 13, "id": "candledove_olive_branch" },
+        { "lv": 17, "id": "healing_light" },
+        { "lv": 21, "id": "candledove_candle_wish" },
+        { "lv": 24, "id": "candledove_bell_toll" },
+        { "lv": 26, "id": "candledove_twin_candles" },
+        { "lv": 30, "id": "candledove_truce" },
+        { "lv": 38, "id": "candledove_halo_beam" }
+      ],
+      "ultimate": "u_candledove",
+      "core": ["candledove_halo_beam", "candledove_twin_candles", "holy_lance", "holy_ray", "candledove_olive_branch"]
+    },
+    "prismsnail": {
+      "concept": "殼是一扇玫瑰窗：磨出的每一面「稜面」都把魔法折回施術者；武技會敲碎玻璃，但稜面越多，它的虹光也越亮。",
+      "mechanic": { "name": "稜面", "text": "聖窗巨蝸的殼上有「稜面」（最多 3 面，顯示在身上，離場歸零）。每面稜面使特性「稜鏡」的反彈再 +10%；受到武技攻擊時，擊碎 1 面稜面。寫著〔稜彩〕的技能依稜面數變強。" },
+      "trait": { "name": "稜鏡", "text": "受到魔法攻擊而未倒下時，將傷害的 20% 反彈給攻擊者（每面「稜面」再 +10%）。" },
+      "learnset": [
+        { "lv": 1, "id": "prismsnail_glint" },
+        { "lv": 1, "id": "prismsnail_polish" },
+        { "lv": 5, "id": "holy_lance" },
+        { "lv": 9, "id": "prism_refract" },
+        { "lv": 13, "id": "prismsnail_rose_window" },
+        { "lv": 17, "id": "healing_light" },
+        { "lv": 21, "id": "prismsnail_mirror" },
+        { "lv": 24, "id": "sand_blast" },
+        { "lv": 29, "id": "prismsnail_glass_armor" },
+        { "lv": 35, "id": "prismsnail_rainbow" },
+        { "lv": 42, "id": "prismsnail_stained_glass" }
+      ],
+      "ultimate": "u_prismsnail",
+      "core": ["prism_refract", "prismsnail_glass_armor", "prismsnail_mirror", "prismsnail_glint", "prismsnail_rainbow"]
+    },
+    "balancescale": {
+      "concept": "天平一端上升，另一端必然下降：替自己加上砝碼，對手就同樣減輕；秤差越大，裁決越重，最後把兩端歸零一次清算。",
+      "mechanic": { "name": "對秤", "text": "公義天秤的專屬技能使自身能力階級上升時，對手在場精靈的同一項能力下降相同的階數。「秤差」＝ 天平的能力階級總和 − 對手的能力階級總和（顯示在身上）；寫著〔裁決〕的技能依秤差變強。" },
+      "trait": { "name": "秩序", "text": "自身的能力階級不會被對手降低。入場時，對手力量與魔力中較高的一項 −1 階。" },
+      "learnset": [
+        { "lv": 1, "id": "balancescale_scale_ray" },
+        { "lv": 1, "id": "balancescale_weight" },
+        { "lv": 5, "id": "balancescale_equalize" },
+        { "lv": 9, "id": "balancescale_stance" },
+        { "lv": 13, "id": "holy_lance" },
+        { "lv": 17, "id": "balancescale_level" },
+        { "lv": 21, "id": "healing_light" },
+        { "lv": 22, "id": "balancescale_judgment" },
+        { "lv": 28, "id": "balancescale_counterpoise" },
+        { "lv": 33, "id": "balancescale_double_weight" },
+        { "lv": 38, "id": "balancescale_sentence" },
+        { "lv": 44, "id": "balance_verdict" }
+      ],
+      "ultimate": "u_balancescale",
+      "core": ["balancescale_judgment", "balancescale_weight", "balancescale_level", "balancescale_scale_ray", "balance_verdict"]
+    },
+    "griffin": {
+      "concept": "聖騎士的坐騎：騎士在鞍上時每一擊都有騎槍追擊；格擋與重擊會把騎士打落，獅鷲就化悲憤為孤翼之怒，再吹號讓騎士歸鞍。",
+      "mechanic": { "name": "騎乘", "text": "騎士在鞍上時（「騎乘」），獅鷲的專屬攻擊命中後，騎士以「騎槍」追擊（威力 ×0.5）。獅鷲的攻擊被「格擋」、或一次受到最大生命 25% 以上的攻擊傷害時，騎士「落鞍」。「登鞍」類技能讓騎士回到鞍上；離場時騎士下鞍。" },
+      "trait": { "name": "聖騎之誓", "text": "入場時騎士上鞍（「騎乘」）。" },
+      "learnset": [
+        { "lv": 1, "id": "griffin_lance" },
+        { "lv": 1, "id": "griffin_remount" },
+        { "lv": 5, "id": "holy_dive" },
+        { "lv": 9, "id": "radiant_slash" },
+        { "lv": 13, "id": "griffin_charge" },
+        { "lv": 17, "id": "sky_slash" },
+        { "lv": 20, "id": "griffin_sacrifice" },
+        { "lv": 24, "id": "griffin_twin_lance" },
+        { "lv": 28, "id": "griffin_lone_wrath" },
+        { "lv": 32, "id": "griffin_gale_thrust" },
+        { "lv": 36, "id": "griffin_oath_guard" },
+        { "lv": 40, "id": "griffin_rally" },
+        { "lv": 46, "id": "griffin_cavalry" }
+      ],
+      "ultimate": "u_griffin",
+      "core": ["griffin_cavalry", "griffin_twin_lance", "griffin_rally", "griffin_lance", "griffin_charge"]
+    },
+    "astragate": {
+      "concept": "守門人不讓任何東西通過：擋下的招式被封印、傷害封存為星輝；被封印的對手只能硬拚，再「開門」把一切加倍奉還。",
+      "mechanic": { "name": "星門封存", "text": "阿斯特拉「擋下」攻擊時（格擋、星門技能、伏技）：那個技能被「封印」3 回合，擋下的傷害存為「星輝」（最多為最大生命的 40%，以百分比顯示）。有星輝時「開門」技能「無視格擋」，並釋放星輝造成固定傷害。星輝在離場時消散。" },
+      "learnset": [
+        { "lv": 1, "id": "astragate_starstone_strike" },
+        { "lv": 1, "id": "astragate_gate_stream" },
+        { "lv": 5, "id": "astragate_gate_lock" },
+        { "lv": 9, "id": "starlight_bulwark" },
+        { "lv": 13, "id": "provoke" },
+        { "lv": 17, "id": "astragate_barrier_rebuild" },
+        { "lv": 22, "id": "astragate_gate_toll" },
+        { "lv": 26, "id": "astragate_meteor_counter" },
+        { "lv": 30, "id": "astragate_gate_flood" },
+        { "lv": 34, "id": "astragate_gate_reversal" },
+        { "lv": 38, "id": "astragate_star_mending" },
+        { "lv": 43, "id": "astragate_bastion_slam" },
+        { "lv": 48, "id": "astragate_gate_seal" }
+      ],
+      "ultimate": "u_astragate",
+      "core": ["astragate_gate_flood", "starlight_bulwark", "astragate_starstone_strike", "astragate_meteor_counter", "astragate_gate_stream"]
+    }
+  },
+  "skills": [
+    {
+      "id": "luminael_dawn_plume", "name": "晨光羽", "en": "Dawn Plume",
+      "element": "light", "category": "magic",
+      "cost": 0, "power": 60, "accuracy": 100, "priority": -1,
+      "exclusive": "luminael",
+      "text": "先制 −1。「先出手」時，命中後回復 10% 最大生命。",
+      "tags": { "custom": 12 },
+      "note": "回復 10%（25）× 先出手機率約 0.5 ≈ 12"
+    },
+    {
+      "id": "luminael_dawnlight", "name": "晨曦逆光", "en": "Dawnlight Inversion",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "luminael",
+      "text": "「逆光」3 回合；已在逆光中時，改為恢復正常的行動順序。",
+      "tags": { "custom": 80 },
+      "note": "逆光：改寫行動順序的全場規則，約場地（90）× 3/5 回合 ≈ 55，加上露米娜爾負先制攻擊翻正的價值約 25"
+    },
+    {
+      "id": "luminael_star_lance", "name": "晨星之矛", "en": "Morningstar Lance",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 120, "accuracy": 100, "priority": -2,
+      "exclusive": "luminael",
+      "text": "先制 −2。",
+      "tags": {}
+    },
+    {
+      "id": "luminael_sanctuary", "name": "晨星聖域", "en": "Morningstar Sanctuary",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "luminael",
+      "text": "場地變為「聖域」5 回合，並解除自身的異常狀態。",
+      "tags": { "field": 1, "cleanse": 1 }
+    },
+    {
+      "id": "luminael_dusk_judgment", "name": "昏星審判", "en": "Dusk Judgment",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": -2,
+      "exclusive": "luminael",
+      "text": "先制 −2。「後出手」時，若對手本回合沒有使用攻擊技能，威力 ×2。",
+      "tags": { "custom": 28 },
+      "note": "威力 +100 × 後出手且對手沒攻擊（設伏、強化、替換、回復）的機率約 0.28"
+    },
+    {
+      "id": "luminael_morningstar_verdict", "name": "晨星裁決", "en": "Morningstar Verdict",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": -2,
+      "exclusive": "luminael",
+      "text": "先制 −2。「先出手」時必定暴擊。",
+      "tags": { "custom": 55, "sig": 1 },
+      "note": "必定暴擊 = 威力 × 0.5 × 95%（62）× 先出手機率約 0.55（逆光中必定先出手）≈ 33"
+    },
+    {
+      "id": "luminael_daybreak", "name": "破曉", "en": "Daybreak",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "luminael",
+      "text": "消除對手的「回合類效果」。",
+      "tags": { "dispelTurns": 1 }
+    },
+    {
+      "id": "luminael_morningstar_inversion", "name": "晨星逆光", "en": "Morningstar Inversion",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "luminael",
+      "text": "「逆光」5 回合（已在逆光中時，改為恢復正常的行動順序），並使自身魔力 +1 階。",
+      "tags": { "self.mag": 1, "custom": 80 },
+      "note": "逆光 5 回合約等於一個場地（90），扣掉有時拿來解除逆光 → 80"
+    },
+    {
+      "id": "luminael_meteor", "name": "流星", "en": "Falling Star",
+      "element": "light", "category": "magic",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 2,
+      "exclusive": "luminael",
+      "text": "先制 +2（「逆光」中變為先制 −2）。",
+      "tags": {}
+    },
+    {
+      "id": "luminael_radiant_cannon", "name": "晨星光砲", "en": "Morningstar Cannon",
+      "element": "light", "category": "magic",
+      "cost": 4, "power": 160, "accuracy": 100, "priority": -2,
+      "exclusive": "luminael",
+      "text": "先制 −2。無視對手 20% 抗魔。",
+      "tags": { "armorPen": 0.2 }
+    },
+    {
+      "id": "luminael_morningstar_oath", "name": "晨星之誓", "en": "Morningstar Oath",
+      "element": "light", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手使用秘術時",
+      "exclusive": "luminael",
+      "text": "使該秘術無效；行動順序正常時，再展開「逆光」3 回合。",
+      "tags": { "negateSkill": 1, "custom": 45, "odds": 0.5 },
+      "note": "逆光 3 回合 ≈ 55 × 不在逆光中的機率 0.8 ≈ 45"
+    },
+    {
+      "id": "luminael_twin_stars", "name": "晨昏同天", "en": "Dawn and Dusk as One",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "luminael",
+      "text": "3 回合內，露米娜爾同時視為「先出手」與「後出手」。",
+      "tags": { "custom": 115, "sig": 1 },
+      "note": "晨星裁決必定暴擊（約 +60／次）、昏星審判在對手不攻擊時翻倍、晨光羽必定回復；3 回合約觸發 2 次 ≈ 115"
+    },
+    {
+      "id": "u_luminael", "name": "晨星天啟", "en": "Morningstar Revelation",
+      "element": "light", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 230, "accuracy": 100, "priority": -2,
+      "exclusive": "luminael",
+      "text": "先制 −2。「逆光」中「無視格擋」；行動順序正常時，命中後展開「逆光」5 回合。",
+      "tags": { "custom": 50 },
+      "note": "逆光中無視格擋（20）× 0.6 ≈ 12；不在逆光中時展開逆光（約 90）× 0.4 ≈ 36 → 50"
+    },
+    {
+      "id": "astragate_starstone_strike", "name": "星石擊", "en": "Starstone Strike",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 53, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "對手有技能處於「封印」時，威力 +30。",
+      "tags": { "cond": 15 },
+      "note": "+30 × 對手有技能被封印的機率約 0.5（封印 3 回合，實測約 48% 的回合）"
+    },
+    {
+      "id": "astragate_gate_stream", "name": "開門・星流", "en": "Gate Stream",
+      "element": "light", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "「開門」：有「星輝」時「無視格擋」；命中後釋放全部「星輝」，造成等量的固定傷害。",
+      "tags": { "custom": 36 },
+      "note": "釋放 ×1 → 記 0.5 × 72 ≈ 36（星輝的價值由存入與釋放各算一半：存入的技能記 0.5 倍，釋放的技能記「倍率 − 0.5」倍；1 倍 ≈ 對手 30% 生命 × 可靠度 0.8 ≈ 72）"
+    },
+    {
+      "id": "astragate_gate_toll", "name": "星界關卡", "en": "Gate Toll",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "在對手陣地佈下「入場陷阱」：對手之後每次替換入場時，受到其最大生命 12% 的傷害。自身護甲 +1 階。",
+      "tags": { "hazard": 12, "self.def": 1 }
+    },
+    {
+      "id": "astragate_barrier_rebuild", "name": "結界重構", "en": "Barrier Rebuild",
+      "element": "earth", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "我方陣地展開「晶壁」與「光幕」5 回合：受到的武技、魔法傷害各 −20%。",
+      "tags": { "screenPhys": 20, "screenMag": 20 }
+    },
+    {
+      "id": "astragate_gate_lock", "name": "星門鎖", "en": "Gate Lock",
+      "element": "light", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "使對手「束縛」2 回合。",
+      "tags": { "status.root": 1 }
+    },
+    {
+      "id": "starlight_bulwark", "name": "星輝壁壘", "en": "Starlight Bulwark",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 3,
+      "exclusive": "astragate",
+      "text": "先制 +3。本回合受到的攻擊傷害 −50%，並視為「擋下」：整次攻擊的傷害存為星輝，被減免的部分另外反彈 50%。不能連續使用。",
+      "tags": { "custom": 145, "sig": 1 },
+      "note": "減傷 50%（44）× 被攻擊機率 0.7 ≈ 31；封印 3 回合（105）× 0.6 ≈ 63；存入約 25% 生命的星輝 → 0.5 × 72 ≈ 36；反彈 ≈ 15（星輝的價值由存入與釋放各算一半：存入的技能記 0.5 倍，釋放的技能記「倍率 − 0.5」倍；1 倍 ≈ 對手 30% 生命 × 可靠度 0.8 ≈ 72）"
+    },
+    {
+      "id": "astragate_meteor_counter", "name": "星隕反擊", "en": "Meteor Counter",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "若對手有技能處於「封印」，威力 +50。",
+      "tags": { "cond": 25 },
+      "note": "+50 × 對手有技能被封印的機率約 0.5（封印 3 回合，實測約 48% 的回合）"
+    },
+    {
+      "id": "astragate_gate_flood", "name": "開門・星河決堤", "en": "Starflood Gate",
+      "element": "light", "category": "physical",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "「開門」：有「星輝」時「無視格擋」；命中後釋放全部「星輝」，造成其 150% 的固定傷害。",
+      "tags": { "custom": 72, "sig": 1 },
+      "note": "釋放 ×1.5 → 記 1.0 × 72 ≈ 72（實測每次約釋放對手 45% 生命）（星輝的價值由存入與釋放各算一半：存入的技能記 0.5 倍，釋放的技能記「倍率 − 0.5」倍；1 倍 ≈ 對手 30% 生命 × 可靠度 0.8 ≈ 72）"
+    },
+    {
+      "id": "astragate_gate_reversal", "name": "星門反轉", "en": "Gate Reversal",
+      "element": "light", "category": "trap",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手使用攻擊技能時",
+      "exclusive": "astragate",
+      "text": "使該次攻擊無效，並視為「擋下」（封印該技能、把它的傷害存為星輝）。",
+      "tags": { "negateSkill": 1, "custom": 85, "odds": 0.6 },
+      "note": "擋下 = 封印 3 回合（63）＋ 存入星輝（22）"
+    },
+    {
+      "id": "astragate_star_mending", "name": "星輝修復", "en": "Star Mending",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "回復 15% 最大生命，並消耗全部「星輝」，回復等量的生命。",
+      "tags": { "heal": 15, "custom": 60 },
+      "note": "消耗星輝回復等量生命（釋放 ×1 的另一種用法）：約 25% 生命 → 0.5 × 72 ≈ 36，加上可以換成傷害或生命的彈性 ≈ 60"
+    },
+    {
+      "id": "astragate_bastion_slam", "name": "磐門重擊", "en": "Bastion Slam",
+      "element": "earth", "category": "physical",
+      "cost": 4, "power": 130, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "以自身「護甲」代替「力量」計算傷害。",
+      "tags": { "useDef": 1, "cond": 25 },
+      "note": "阿斯特拉護甲 110、力量 90：約 +22% 傷害，加上挑釁、關卡的護甲強化"
+    },
+    {
+      "id": "astragate_gate_seal", "name": "星門全閉", "en": "Sealed Gate",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "3 回合內，命中阿斯特拉的攻擊技能都會被「封印」3 回合，並把該次傷害的 40% 存為「星輝」。",
+      "tags": { "custom": 120, "sig": 1 },
+      "note": "約 3 次命中 ×（封印 3 回合 32 ＋ 存入約 10% 生命的星輝 → 0.5 × 16 ≈ 8）≈ 120"
+    },
+    {
+      "id": "u_astragate", "name": "星門開闢", "en": "Gate of Stars",
+      "element": "light", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "astragate",
+      "text": "「開門」：有「星輝」時「無視格擋」；命中後釋放全部「星輝」，造成其 200% 的固定傷害。",
+      "tags": { "custom": 108 },
+      "note": "釋放 ×2 → 記 1.5 × 72 ≈ 108（星輝的價值由存入與釋放各算一半：存入的技能記 0.5 倍，釋放的技能記「倍率 − 0.5」倍；1 倍 ≈ 對手 30% 生命 × 可靠度 0.8 ≈ 72）"
+    },
+    {
+      "id": "chime_ring", "name": "鈴音", "en": "Chime Note",
+      "element": "light", "category": "magic",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "「鈴律」中每有 1 個音，威力 +20。",
+      "tags": { "cond": 15 },
+      "note": "+20 × 平均約 0.75 個音 ≈ 15"
+    },
+    {
+      "id": "chime_clear_bell", "name": "清鈴", "en": "Clear Bell",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "回復 25% 最大生命，並解除自身的異常狀態。",
+      "tags": { "heal": 25, "cleanse": 1 }
+    },
+    {
+      "id": "chime_ward_bell", "name": "守鈴", "en": "Ward Bell",
+      "element": "light", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手使用攻擊技能時",
+      "exclusive": "chime_sprite",
+      "text": "該次傷害 −50%。",
+      "tags": { "reduce": 0.5, "custom": 12, "odds": 0.8 },
+      "note": "custom：發動時記下「守」，湊和鳴"
+    },
+    {
+      "id": "chime_dispel_toll", "name": "破妄鈴", "en": "Dispelling Toll",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "命中後，破壞對手設置中的伏技。",
+      "tags": { "destroyTrap": 1 }
+    },
+    {
+      "id": "chime_bell_ward", "name": "鐘罩", "en": "Bell Ward",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 3,
+      "exclusive": "chime_sprite",
+      "text": "先制 +3。本回合受到的攻擊傷害 −40%；「鈴律」記下「守」（而不是「清」）。",
+      "tags": { "custom": 76 },
+      "note": "一回合 −40% ≈ 45 ＋ 不靠伏技的「守」≈ 25"
+    },
+    {
+      "id": "chime_matins", "name": "晨禱清唱", "en": "Matins",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "回復 30% 最大生命；「鈴律」除了「清」，再記下「鳴」。",
+      "tags": { "heal": 30, "custom": 55, "sig": 1 },
+      "note": "一次記下兩音 ≈ 省下一個行動的一半；三音湊齊的和鳴（12% 傷害＋12% 回復）約 110 × 0.5 ≈ 55"
+    },
+    {
+      "id": "chime_resonance", "name": "共鳴光", "en": "Resonant Light",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "「鈴律」中有「守」時，威力 +40。",
+      "tags": { "cond": 20 },
+      "note": "+40 × 有守的機率約 0.5"
+    },
+    {
+      "id": "chime_silence_bell", "name": "肅靜之鐘", "en": "Hush Bell",
+      "element": "light", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手使用秘術時",
+      "exclusive": "chime_sprite",
+      "text": "使該秘術無效。",
+      "tags": { "negateSkill": 1, "custom": 15, "odds": 0.6 },
+      "note": "custom：發動時記下「守」，湊和鳴"
+    },
+    {
+      "id": "chime_sanctus", "name": "聖詠", "en": "Sanctus",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "3 回合內，每回合結束時「鈴律」自動記下「守」。",
+      "tags": { "custom": 95 },
+      "note": "約 2 次守（不必設伏技，省 2 靈能與伏技槽）；讓和鳴每 2 回合一次 ≈ 95"
+    },
+    {
+      "id": "chime_crescendo", "name": "終章・萬鈴齊鳴", "en": "Grand Carillon",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "本場每「和鳴」過 1 次，威力 +40（最多 +160）。",
+      "tags": { "cond": 65, "sig": 1 },
+      "note": "中後期平均和鳴約 1.6 次 × 40 ≈ 65"
+    },
+    {
+      "id": "u_chime_sprite", "name": "晨鐘天籟", "en": "Dawn Carillon",
+      "element": "light", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "chime_sprite",
+      "text": "命中後立刻「和鳴」（不需湊齊三音，也不清空已記下的音）。",
+      "tags": { "custom": 90 },
+      "note": "一次和鳴：對手 12% 傷害＋自身 12% 回復 ≈ 90"
+    },
+    {
+      "id": "griffin_lance", "name": "騎槍", "en": "Knight's Lance",
+      "element": "light", "category": "physical",
+      "cost": 0, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "騎士的長槍。「騎乘」中，騎士追擊也使用這一招（威力 ×0.5）。",
+      "tags": {}
+    },
+    {
+      "id": "griffin_remount", "name": "登鞍", "en": "Remount",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "騎士上鞍（「騎乘」），並使自身速度 +1 階。",
+      "tags": { "custom": 55, "self.spd": 1 },
+      "note": "騎乘：之後每次專屬攻擊追擊 30 威力，直到落鞍（約 2～3 次）× 落鞍中才會用的機率 → 55"
+    },
+    {
+      "id": "holy_dive", "name": "聖光俯衝", "en": "Holy Dive",
+      "element": "light", "category": "physical",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 1,
+      "exclusive": "griffin",
+      "text": "先制 +1。",
+      "tags": {}
+    },
+    {
+      "id": "griffin_charge", "name": "聖騎衝鋒", "en": "Paladin Charge",
+      "element": "light", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "「騎乘」中，威力 +35。",
+      "tags": { "cond": 20 },
+      "note": "+35 × 騎乘中的機率約 0.6"
+    },
+    {
+      "id": "griffin_sacrifice", "name": "捨身護主", "en": "Rider's Sacrifice",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 3,
+      "exclusive": "griffin",
+      "text": "先制 +3。「騎乘」中才能使用。本回合受到的攻擊傷害 −60%；回合結束時騎士「落鞍」。",
+      "tags": { "custom": 88 },
+      "note": "一回合 −60% 傷害 ≈ 保護類 100，扣掉落鞍的代價與使用條件"
+    },
+    {
+      "id": "griffin_twin_lance", "name": "雙槍突", "en": "Twin Lances",
+      "element": "light", "category": "physical",
+      "cost": 2, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "「騎乘」中，命中後騎士追擊 2 次（原為 1 次）。",
+      "tags": { "custom": 45, "sig": 1 },
+      "note": "兩次 30 威力的追擊 × 騎乘中約 0.75 ≈ 45"
+    },
+    {
+      "id": "griffin_lone_wrath", "name": "孤翼之怒", "en": "Lone Wing's Wrath",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "騎士不在鞍上時，威力 +60。",
+      "tags": { "cond": 25 },
+      "note": "+60 × 落鞍中的機率約 0.4"
+    },
+    {
+      "id": "griffin_gale_thrust", "name": "疾風突刺", "en": "Gale Thrust",
+      "element": "wind", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 1,
+      "exclusive": "griffin",
+      "text": "先制 +1。",
+      "tags": {}
+    },
+    {
+      "id": "griffin_oath_guard", "name": "誓約護主", "en": "Oath of the Guardian",
+      "element": "light", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "獅鷲將被攻擊擊倒時",
+      "exclusive": "griffin",
+      "text": "「騎乘」中：騎士捨身擋下，獅鷲保留 1 點生命；騎士「落鞍」。",
+      "tags": { "lifeSave": 1, "odds": 0.45 }
+    },
+    {
+      "id": "griffin_rally", "name": "聖騎號角", "en": "Paladin's Horn",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "騎士上鞍（「騎乘」），並回復 30% 最大生命。",
+      "tags": { "heal": 30, "custom": 45 },
+      "note": "騎乘 ≈ 55 × 落鞍時才用的機率"
+    },
+    {
+      "id": "griffin_cavalry", "name": "聖騎破陣", "en": "Cavalry Breach",
+      "element": "light", "category": "physical",
+      "cost": 3, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "「騎乘」中，命中後騎士全力追擊（威力 ×1.0），然後「落鞍」。",
+      "tags": { "custom": 16, "sig": 1 },
+      "note": "追擊多 30 威力 × 騎乘中約 0.9 ≈ 27，扣掉落鞍的代價 ≈ 11"
+    },
+    {
+      "id": "u_griffin", "name": "天翼聖騎", "en": "Winged Paladin",
+      "element": "light", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "griffin",
+      "text": "命中後騎士上鞍（「騎乘」），並追擊 3 次。",
+      "tags": { "custom": 90 },
+      "note": "上鞍 ≈ 30 ＋ 3 次 30 威力的追擊 × 0.65 ≈ 60"
+    },
+    {
+      "id": "balancescale_scale_ray", "name": "秤光", "en": "Scale Ray",
+      "element": "light", "category": "magic",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "〔裁決〕「秤差」每 1 點，威力 +5（最多 +40）。",
+      "tags": { "cond": 12 },
+      "note": "平均秤差約 2.5 × 5"
+    },
+    {
+      "id": "balancescale_weight", "name": "加砝碼", "en": "Counterweight",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "自身魔力 +1 階；對手的力量高於魔力時，改為自身力量 +1 階（「對秤」：對手的同一項 −1 階）。",
+      "tags": { "custom": 80 },
+      "note": "自身 +1（40）＋ 對秤使對手的主要攻擊能力 −1（40）"
+    },
+    {
+      "id": "balancescale_equalize", "name": "平衡波", "en": "Equalizing Wave",
+      "element": "light", "category": "magic",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "對手的能力階級總和高於天平時，命中後消除對手的能力提升。",
+      "tags": { "cond": 18 },
+      "note": "驅散 25 × 對手較重的機率約 0.35 ＋ 自身威力略低"
+    },
+    {
+      "id": "balancescale_stance", "name": "天秤架勢", "en": "Scale Stance",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "自身護甲、抗魔各 +1 階（「對秤」：對手護甲、抗魔各 −1 階）。",
+      "tags": { "custom": 120 },
+      "note": "自身護甲、抗魔 +1（60）＋ 對秤使對手各 −1（60）"
+    },
+    {
+      "id": "balancescale_level", "name": "秤平", "en": "Level the Scales",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "雙方在場精靈的生命比例往平均值靠攏，但各自的變化最多為其最大生命的 20%。不能連續使用。",
+      "tags": { "custom": 75 },
+      "note": "均分（85）的上限版：各自最多 ±20%、不能連續使用"
+    },
+    {
+      "id": "balancescale_judgment", "name": "天秤裁決", "en": "Scale's Judgment",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "〔裁決〕「秤差」每 1 點，威力 +15（最多 +90）。",
+      "tags": { "cond": 50, "sig": 1 },
+      "note": "平均秤差約 3.3 × 15 ≈ 50"
+    },
+    {
+      "id": "balancescale_counterpoise", "name": "失衡懲戒", "en": "Counterpoise",
+      "element": "light", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "對手能力階級上升時",
+      "exclusive": "balancescale",
+      "text": "天平的同一項能力 +1 階（「對秤」：對手的這項能力再 −1 階）。",
+      "tags": { "custom": 75, "odds": 0.55 },
+      "note": "自身 +1 ＋ 對手 −1 ≈ 75；對手強化時發動（強化型對手多）"
+    },
+    {
+      "id": "balancescale_double_weight", "name": "雙砝碼", "en": "Double Counterweight",
+      "element": "neutral", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "自身魔力 +2 階（「對秤」：對手魔力 −2 階）。",
+      "tags": { "custom": 155 },
+      "note": "自身魔力 +2（80）＋ 對手魔力 −2（80），接近上限時打折 ≈ 155"
+    },
+    {
+      "id": "balancescale_sentence", "name": "天平定讞", "en": "Final Sentence",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 125, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "無視對手 20% 抗魔。",
+      "tags": { "armorPen": 0.2 }
+    },
+    {
+      "id": "balance_verdict", "name": "均衡裁決", "en": "Balance Verdict",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "〔裁決〕雙方的能力階級全部歸零；每歸零 1 點「秤差」，對手受到其最大生命 5% 的傷害（最多 40%）。",
+      "tags": { "custom": 125, "sig": 1 },
+      "note": "秤差平均約 5 → 25% 最大生命 ≈ 100 ＋ 清掉對手強化 ≈ 25"
+    },
+    {
+      "id": "u_balancescale", "name": "公義天秤", "en": "Scale of Justice",
+      "element": "light", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "balancescale",
+      "text": "〔裁決〕「秤差」每 1 點，威力 +10（最多 +80）；命中後，自身魔力、抗魔各 +1 階（「對秤」）。",
+      "tags": { "custom": 70 },
+      "note": "秤差 +40 威力 ≈ 30 ＋ 對秤的兩階 ≈ 40"
+    },
+    {
+      "id": "dawn_prayer", "name": "晨禱", "en": "Dawn Prayer",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "我方陣地展開「光幕」5 回合：受到的魔法傷害 −25%。",
+      "tags": { "screenMag": 25 }
+    },
+    {
+      "id": "candledove_olive_branch", "name": "銜枝", "en": "Olive Branch",
+      "element": "wind", "category": "magic",
+      "cost": 1, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "命中後，與後備精靈交換。",
+      "tags": { "pivot": 1 }
+    },
+    {
+      "id": "candledove_bell_toll", "name": "晨鐘", "en": "Morning Bell",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "雙方的能力階級全部歸零（上升與下降都消除），並回復 15% 最大生命。",
+      "tags": { "heal": 15, "custom": 48 },
+      "note": "雙方歸零：清掉自身的能力下降與對手本回合的強化 ≈ 48"
+    },
+    {
+      "id": "candledove_candle_wish", "name": "燭火祈願", "en": "Candle Wish",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "「許願」：下回合結束時，我方在場精靈回復 50% 最大生命。",
+      "tags": { "wish": 50 }
+    },
+    {
+      "id": "candledove_twin_candles", "name": "雙燭幕", "en": "Twin Candles",
+      "element": "light", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "我方陣地展開「光幕」與「晶壁」5 回合：受到的魔法、武技傷害各 −22%。",
+      "tags": { "screenMag": 22, "screenPhys": 22, "sig": 1 }
+    },
+    {
+      "id": "candledove_truce", "name": "休戰協定", "en": "Truce",
+      "element": "light", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "對手設置伏技時",
+      "exclusive": "candledove",
+      "text": "破壞那張伏技，並回復 10% 最大生命。",
+      "tags": { "custom": 65, "heal": 10, "odds": 0.5 },
+      "note": "破壞伏技 ≈ 65（destroyTrap）"
+    },
+    {
+      "id": "candledove_halo_beam", "name": "光冠聖光", "en": "Halo Beam",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "無視對手 20% 抗魔。",
+      "tags": { "armorPen": 0.2 }
+    },
+    {
+      "id": "u_candledove", "name": "聖燭天光", "en": "Sacred Candlelight",
+      "element": "light", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 150, "accuracy": 100, "priority": 0,
+      "exclusive": "candledove",
+      "text": "命中後，我方陣地展開「光幕」與「晶壁」5 回合（各 −15%）。",
+      "tags": { "screenMag": 15, "screenPhys": 15 }
+    },
+    {
+      "id": "prismsnail_glint", "name": "琉光", "en": "Glint",
+      "element": "light", "category": "magic",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "〔稜彩〕每面「稜面」，威力 +5。",
+      "tags": { "cond": 7 },
+      "note": "平均約 1.4 面 × 5"
+    },
+    {
+      "id": "prismsnail_polish", "name": "磨殼", "en": "Polish",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "「稜面」+1，並使自身抗魔 +1 階。",
+      "tags": { "custom": 50, "self.res": 1 },
+      "note": "一面稜面：魔法反彈 +10%（≈27）＋〔稜彩〕威力加成（≈20）≈ 50"
+    },
+    {
+      "id": "prism_refract", "name": "虹光折射", "en": "Prism Refraction",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "〔稜彩〕每面「稜面」，威力 +10。",
+      "tags": { "cond": 15 },
+      "note": "平均約 1.5 面 × 10"
+    },
+    {
+      "id": "prismsnail_rose_window", "name": "玫瑰窗", "en": "Rose Window",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "我方陣地展開「光幕」5 回合（魔法傷害 −20%），並使「稜面」+1。",
+      "tags": { "screenMag": 20, "custom": 45 }
+    },
+    {
+      "id": "prismsnail_mirror", "name": "鏡殼", "en": "Mirror Shell",
+      "element": "light", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手使用攻擊技能時",
+      "exclusive": "prismsnail",
+      "text": "該次傷害 −30%，並在傷害之前使「稜面」+1。",
+      "tags": { "reduce": 0.3, "custom": 30, "odds": 0.8 },
+      "note": "稜面 +1（先於傷害：稜鏡會算進這一面）≈ 30"
+    },
+    {
+      "id": "prismsnail_glass_armor", "name": "琉璃甲", "en": "Glass Armor",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "「稜面」補滿為 3 面，並使自身護甲 +1 階。",
+      "tags": { "custom": 100, "self.def": 1, "sig": 1 },
+      "note": "平均補 2 面 × 50"
+    },
+    {
+      "id": "prismsnail_rainbow", "name": "七彩虹光", "en": "Seven-Color Ray",
+      "element": "light", "category": "magic",
+      "cost": 3, "power": 115, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "〔稜彩〕每面「稜面」，威力 +10。",
+      "tags": { "cond": 17 },
+      "note": "平均約 1.7 面 × 10"
+    },
+    {
+      "id": "prismsnail_stained_glass", "name": "彩窗修補", "en": "Stained Glass",
+      "element": "light", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "回復 30% 最大生命，並使「稜面」+1。",
+      "tags": { "heal": 30, "custom": 40 }
+    },
+    {
+      "id": "u_prismsnail", "name": "聖窗天光", "en": "Rose Window Radiance",
+      "element": "light", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "prismsnail",
+      "text": "〔稜彩〕每面「稜面」，威力 +20；命中後「稜面」補滿為 3 面。",
+      "tags": { "custom": 80 },
+      "note": "稜彩 ≈ 30 ＋ 補滿稜面 ≈ 50"
+    }
+  ]
+}

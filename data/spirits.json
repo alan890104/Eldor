@@ -1,0 +1,1613 @@
+[
+  {
+    "id": "pyre_dragoon",
+    "name": "熾焰龍騎",
+    "en": "Pyre Dragoon",
+    "elements": [
+      "fire"
+    ],
+    "rarity": "R",
+    "role": "突擊・武技",
+    "base": {
+      "hp": 80,
+      "atk": 110,
+      "mag": 60,
+      "def": 75,
+      "res": 65,
+      "spd": 90
+    },
+    "trait": {
+      "name": "龍騎之心",
+      "text": "生命 ≤ 50% 時，火屬性武技威力 +30%。"
+    },
+    "obtain": "野生（焰脊火山帶，稀有）／星門召喚（常駐 R）",
+    "lore": "棲息在焰脊火山帶的小蜥蜴，尾焰會隨心情忽明忽暗。成年後以尾焰鍛出一柄火焰之劍，被赤鐵堡的騎士奉為守護神。"
+  },
+  {
+    "id": "oathsea_sage",
+    "name": "海誓賢獺",
+    "en": "Oathsea Sage",
+    "elements": [
+      "water"
+    ],
+    "rarity": "R",
+    "role": "法師・魔法",
+    "base": {
+      "hp": 85,
+      "atk": 55,
+      "mag": 110,
+      "def": 70,
+      "res": 85,
+      "spd": 75
+    },
+    "trait": {
+      "name": "潮汐詠唱",
+      "text": "連續使用魔法技能時，每次威力 +15%（最多 +45%）；使用其他技能或離場後重置。"
+    },
+    "obtain": "野生（潮歌群島，稀有）／星門召喚（常駐 R）",
+    "lore": "潮歌群島的水獺，習慣用貝殼記下潮汐的旋律。牠總是拿著一根珊瑚法杖，島民稱牠為「海誓賢者」。"
+  },
+  {
+    "id": "elderwood_warden",
+    "name": "古木熊衛",
+    "en": "Elderwood Warden",
+    "elements": [
+      "nature"
+    ],
+    "rarity": "R",
+    "role": "守護",
+    "base": {
+      "hp": 110,
+      "atk": 85,
+      "mag": 60,
+      "def": 100,
+      "res": 75,
+      "spd": 50
+    },
+    "trait": {
+      "name": "森之庇護",
+      "text": "回合結束時，若本回合沒有使用攻擊技能，回復 8% 最大生命。"
+    },
+    "obtain": "野生（翠語森林，稀有）／星門召喚（常駐 R）",
+    "lore": "背上長滿青苔的小熊，最愛在樹洞裡睡午覺。成年後背負一整棵古木，是翠語森林最可靠的守門者。"
+  },
+  {
+    "id": "pyrewing",
+    "name": "焰翅蛾后",
+    "en": "Pyrewing Queen",
+    "elements": [
+      "fire"
+    ],
+    "rarity": "N",
+    "role": "異常・灼燒",
+    "base": {
+      "hp": 70,
+      "atk": 45,
+      "mag": 95,
+      "def": 60,
+      "res": 80,
+      "spd": 100
+    },
+    "trait": {
+      "name": "火鱗粉",
+      "text": "對「灼燒」狀態的對手造成的傷害 +20%。"
+    },
+    "obtain": "野生：焰脊火山帶",
+    "lore": "夜裡聚集在熔岩裂縫旁的飛蛾。翅膀上的鱗粉一碰就燃，古代礦工拿牠們當燈籠。"
+  },
+  {
+    "id": "icecrown",
+    "name": "冰冠皇企鵝",
+    "en": "Icecrown Emperor",
+    "elements": [
+      "water"
+    ],
+    "rarity": "N",
+    "role": "控制・冰凍",
+    "base": {
+      "hp": 90,
+      "atk": 80,
+      "mag": 70,
+      "def": 80,
+      "res": 70,
+      "spd": 60
+    },
+    "trait": {
+      "name": "凍氣",
+      "text": "對「冰凍」狀態的對手使用武技時必定暴擊。"
+    },
+    "obtain": "野生：潮歌群島（北岸冰原）",
+    "lore": "成群生活在冰原上的企鵝。皇企鵝頭頂的冰冠永不融化，據說是千年前一塊源晶碎屑凝成的。"
+  },
+  {
+    "id": "dreamcap",
+    "name": "幻夢菌后",
+    "en": "Dreamveil Matron",
+    "elements": [
+      "nature"
+    ],
+    "rarity": "N",
+    "role": "異常・中毒／睡眠",
+    "base": {
+      "hp": 95,
+      "atk": 50,
+      "mag": 85,
+      "def": 75,
+      "res": 90,
+      "spd": 55
+    },
+    "trait": {
+      "name": "孢子外殼",
+      "text": "受到武技攻擊時，30% 使攻擊者「中毒」1 層。"
+    },
+    "obtain": "野生：翠語森林",
+    "lore": "森林深處發著微光的蕈菇。旅人若在菌圈裡睡著，會做一場很長很長的夢。"
+  },
+  {
+    "id": "skyreign",
+    "name": "蒼風隼王",
+    "en": "Skyreign Falcon",
+    "elements": [
+      "wind"
+    ],
+    "rarity": "N",
+    "role": "速攻・節奏",
+    "base": {
+      "hp": 70,
+      "atk": 90,
+      "mag": 50,
+      "def": 60,
+      "res": 60,
+      "spd": 120
+    },
+    "trait": {
+      "name": "乘風",
+      "text": "入場時速度 +1 階。"
+    },
+    "obtain": "野生：蒼嘯高原",
+    "lore": "高原上最常見的雀鳥，翼民會把幼雛養在帽子裡。成年的隼王能乘著上升氣流三天不落地。"
+  },
+  {
+    "id": "monolith",
+    "name": "磐石巨像",
+    "en": "Monolith Colossus",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "N",
+    "role": "守護・挑釁",
+    "base": {
+      "hp": 110,
+      "atk": 85,
+      "mag": 40,
+      "def": 110,
+      "res": 70,
+      "spd": 35
+    },
+    "trait": {
+      "name": "堅石",
+      "text": "生命全滿時受到致命傷害，改為保留 1 點生命。"
+    },
+    "obtain": "野生：磐心峽谷",
+    "lore": "會自己滾來滾去的石頭。長大以後幾乎不再移動，峽谷的矮人會在它身上刻下家族的名字。"
+  },
+  {
+    "id": "cloudfluff",
+    "name": "絨雲",
+    "en": "Cloudfluff",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "N",
+    "role": "支援",
+    "base": {
+      "hp": 120,
+      "atk": 55,
+      "mag": 65,
+      "def": 70,
+      "res": 80,
+      "spd": 60
+    },
+    "trait": {
+      "name": "和聲",
+      "text": "離場時，替換入場的精靈回復 15% 最大生命。"
+    },
+    "obtain": "野生：各地區（常見）",
+    "lore": "不屬於任何源流的毛球，哪裡都能見到。牠們會哼一種沒有旋律的歌，聽了會讓人安心。"
+  },
+  {
+    "id": "stormram",
+    "name": "霆角公羊",
+    "en": "Stormram",
+    "elements": [
+      "thunder"
+    ],
+    "rarity": "R",
+    "role": "蓄能・魔法",
+    "base": {
+      "hp": 90,
+      "atk": 60,
+      "mag": 105,
+      "def": 75,
+      "res": 75,
+      "spd": 75
+    },
+    "trait": {
+      "name": "蓄電羊毛",
+      "text": "回合結束時獲得 1 層「電荷」。"
+    },
+    "obtain": "星門召喚（常駐 R）／野生稀有：雷鳴荒原",
+    "lore": "羊毛會不斷累積靜電的綿羊。荒原的遊牧民剪下牠的毛做成雷紋護符，雷雨夜裡整個營地都會發亮。"
+  },
+  {
+    "id": "eclipse_batlord",
+    "name": "月蝕蝠王",
+    "en": "Eclipse Batlord",
+    "elements": [
+      "dark"
+    ],
+    "rarity": "R",
+    "role": "吸血・干擾",
+    "base": {
+      "hp": 85,
+      "atk": 95,
+      "mag": 70,
+      "def": 70,
+      "res": 70,
+      "spd": 90
+    },
+    "trait": {
+      "name": "吸血本能",
+      "text": "武技造成傷害的 15% 轉為自身生命。"
+    },
+    "obtain": "星門召喚（常駐 R）／野生稀有：暮影幽境",
+    "lore": "倒掛在幽境洞窟裡的蝙蝠。月蝕之夜，蝠王會帶領整群飛上天空，遮住僅存的月光。"
+  },
+  {
+    "id": "gale_weasel",
+    "name": "嵐斬鼬",
+    "en": "Galeweasel",
+    "elements": [
+      "wind"
+    ],
+    "rarity": "SR",
+    "role": "突擊・裂傷",
+    "base": {
+      "hp": 75,
+      "atk": 120,
+      "mag": 50,
+      "def": 65,
+      "res": 65,
+      "spd": 135
+    },
+    "trait": {
+      "name": "三連鐮",
+      "text": "攻擊「裂傷」狀態的對手時，暴擊率 +30%。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "三隻一組行動的鼬，一隻絆倒、一隻斬擊、一隻敷藥。拚盡全力時三者合而為一，化為一道看不見的旋風。"
+  },
+  {
+    "id": "sand_reaper",
+    "name": "沙鐮蠍",
+    "en": "Sand Reaper",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "SR",
+    "role": "陷阱師",
+    "base": {
+      "hp": 85,
+      "atk": 105,
+      "mag": 45,
+      "def": 110,
+      "res": 75,
+      "spd": 90
+    },
+    "trait": {
+      "name": "伏沙",
+      "text": "我方伏技發動後，本精靈力量 +1 階並獲得 1 點靈能。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "潛伏在峽谷流沙下的巨蠍，只露出一對鐮鉗。獵人說：「看見沙在動，就已經太遲了。」"
+  },
+  {
+    "id": "magma_golem",
+    "name": "熔岩魔像",
+    "en": "Magma Golem",
+    "elements": [
+      "fire",
+      "earth"
+    ],
+    "rarity": "SR",
+    "role": "重裝",
+    "base": {
+      "hp": 105,
+      "atk": 110,
+      "mag": 70,
+      "def": 110,
+      "res": 60,
+      "spd": 55
+    },
+    "trait": {
+      "name": "熔岩之軀",
+      "text": "受到武技攻擊時，30% 使攻擊者「灼燒」。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "王國紀的矮人以火山岩與源晶鑄造的守衛，主人早已不在，它仍守著熔爐。"
+  },
+  {
+    "id": "chime_sprite",
+    "name": "晨鈴仙",
+    "en": "Chime Sprite",
+    "elements": [
+      "light"
+    ],
+    "rarity": "SR",
+    "role": "治療・反制",
+    "base": {
+      "hp": 90,
+      "atk": 50,
+      "mag": 100,
+      "def": 70,
+      "res": 110,
+      "spd": 90
+    },
+    "trait": {
+      "name": "清音",
+      "text": "入場時翻開對手設置中的伏技。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "曦光聖都鐘樓裡誕生的小仙靈，鈴聲能照出藏在暗處的東西。教廷的聖職者都想得到牠的祝福。"
+  },
+  {
+    "id": "soul_lantern",
+    "name": "冥燈引魂者",
+    "en": "Soul Lantern",
+    "elements": [
+      "dark"
+    ],
+    "rarity": "SR",
+    "role": "詛咒・伏技",
+    "base": {
+      "hp": 80,
+      "atk": 50,
+      "mag": 110,
+      "def": 70,
+      "res": 100,
+      "spd": 100
+    },
+    "trait": {
+      "name": "引魂",
+      "text": "對手精靈被擊倒時，我方獲得 2 點靈能。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "提著幽藍燈籠在幽境巡行的靈體。傳說它會為迷路的精靈引路，也會把貪心的人帶進更深的黑暗。"
+  },
+  {
+    "id": "relic_blade",
+    "name": "古劍之靈",
+    "en": "Relic Blade",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "SR",
+    "role": "劍士・反擊",
+    "base": {
+      "hp": 80,
+      "atk": 125,
+      "mag": 40,
+      "def": 95,
+      "res": 70,
+      "spd": 100
+    },
+    "trait": {
+      "name": "劍意",
+      "text": "以「格擋」成功擋下攻擊後，下一個武技必定暴擊。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "銀誓騎士團初代團長的佩劍，在主人戰死後吸收了千年的劍意而甦醒。它不說話，但會在月夜裡獨自練劍。"
+  },
+  {
+    "id": "grimoire",
+    "name": "秘典書靈",
+    "en": "Grimoire",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "SR",
+    "role": "法師・複製",
+    "base": {
+      "hp": 80,
+      "atk": 40,
+      "mag": 125,
+      "def": 70,
+      "res": 95,
+      "spd": 100
+    },
+    "trait": {
+      "name": "記述",
+      "text": "受到對手本場戰鬥中已使用過的技能攻擊時，傷害 −20%。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "星穹賢者塔禁書庫中自行翻頁的魔導書。它記錄看過的每一個咒文，而且從不忘記。"
+  },
+  {
+    "id": "ignisar",
+    "name": "煌焰獅王・伊格尼薩",
+    "en": "Ignisar, the Blazing King",
+    "elements": [
+      "fire"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・火",
+    "base": {
+      "hp": 95,
+      "atk": 110,
+      "mag": 115,
+      "def": 80,
+      "res": 70,
+      "spd": 70
+    },
+    "trait": {
+      "name": "王焰領域",
+      "text": "入場時展開「烈陽」3 回合。烈陽中，本精靈的火屬性技能無視目標 20% 防禦。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "守護火之源晶的聖靈。鬃毛是千年不熄的火焰，每一聲咆哮都讓焰脊火山帶的地脈跟著脈動。"
+  },
+  {
+    "id": "thalassene",
+    "name": "潮汐聖鯨・瑟蓮娜",
+    "en": "Thalassene, the Tide Singer",
+    "elements": [
+      "water"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・水",
+    "base": {
+      "hp": 140,
+      "atk": 60,
+      "mag": 100,
+      "def": 80,
+      "res": 105,
+      "spd": 55
+    },
+    "trait": {
+      "name": "深海之歌",
+      "text": "入場時展開「暴雨」3 回合。本精靈離場時，入場的精靈獲得 20% 最大生命的護盾。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "在以太之海與大陸交界處遨遊的巨鯨。潮歌群島的漁民相信，潮汐就是牠的歌聲。"
+  },
+  {
+    "id": "sylvaron",
+    "name": "萬葉古鹿・希爾凡",
+    "en": "Sylvaron, the Evergreen",
+    "elements": [
+      "nature"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・木",
+    "base": {
+      "hp": 110,
+      "atk": 70,
+      "mag": 110,
+      "def": 85,
+      "res": 95,
+      "spd": 70
+    },
+    "trait": {
+      "name": "萬葉庇佑",
+      "text": "入場時展開「森域」3 回合。森域中，本精靈受到的傷害 −20%。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "鹿角上生著一整座森林的古鹿。牠走過的地方，枯木會在一夜之間發芽。"
+  },
+  {
+    "id": "aeroth",
+    "name": "蒼穹天鷹・艾洛斯",
+    "en": "Aeroth, the Sky Sovereign",
+    "elements": [
+      "wind"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・風",
+    "base": {
+      "hp": 85,
+      "atk": 120,
+      "mag": 75,
+      "def": 70,
+      "res": 70,
+      "spd": 120
+    },
+    "trait": {
+      "name": "天穹主宰",
+      "text": "入場時展開「疾風」3 回合。擊倒對手時速度 +1 階。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "盤旋在蒼嘯高原雲層之上的天鷹。翼民世代傳頌：看見牠的影子掠過，就是遠行的吉兆。"
+  },
+  {
+    "id": "terragon",
+    "name": "磐岳巨龜・泰拉岡",
+    "en": "Terragon, the Mountain Shell",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・地",
+    "base": {
+      "hp": 130,
+      "atk": 110,
+      "mag": 50,
+      "def": 130,
+      "res": 80,
+      "spd": 40
+    },
+    "trait": {
+      "name": "不動磐岳",
+      "text": "入場時展開「沙暴」3 回合。受到剋制屬性的傷害 −30%。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "背甲就是一座山的巨龜。磐心峽谷的矮人王國其實就建在牠沉睡的背上。"
+  },
+  {
+    "id": "voltarion",
+    "name": "雷霆麒麟・弗爾塔",
+    "en": "Voltarion, the Storm Qilin",
+    "elements": [
+      "thunder"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・雷",
+    "base": {
+      "hp": 90,
+      "atk": 85,
+      "mag": 125,
+      "def": 75,
+      "res": 75,
+      "spd": 90
+    },
+    "trait": {
+      "name": "雷霆降臨",
+      "text": "入場時展開「雷雲」3 回合，並獲得 2 層「電荷」。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "踏雷而行的麒麟。雷鳴荒原的每一道閃電，據說都是牠巡視領地留下的足跡。"
+  },
+  {
+    "id": "luminael",
+    "name": "晨星天馬・露米娜爾",
+    "en": "Luminael, the Morningstar",
+    "elements": [
+      "light"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・光",
+    "base": {
+      "hp": 100,
+      "atk": 70,
+      "mag": 120,
+      "def": 80,
+      "res": 100,
+      "spd": 70
+    },
+    "trait": {
+      "name": "晨星之翼",
+      "text": "入場時展開「聖域」3 回合，並翻開對手設置中的伏技。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "在黎明第一道光中現身的天馬。曦光教廷的教典把牠記為「真理之使」，但牠從未替任何人說過話。"
+  },
+  {
+    "id": "noxfang",
+    "name": "永夜魔狼・諾克斯",
+    "en": "Noxfang, the Endless Night",
+    "elements": [
+      "dark"
+    ],
+    "rarity": "SSR",
+    "role": "聖靈・暗",
+    "base": {
+      "hp": 90,
+      "atk": 130,
+      "mag": 70,
+      "def": 75,
+      "res": 70,
+      "spd": 105
+    },
+    "trait": {
+      "name": "夜之獵手",
+      "text": "入場時展開「永夜」3 回合。我方伏技發動時，本精靈力量 +1 階。"
+    },
+    "obtain": "星門召喚（常駐 SSR；可自選 UP）",
+    "lore": "守護暗之源晶的魔狼，常被誤認為災厄本身。事實上，千年前正是牠咬住了虛蝕的咽喉。"
+  },
+  {
+    "id": "clockmouse",
+    "name": "機樞鼠王",
+    "en": "Mainspring King",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "N",
+    "role": "速攻・連環",
+    "base": {
+      "hp": 70,
+      "atk": 95,
+      "mag": 45,
+      "def": 65,
+      "res": 60,
+      "spd": 115
+    },
+    "trait": {
+      "name": "上發條",
+      "text": "回合結束時若本回合沒有替換，速度 +1 階（由此特性最多 +2 階）。"
+    },
+    "obtain": "野生（星門城）",
+    "lore": "王國紀的工匠為了維修星門，造出會自己上發條的小老鼠。碎心之夜後工匠消失了，老鼠們卻還住在星門的齒輪之間，一代一代地轉著發條。"
+  },
+  {
+    "id": "inkcat",
+    "name": "繪卷靈貓",
+    "en": "Scroll Cat",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "R",
+    "role": "干擾・反轉",
+    "base": {
+      "hp": 80,
+      "atk": 60,
+      "mag": 100,
+      "def": 65,
+      "res": 85,
+      "spd": 90
+    },
+    "trait": {
+      "name": "臨摹",
+      "text": "入場時，複製對手目前的正向能力階級。"
+    },
+    "obtain": "野生（星門城，稀有）／星門召喚（常駐 R）",
+    "lore": "住在星穹賢者塔的抄經室，踩過墨汁的腳印會變成會動的小畫。賢者們發現，牠畫出的東西往往是別人心裡正在想的事。"
+  },
+  {
+    "id": "acornsquirrel",
+    "name": "萬果松鼠",
+    "en": "Grove Hoarder",
+    "elements": [
+      "nature"
+    ],
+    "rarity": "N",
+    "role": "續戰・許願",
+    "base": {
+      "hp": 85,
+      "atk": 80,
+      "mag": 50,
+      "def": 75,
+      "res": 70,
+      "spd": 90
+    },
+    "trait": {
+      "name": "囤糧",
+      "text": "生命首次降到 50% 以下時，吃掉囤積的果實回復 25% 生命（每場一次）。"
+    },
+    "obtain": "野生（翠語森林）",
+    "lore": "秋天會把種子埋遍整座森林，卻總是忘了埋在哪裡。森民說翠語森林一半的巨木，都是萬果松鼠忘記的點心長成的。"
+  },
+  {
+    "id": "leaffrog",
+    "name": "森笛蛙王",
+    "en": "Grovepipe King",
+    "elements": [
+      "nature",
+      "water"
+    ],
+    "rarity": "N",
+    "role": "回音・自癒",
+    "base": {
+      "hp": 75,
+      "atk": 55,
+      "mag": 95,
+      "def": 65,
+      "res": 80,
+      "spd": 80
+    },
+    "trait": {
+      "name": "晨露",
+      "text": "回合結束時，有 30% 機率解除自身一種異常狀態。"
+    },
+    "obtain": "野生（翠語森林）",
+    "lore": "用葉子捲成的笛子唱歌，森民靠牠的歌聲辨認季節。聽說只要蛙王吹錯一個音，整座森林的花就會晚開三天。"
+  },
+  {
+    "id": "owlarchivist",
+    "name": "古樹書梟",
+    "en": "Archive Owl",
+    "elements": [
+      "nature",
+      "dark"
+    ],
+    "rarity": "R",
+    "role": "記錄・封印",
+    "base": {
+      "hp": 85,
+      "atk": 60,
+      "mag": 95,
+      "def": 70,
+      "res": 90,
+      "spd": 80
+    },
+    "trait": {
+      "name": "記錄",
+      "text": "入場時，「封印」對手最後使用的技能 1 回合。"
+    },
+    "obtain": "野生（翠語森林，稀有）／星門召喚（常駐 R）",
+    "lore": "森民長老的書記。牠把每一場見過的戰鬥都記在羽毛上，換羽時整座樹屋會下起一場字雨。"
+  },
+  {
+    "id": "banyanelder",
+    "name": "古榕樹靈",
+    "en": "Elder Banyan",
+    "elements": [
+      "nature",
+      "earth"
+    ],
+    "rarity": "SR",
+    "role": "紮根・纏繞",
+    "base": {
+      "hp": 120,
+      "atk": 90,
+      "mag": 70,
+      "def": 110,
+      "res": 85,
+      "spd": 35
+    },
+    "trait": {
+      "name": "盤根",
+      "text": "回合結束時回復 6% 生命；不會被強制替換。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "翠語森林最古老的一棵榕樹，氣根一路垂進磐心峽谷的地底。牠一年只走一步，森民卻說，牠走過的地方從來沒有鬧過旱災。"
+  },
+  {
+    "id": "bubblecrab",
+    "name": "礁堡巨蟹",
+    "en": "Reef Fortress",
+    "elements": [
+      "water"
+    ],
+    "rarity": "N",
+    "role": "硬殼・以守為攻",
+    "base": {
+      "hp": 70,
+      "atk": 70,
+      "mag": 40,
+      "def": 120,
+      "res": 70,
+      "spd": 80
+    },
+    "trait": {
+      "name": "硬殼",
+      "text": "不會受到暴擊（暴擊改為一般傷害）。"
+    },
+    "obtain": "野生（潮歌群島）",
+    "lore": "背著珊瑚長大的寄居蟹，殼越住越大，最後整座礁石都成了牠的家。漁民在暴風雨夜會躲進巨蟹背上的洞穴。"
+  },
+  {
+    "id": "lanternfish",
+    "name": "深海燈母",
+    "en": "Abyss Lantern",
+    "elements": [
+      "water",
+      "light"
+    ],
+    "rarity": "N",
+    "role": "誘光・破綻",
+    "base": {
+      "hp": 80,
+      "atk": 45,
+      "mag": 90,
+      "def": 60,
+      "res": 90,
+      "spd": 85
+    },
+    "trait": {
+      "name": "誘光",
+      "text": "入場後的第一回合，對手攻擊技能的命中率 −30%。"
+    },
+    "obtain": "野生（潮歌群島）",
+    "lore": "深海的鮟鱇魚，頭上的小燈會照亮迷航的船。燈塔守護者說，燈塔的第一盞燈，就是從燈母那裡借來的火。"
+  },
+  {
+    "id": "swordfish",
+    "name": "浪刃旗魚",
+    "en": "Tidal Marlin",
+    "elements": [
+      "water",
+      "wind"
+    ],
+    "rarity": "R",
+    "role": "先制・破防",
+    "base": {
+      "hp": 75,
+      "atk": 110,
+      "mag": 55,
+      "def": 65,
+      "res": 65,
+      "spd": 110
+    },
+    "trait": {
+      "name": "破浪",
+      "text": "每次入場後的第一個攻擊技能先制 +1。"
+    },
+    "obtain": "野生（潮歌群島，稀有）／星門召喚（常駐 R）",
+    "lore": "雷暴海峽的船長們把旗魚當作守護神，因為只有牠敢逆著雷雲衝過海峽。每艘船的船頭都刻著一把劍吻。"
+  },
+  {
+    "id": "siren",
+    "name": "迷潮海妖",
+    "en": "Driftsong Siren",
+    "elements": [
+      "water",
+      "dark"
+    ],
+    "rarity": "SR",
+    "role": "睡眠・消耗",
+    "base": {
+      "hp": 85,
+      "atk": 50,
+      "mag": 115,
+      "def": 70,
+      "res": 100,
+      "spd": 90
+    },
+    "trait": {
+      "name": "失落的旋律",
+      "text": "睡眠中的對手，每回合結束時失去 10% 生命。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "潮歌群島流傳最久的故事：聖鯨的歌有一段被偷走了，偷歌的就是海妖。她唱的是那段失落的旋律，聽到的水手會睡著，夢見回不去的故鄉。"
+  },
+  {
+    "id": "bellowsbeast",
+    "name": "熔爐鍛獸",
+    "en": "Forgeheart",
+    "elements": [
+      "fire"
+    ],
+    "rarity": "N",
+    "role": "引火・爆發",
+    "base": {
+      "hp": 85,
+      "atk": 90,
+      "mag": 55,
+      "def": 85,
+      "res": 65,
+      "spd": 70
+    },
+    "trait": {
+      "name": "引火",
+      "text": "受到火屬性攻擊時不受傷害，並使自身下一個火屬性技能威力 +50%。"
+    },
+    "obtain": "野生（焰脊火山帶）",
+    "lore": "赤鐵堡的鍛冶師會在爐邊養一隻熔爐鍛獸，牠一打呵欠爐火就旺三分。學徒出師時，會分到一隻自己的鍛獸。"
+  },
+  {
+    "id": "shieldbeetle",
+    "name": "赤鐵騎甲",
+    "en": "Ironclad Knight",
+    "elements": [
+      "fire"
+    ],
+    "rarity": "N",
+    "role": "守護・以守為攻",
+    "base": {
+      "hp": 80,
+      "atk": 60,
+      "mag": 40,
+      "def": 120,
+      "res": 80,
+      "spd": 70
+    },
+    "trait": {
+      "name": "騎士之盾",
+      "text": "成功「格擋」攻擊時，獲得 15% 生命的護盾。"
+    },
+    "obtain": "野生（焰脊火山帶）",
+    "lore": "赤鐵堡的見習騎士，第一個夥伴往往是一隻赤鐵騎甲。牠們會學主人的樣子舉盾，據說一次也沒有讓主人受過傷。"
+  },
+  {
+    "id": "steameel",
+    "name": "汽笛龍鰻",
+    "en": "Whistle Wyrm",
+    "elements": [
+      "fire",
+      "water"
+    ],
+    "rarity": "R",
+    "role": "蒸騰・灼燒",
+    "base": {
+      "hp": 85,
+      "atk": 60,
+      "mag": 105,
+      "def": 70,
+      "res": 80,
+      "spd": 80
+    },
+    "trait": {
+      "name": "蒸騰",
+      "text": "場地為「烈陽」或「暴雨」時，速度 ×1.5。"
+    },
+    "obtain": "野生（焰脊火山帶，稀有）／星門召喚（常駐 R）",
+    "lore": "生在蒸汽海岸，一半的身體泡在海裡、一半躺在熔岩上。牠呼出的白霧能讓整片海岸消失，走私船最愛在牠睡醒的早晨出航。"
+  },
+  {
+    "id": "phoenix",
+    "name": "燼羽不死鳥",
+    "en": "Ashen Phoenix",
+    "elements": [
+      "fire",
+      "light"
+    ],
+    "rarity": "SR",
+    "role": "重生・魔法",
+    "base": {
+      "hp": 80,
+      "atk": 70,
+      "mag": 115,
+      "def": 70,
+      "res": 85,
+      "spd": 90
+    },
+    "trait": {
+      "name": "涅槃",
+      "text": "首次被擊倒時，以 30% 生命復活並解除異常（每場一次）。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "焰脊的火山每百年大噴發一次，灰燼落下的地方就會孵出一隻不死鳥。牠記得每一次重生前的事，所以從不急著長大。"
+  },
+  {
+    "id": "dandelion",
+    "name": "千絮之冠",
+    "en": "Crown of Seeds",
+    "elements": [
+      "wind",
+      "nature"
+    ],
+    "rarity": "N",
+    "role": "游擊・入場陷阱",
+    "base": {
+      "hp": 70,
+      "atk": 55,
+      "mag": 80,
+      "def": 60,
+      "res": 80,
+      "spd": 105
+    },
+    "trait": {
+      "name": "隨風而去",
+      "text": "替換離場時回復 20% 生命。"
+    },
+    "obtain": "野生（蒼嘯高原）",
+    "lore": "高原上的風一吹，牠就把種子送到大陸各地。翼民的信使說，要是在很遠的地方看到一朵特別白的蒲公英，就是牠在替你問好。"
+  },
+  {
+    "id": "papercrane",
+    "name": "千羽鶴",
+    "en": "Thousand Cranes",
+    "elements": [
+      "wind",
+      "neutral"
+    ],
+    "rarity": "N",
+    "role": "接力・支援",
+    "base": {
+      "hp": 75,
+      "atk": 55,
+      "mag": 85,
+      "def": 60,
+      "res": 70,
+      "spd": 105
+    },
+    "trait": {
+      "name": "託付",
+      "text": "被擊倒時，下一隻入場的我方精靈力量與魔力各 +1 階。"
+    },
+    "obtain": "野生（蒼嘯高原）",
+    "lore": "翼民把寄不出去的信折成紙鶴放上高原的風，紙鶴吸了源流便活了過來。牠們至今仍在找收信的人。"
+  },
+  {
+    "id": "lyrebird",
+    "name": "天籟琴鳥",
+    "en": "Heavenly Lyrebird",
+    "elements": [
+      "wind",
+      "light"
+    ],
+    "rarity": "R",
+    "role": "模仿・支援",
+    "base": {
+      "hp": 80,
+      "atk": 55,
+      "mag": 100,
+      "def": 70,
+      "res": 85,
+      "spd": 90
+    },
+    "trait": {
+      "name": "擬聲",
+      "text": "對手使用秘術提升自身能力時，自己也獲得同樣的提升。"
+    },
+    "obtain": "野生（蒼嘯高原，稀有）／星門召喚（常駐 R）",
+    "lore": "遊吟詩人的老師。牠能學會聽過的任何聲音，所以高原上的詩人都說：「真正的原創，只存在於琴鳥還沒聽過的歌裡。」"
+  },
+  {
+    "id": "tornado",
+    "name": "颶風之眼",
+    "en": "Eye of the Gale",
+    "elements": [
+      "wind",
+      "thunder"
+    ],
+    "rarity": "SR",
+    "role": "風暴・強制替換",
+    "base": {
+      "hp": 80,
+      "atk": 70,
+      "mag": 110,
+      "def": 70,
+      "res": 70,
+      "spd": 110
+    },
+    "trait": {
+      "name": "風眼",
+      "text": "先制 +1 以上的攻擊技能對自身無效。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "高原每年春天最大的一場暴風，中心會有一隻靜靜漂浮的精靈。翼民不敢靠近，卻會把最重要的信託給颶風帶走。牠從沒弄丟過任何一封。"
+  },
+  {
+    "id": "digmole",
+    "name": "掘晶鼴王",
+    "en": "Crystal Delver",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "N",
+    "role": "潛地・奇襲",
+    "base": {
+      "hp": 75,
+      "atk": 105,
+      "mag": 35,
+      "def": 80,
+      "res": 55,
+      "spd": 100
+    },
+    "trait": {
+      "name": "探脈",
+      "text": "第一次入場時靈能 +1。"
+    },
+    "obtain": "野生（磐心峽谷）",
+    "lore": "矮人礦工的好幫手，鼻尖的晶體碰到礦脈就會發光。矮人說：「跟著鼴王挖，挖到的不是金子，就是更好的東西。」"
+  },
+  {
+    "id": "gargoyle",
+    "name": "守門石魔",
+    "en": "Gatewarden",
+    "elements": [
+      "earth",
+      "dark"
+    ],
+    "rarity": "N",
+    "role": "石化・減速",
+    "base": {
+      "hp": 80,
+      "atk": 80,
+      "mag": 60,
+      "def": 100,
+      "res": 80,
+      "spd": 50
+    },
+    "trait": {
+      "name": "石化",
+      "text": "生命首次降到 30% 以下時，護甲與抗魔 +2 階、速度 −2 階（每場一次）。"
+    },
+    "obtain": "野生（磐心峽谷）",
+    "lore": "蹲在矮人城門上的石像，白天一動也不動。只有在月光下，牠會伸個懶腰，數一數今天有沒有少掉哪個孩子。"
+  },
+  {
+    "id": "rhino",
+    "name": "峽谷戰犀",
+    "en": "Canyon Warbeast",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "R",
+    "role": "衝鋒・重擊",
+    "base": {
+      "hp": 95,
+      "atk": 115,
+      "mag": 35,
+      "def": 105,
+      "res": 55,
+      "spd": 75
+    },
+    "trait": {
+      "name": "衝鋒",
+      "text": "速度高於對手時，武技傷害 +20%。"
+    },
+    "obtain": "野生（磐心峽谷，稀有）／星門召喚（常駐 R）",
+    "lore": "矮人王國的戰爭坐騎，也是運礦的車伕。牠一輩子只朝一個方向衝：前面。"
+  },
+  {
+    "id": "sandserpent",
+    "name": "流沙巨蟒",
+    "en": "Quicksand Wyrm",
+    "elements": [
+      "earth"
+    ],
+    "rarity": "SR",
+    "role": "困敵・纏繞",
+    "base": {
+      "hp": 100,
+      "atk": 105,
+      "mag": 60,
+      "def": 95,
+      "res": 70,
+      "spd": 80
+    },
+    "trait": {
+      "name": "流沙領域",
+      "text": "在場時，對手無法主動替換（攻擊後替換等技能效果不受限制）。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "峽谷底部的流沙其實是牠的呼吸。矮人在流沙邊插了七根石柱，警告孩子：柱子會動的那天，千萬別靠近。"
+  },
+  {
+    "id": "hedgehog",
+    "name": "避雷蝟王",
+    "en": "Lightning Rod King",
+    "elements": [
+      "thunder"
+    ],
+    "rarity": "N",
+    "role": "吸雷・連擊",
+    "base": {
+      "hp": 70,
+      "atk": 90,
+      "mag": 70,
+      "def": 80,
+      "res": 60,
+      "spd": 80
+    },
+    "trait": {
+      "name": "避雷針",
+      "text": "受到雷屬性攻擊時不受傷害，改為獲得 2 層「電荷」。"
+    },
+    "obtain": "野生（雷鳴荒原）",
+    "lore": "避雷柱原的石柱之間住著一群刺蝟，雷雨天全都豎起刺站到柱頂。矮人說，是刺蝟教會了他們怎麼立避雷柱。"
+  },
+  {
+    "id": "ballspark",
+    "name": "球雷核心",
+    "en": "Ball Lightning Core",
+    "elements": [
+      "thunder"
+    ],
+    "rarity": "N",
+    "role": "爆發・自爆",
+    "base": {
+      "hp": 60,
+      "atk": 50,
+      "mag": 110,
+      "def": 55,
+      "res": 60,
+      "spd": 115
+    },
+    "trait": {
+      "name": "不穩定",
+      "text": "被攻擊擊倒時，對擊倒者造成其最大生命 20% 的傷害。"
+    },
+    "obtain": "野生（雷鳴荒原）",
+    "lore": "雷雲低垂的夜裡，草原上會滾過一顆顆發光的球。遊牧部族的孩子會追著牠跑，大人則會把孩子抱回帳篷，因為球雷核心興奮起來是會爆炸的。"
+  },
+  {
+    "id": "stormhorse",
+    "name": "雷霆戰駒",
+    "en": "Storm Steed",
+    "elements": [
+      "thunder"
+    ],
+    "rarity": "R",
+    "role": "群奔・追擊麻痺",
+    "base": {
+      "hp": 80,
+      "atk": 110,
+      "mag": 60,
+      "def": 70,
+      "res": 60,
+      "spd": 100
+    },
+    "trait": {
+      "name": "群奔",
+      "text": "我方每有一隻未倒下的後備精靈，攻擊傷害 +8%。"
+    },
+    "obtain": "野生（雷鳴荒原，稀有）／星門召喚（常駐 R）",
+    "lore": "荒原遊牧部族的坐騎，一群一群地追著雷雲遷徙。族長卡蘭說，只要馬群還在奔跑，部族就不會迷路。"
+  },
+  {
+    "id": "thunderbird",
+    "name": "雷雲神鳥",
+    "en": "Stormcaller",
+    "elements": [
+      "thunder",
+      "wind"
+    ],
+    "rarity": "SR",
+    "role": "雷暴・持續",
+    "base": {
+      "hp": 80,
+      "atk": 75,
+      "mag": 110,
+      "def": 70,
+      "res": 75,
+      "spd": 100
+    },
+    "trait": {
+      "name": "雷雲",
+      "text": "每 2 回合結束時（第 2、4、6…回合），對手受到其最大生命 8% 的雷擊傷害。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "雷雲停下不走的那一年，遊牧部族在雲裡看見了一隻巨鳥。牠每拍一次翅膀就落下一道雷，像是在催促雲快點走。"
+  },
+  {
+    "id": "candledove",
+    "name": "光冠聖鴿",
+    "en": "Haloed Dove",
+    "elements": [
+      "light",
+      "wind"
+    ],
+    "rarity": "N",
+    "role": "和平・光幕",
+    "base": {
+      "hp": 70,
+      "atk": 55,
+      "mag": 80,
+      "def": 65,
+      "res": 85,
+      "spd": 95
+    },
+    "trait": {
+      "name": "和平鐘聲",
+      "text": "入場時，雙方在場精靈的能力階級全部歸零。"
+    },
+    "obtain": "野生（曦光聖都）",
+    "lore": "聖都鐘樓的鴿子，翅膀邊緣有一圈燭光。每天清晨鐘響時，牠們會繞著聖都飛一圈，把光灑在還沒醒來的街道上。"
+  },
+  {
+    "id": "prismsnail",
+    "name": "聖窗巨蝸",
+    "en": "Rose Window Snail",
+    "elements": [
+      "light",
+      "earth"
+    ],
+    "rarity": "N",
+    "role": "折射・反彈",
+    "base": {
+      "hp": 85,
+      "atk": 40,
+      "mag": 90,
+      "def": 95,
+      "res": 100,
+      "spd": 40
+    },
+    "trait": {
+      "name": "稜鏡",
+      "text": "受到魔法攻擊時，將 25% 的傷害反彈給攻擊者。"
+    },
+    "obtain": "野生（曦光聖都）",
+    "lore": "殼像教堂的彩繪玻璃，陽光一照就在地上投出一幅畫。聖都的工匠說，大教堂的玫瑰窗，是照著巨蝸的殼畫的。"
+  },
+  {
+    "id": "balancescale",
+    "name": "公義天秤",
+    "en": "Scale of Justice",
+    "elements": [
+      "light",
+      "neutral"
+    ],
+    "rarity": "R",
+    "role": "均衡・秩序",
+    "base": {
+      "hp": 90,
+      "atk": 60,
+      "mag": 90,
+      "def": 85,
+      "res": 85,
+      "spd": 70
+    },
+    "trait": {
+      "name": "秩序",
+      "text": "自身的能力階級不會被對手降低。"
+    },
+    "obtain": "野生（曦光聖都，稀有）／星門召喚（常駐 R）",
+    "lore": "曦光教廷審判庭上的天秤，承載了一千年的判決後有了意識。牠不在乎誰對誰錯，只在乎兩邊是不是一樣重。"
+  },
+  {
+    "id": "griffin",
+    "name": "聖翼獅鷲",
+    "en": "Aurelian Griffin",
+    "elements": [
+      "light",
+      "wind"
+    ],
+    "rarity": "SR",
+    "role": "俯衝・先制",
+    "base": {
+      "hp": 85,
+      "atk": 115,
+      "mag": 60,
+      "def": 80,
+      "res": 70,
+      "spd": 100
+    },
+    "trait": {
+      "name": "俯衝",
+      "text": "攻擊速度較慢的對手時，暴擊率 +25%。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "曦光聖騎士的坐騎，只認守誓之人。據說背叛誓言的騎士，第二天醒來就會發現坐騎的羽毛全都變成了灰色。"
+  },
+  {
+    "id": "abyssjelly",
+    "name": "永夜水母后",
+    "en": "Queen of Eternal Night",
+    "elements": [
+      "dark",
+      "water"
+    ],
+    "rarity": "N",
+    "role": "汲取靈能・麻痺",
+    "base": {
+      "hp": 80,
+      "atk": 40,
+      "mag": 90,
+      "def": 65,
+      "res": 95,
+      "spd": 80
+    },
+    "trait": {
+      "name": "麻痺觸手",
+      "text": "受到武技攻擊時，30% 使攻擊者「麻痺」。"
+    },
+    "obtain": "野生（暮影幽境）",
+    "lore": "永夜湖沒有光，只有水母身上若有若無的藍。結社的人說，湖底沉著古王國的圖書館，水母是守書的燈。"
+  },
+  {
+    "id": "maskfox",
+    "name": "百面狐",
+    "en": "Hundred-Mask Fox",
+    "elements": [
+      "dark",
+      "neutral"
+    ],
+    "rarity": "N",
+    "role": "偽裝・嫁禍",
+    "base": {
+      "hp": 65,
+      "atk": 90,
+      "mag": 75,
+      "def": 60,
+      "res": 65,
+      "spd": 95
+    },
+    "trait": {
+      "name": "面具",
+      "text": "首次受到的攻擊傷害為 0，面具碎裂（每場一次）。"
+    },
+    "obtain": "野生（暮影幽境）",
+    "lore": "暮影結社的信使戴著狐狸面具行走地上，真正的狐狸則戴著人的面具行走地下。沒有人知道牠面具底下的臉，包括牠自己。"
+  },
+  {
+    "id": "tombhound",
+    "name": "三首冥犬",
+    "en": "Three-Headed Warden",
+    "elements": [
+      "dark",
+      "fire"
+    ],
+    "rarity": "R",
+    "role": "連咬・灼燒",
+    "base": {
+      "hp": 90,
+      "atk": 110,
+      "mag": 60,
+      "def": 80,
+      "res": 65,
+      "spd": 75
+    },
+    "trait": {
+      "name": "三首",
+      "text": "單段攻擊改為連擊 2 次，第二次威力 40%。"
+    },
+    "obtain": "野生（暮影幽境，稀有）／星門召喚（常駐 R）",
+    "lore": "古王國地下墓所的看門犬，碎心之夜後仍守著不會再有人回來的門。結社首領墨說，牠是整個暮影最忠誠的生物。"
+  },
+  {
+    "id": "weaverspider",
+    "name": "織夢蛛",
+    "en": "Dreamweaver Spider",
+    "elements": [
+      "dark",
+      "nature"
+    ],
+    "rarity": "SR",
+    "role": "蛛網・伏技",
+    "base": {
+      "hp": 85,
+      "atk": 80,
+      "mag": 100,
+      "def": 80,
+      "res": 85,
+      "spd": 80
+    },
+    "trait": {
+      "name": "織網",
+      "text": "我方設置的伏技發動時，對手速度 −1 階。"
+    },
+    "obtain": "星門召喚（常駐 SR）",
+    "lore": "地底森林的天花板上掛著一整片銀色的網，每一條絲都是一個被牠收藏的夢。結社的預言者會在網下睡覺，醒來時就知道明天會發生什麼。"
+  },
+  {
+    "id": "eldarin",
+    "name": "初契之龍・艾爾達林",
+    "en": "Eldarin, Dragon of the First Pact",
+    "elements": [
+      "neutral"
+    ],
+    "rarity": "SSR",
+    "role": "傳說・契約",
+    "base": {
+      "hp": 100,
+      "atk": 100,
+      "mag": 100,
+      "def": 80,
+      "res": 80,
+      "spd": 80
+    },
+    "trait": {
+      "name": "初契",
+      "text": "每次入場後使用的第一個技能不消耗靈能（奧義除外）。"
+    },
+    "obtain": "序章（星門下的第一份契約）／星門召喚（傳說 SSR；可自選 UP）",
+    "lore": "初代締約者艾爾達的搭檔，契印的原型就刻在牠的額頭上。碎心之夜後牠沉睡在星門的基座下，直到星門再次點亮的那天才睜開眼睛。"
+  },
+  {
+    "id": "astragate",
+    "name": "星門守望者・阿斯特拉",
+    "en": "Astra, Warden of the Star Gate",
+    "elements": [
+      "light",
+      "earth"
+    ],
+    "rarity": "SSR",
+    "role": "傳說・結界",
+    "base": {
+      "hp": 110,
+      "atk": 90,
+      "mag": 80,
+      "def": 110,
+      "res": 100,
+      "spd": 50
+    },
+    "trait": {
+      "name": "星門結界",
+      "text": "入場時，我方陣地展開「晶壁」與「光幕」3 回合（受到的傷害 −20%）。"
+    },
+    "obtain": "星門召喚（傳說 SSR；可自選 UP）",
+    "lore": "王國紀的工匠與賢者合力打造的守門人，用星輝石作心、用城牆的石頭作身體。牠的任務只有一個：不讓任何東西從門的另一邊過來。"
+  },
+  {
+    "id": "voidchild",
+    "name": "虛蝕之子・奈芙",
+    "en": "Nephe, Child of the Void",
+    "elements": [
+      "dark"
+    ],
+    "rarity": "SSR",
+    "role": "傳說・吞噬",
+    "base": {
+      "hp": 90,
+      "atk": 85,
+      "mag": 120,
+      "def": 75,
+      "res": 80,
+      "spd": 90
+    },
+    "trait": {
+      "name": "虛無",
+      "text": "入場時，驅散對手所有強化（能力階級提升與護盾）。"
+    },
+    "obtain": "星門召喚（傳說 SSR；可自選 UP）",
+    "lore": "虛蝕湧入的那一夜，裂隙邊緣凝結出一隻不屬於任何源流的精靈。牠不懂世界，只懂得吞噬；直到有一個締約者對牠伸出了手。"
+  },
+  {
+    "id": "chronodragon",
+    "name": "時砂古螺・克羅諾斯",
+    "en": "Chronos, the Hourglass Nautilus",
+    "elements": [
+      "earth",
+      "wind"
+    ],
+    "rarity": "SSR",
+    "role": "傳說・時間",
+    "base": {
+      "hp": 95,
+      "atk": 80,
+      "mag": 110,
+      "def": 85,
+      "res": 85,
+      "spd": 85
+    },
+    "trait": {
+      "name": "逆時",
+      "text": "生命首次降到 25% 以下時（包含被擊倒），回到本回合開始時的生命（每場一次）。"
+    },
+    "obtain": "星門召喚（傳說 SSR；可自選 UP）",
+    "lore": "王國鐘樓的沙漏裡住著一隻小小的螺。碎心之夜時間停住了，牠卻長大了一千年，殼一圈一圈地長，當年住的沙漏如今只夠牠用一根觸鬚捧著。牠記得王國最後一個早晨，並且一直在等那個早晨再來一次。"
+  },
+  {
+    "id": "springlotus",
+    "name": "星泉蓮姬",
+    "en": "Starwell Lotus Maiden",
+    "elements": [
+      "water",
+      "nature"
+    ],
+    "rarity": "R",
+    "role": "支援・靈能供給",
+    "base": {
+      "hp": 85,
+      "atk": 40,
+      "mag": 85,
+      "def": 75,
+      "res": 105,
+      "spd": 90
+    },
+    "trait": {
+      "name": "湧泉",
+      "text": "在場時，每回合結束我方額外獲得 1 點靈能。"
+    },
+    "obtain": "野生（翠語森林，稀有）／星門召喚（常駐 R）",
+    "lore": "翠語森林深處有一口古泉，碎心之夜以後，泉眼裡冒出來的就只剩散落的靈能。星泉蓮姬在泉眼上生根，把靈能一點一點分給路過的締約者。精靈們打完架會排隊到泉邊喝水，從來沒有誰插隊。"
+  },
+  {
+    "id": "voltadillo",
+    "name": "雷鎧犰狳",
+    "en": "Thunderplate",
+    "elements": [
+      "thunder",
+      "earth"
+    ],
+    "rarity": "N",
+    "role": "坦克・蓄能",
+    "base": {
+      "hp": 100,
+      "atk": 60,
+      "mag": 55,
+      "def": 105,
+      "res": 80,
+      "spd": 50
+    },
+    "trait": {
+      "name": "蓄能背甲",
+      "text": "受到攻擊後，我方獲得 1 點靈能（每回合最多 1 次）。"
+    },
+    "obtain": "野生（雷鳴荒原）",
+    "lore": "雷雨夜，荒原上的犰狳會蜷成一顆球，讓閃電打在背甲上。被打得越多，背甲的紋路就越亮，牧人把這種光叫做「存起來的雷」。締約者帶牠上陣，是要牠替隊友挨打，順便把靈能存起來。打贏的事，交給別人。"
+  }
+]

@@ -1,0 +1,775 @@
+{
+  "spirits": {
+    "cloudfluff": {
+      "mechanic": {
+        "name": "蓬鬆",
+        "text": "絨雲的「哼歌」「軟綿綿撲」等技能使「蓬鬆」+1（最多 3 層，顯示在身上，離場時用完）。絨雲替換下場時，蓬鬆化成特性「暖絨」的護盾裹在接替的夥伴身上；「絨球」攻擊則消耗全部蓬鬆換取威力。"
+      },
+      "trait": {
+        "name": "暖絨",
+        "text": "替換下場的那個回合結束時，我方在場的夥伴獲得其最大生命 10% 的護盾；絨雲離場時每有 1 層「蓬鬆」，再 +5%（最多 25%）。"
+      },
+      "concept": "哼著沒有旋律的歌把毛蓬起來，再把蓬鬆裹在接班的夥伴身上；落單時就把蓬鬆揉成絨球丟出去。",
+      "learnset": [
+        { "lv": 1, "id": "strike" },
+        { "lv": 1, "id": "cloudfluff_hum" },
+        { "lv": 5, "id": "cloudfluff_puffball" },
+        { "lv": 7, "id": "cloudfluff_fluff_pounce" },
+        { "lv": 10, "id": "cloudfluff_cushion" },
+        { "lv": 17, "id": "cloudfluff_cloud_nap" },
+        { "lv": 21, "id": "cloudfluff_roll_away" },
+        { "lv": 24, "id": "meditate" },
+        { "lv": 27, "id": "cloudfluff_big_puffball" },
+        { "lv": 32, "id": "cloudfluff_puff_up" },
+        { "lv": 38, "id": "cloudfluff_fluff_shield" }
+      ],
+      "ultimate": "u_cloudfluff",
+      "core": ["cloudfluff_cloud_nap", "cloudfluff_big_puffball", "cloudfluff_fluff_pounce", "cloudfluff_cushion", "cloudfluff_puffball", "cloudfluff_roll_away", "cloudfluff_hum"]
+    },
+    "relic_blade": {
+      "mechanic": {
+        "name": "見切",
+        "text": "古劍之靈每次「見切」對手，累積 1 層「劍意」（最多 3 層，離場歸零）：① 以格擋擋下攻擊；② 本回合受到攻擊之後，以武技反擊命中（每回合 1 次）。每層劍意使武技暴擊率 +15%；劍意由「一之太刀」與奧義消耗。"
+      },
+      "trait": {
+        "name": "劍意",
+        "text": "以格擋擋下攻擊時，立刻以「古刃斬」反擊攻擊者。"
+      },
+      "concept": "讓對手先出手：格擋與後手反擊累積劍意，劍意越多越容易暴擊；讀對猜拳的每一回合，都在為最後的一之太刀磨刀。",
+      "learnset": [
+        { "lv": 1, "id": "relic_blade_edge" },
+        { "lv": 1, "id": "iaido" },
+        { "lv": 5, "id": "relic_moon_drill" },
+        { "lv": 9, "id": "relic_break_stance" },
+        { "lv": 13, "id": "relic_swallow" },
+        { "lv": 17, "id": "relic_zanshin" },
+        { "lv": 21, "id": "relic_guardbreak" },
+        { "lv": 24, "id": "meditate" },
+        { "lv": 27, "id": "relic_first_cut" },
+        { "lv": 32, "id": "relic_iron_cleave" },
+        { "lv": 37, "id": "relic_oath_thrust" },
+        { "lv": 45, "id": "relic_sword_domain" }
+      ],
+      "ultimate": "u_relic_blade",
+      "core": ["iaido", "relic_first_cut", "relic_blade_edge", "relic_oath_thrust", "relic_zanshin", "relic_guardbreak", "relic_sword_domain"]
+    },
+    "grimoire": {
+      "mechanic": {
+        "name": "抄本",
+        "text": "秘典書靈在場時，對手每使用一個技能（奧義、伏技除外），就把它抄進「抄本」成為最新的一頁（最多 3 頁；抄過的移到最新；滿了擠掉最舊的一頁；抄本離場保留）。「複寫」類技能施展抄本中的技能（武技改以魔力計算）；「焚頁」類技能撕掉頁數換取威力。"
+      },
+      "trait": {
+        "name": "記述",
+        "text": "入場時，把對手在場精靈上一次使用的技能抄進「抄本」。"
+      },
+      "concept": "把對手用過的技能抄進抄本：複寫它、倒寫回去反擊，或撕下書頁化為魔力。對手的招式越強，這本書就越可怕。",
+      "learnset": [
+        { "lv": 1, "id": "arcane_bolt" },
+        { "lv": 1, "id": "transcribe" },
+        { "lv": 5, "id": "grimoire_page_flare" },
+        { "lv": 9, "id": "grimoire_page_ward" },
+        { "lv": 13, "id": "grimoire_page_storm" },
+        { "lv": 17, "id": "arcane_blast" },
+        { "lv": 21, "id": "grimoire_seal_break" },
+        { "lv": 24, "id": "meditate" },
+        { "lv": 27, "id": "grimoire_burn_all" },
+        { "lv": 32, "id": "grimoire_mirror_page" },
+        { "lv": 37, "id": "grimoire_annotate" },
+        { "lv": 45, "id": "grimoire_final_chapter" }
+      ],
+      "ultimate": "u_grimoire",
+      "core": ["transcribe", "grimoire_burn_all", "grimoire_final_chapter", "grimoire_page_flare", "grimoire_page_storm"]
+    },
+    "clockmouse": {
+      "mechanic": {
+        "name": "發條",
+        "text": "機樞鼠王入場時「發條」上滿 3 圈（顯示在身上）。寫著「放條」的攻擊在還有發條時先制 +1，出手後發條 −1；發條用完就「停擺」，放條攻擊不再先制，直到重新上發條。"
+      },
+      "trait": {
+        "name": "上發條",
+        "text": "回合結束時，若本回合沒有使用「放條」攻擊，發條 +1 圈（最多 3 圈）。"
+      },
+      "concept": "上滿發條衝進場：三圈發條就是三次搶先出手的機會，用完再上緊。便宜的收尾手與陷阱鼠夾，專抓換人與殘血。",
+      "learnset": [
+        { "lv": 1, "id": "clockmouse_gear_bite" },
+        { "lv": 1, "id": "clockmouse_wind_up" },
+        { "lv": 5, "id": "windup_dash" },
+        { "lv": 9, "id": "clockmouse_rewind" },
+        { "lv": 13, "id": "clockmouse_gear_jam" },
+        { "lv": 17, "id": "clockmouse_chain_release" },
+        { "lv": 21, "id": "meditate" },
+        { "lv": 27, "id": "clockmouse_mousetrap" },
+        { "lv": 32, "id": "clockmouse_mainspring" },
+        { "lv": 38, "id": "clockmouse_full_gear" }
+      ],
+      "ultimate": "u_clockmouse",
+      "core": ["clockmouse_gear_bite", "windup_dash", "clockmouse_chain_release", "clockmouse_wind_up", "clockmouse_full_gear"]
+    },
+    "inkcat": {
+      "mechanic": {
+        "name": "墨漬",
+        "text": "繪卷靈貓身上的能力下降就是「墨漬」（顯示在身上；對手造成的也算）。「潑墨」技能威力強，代價是沾上墨漬；「反轉」自身墨漬的技能把它翻成等量的能力提升（−2 變 +2）；「甩墨」把墨漬甩到對手身上。"
+      },
+      "trait": {
+        "name": "墨韻",
+        "text": "自身的墨漬被「反轉」成能力提升時，獲得 1 點靈能。"
+      },
+      "concept": "先潑墨、再翻面：用自己的能力下降換取威力，再把墨漬反轉成強化，或甩到對手身上；塗改對手的強化則是牠的干擾。",
+      "learnset": [
+        { "lv": 1, "id": "inkcat_ink_dot" },
+        { "lv": 1, "id": "inkcat_reverse_stroke" },
+        { "lv": 5, "id": "inkcat_splash" },
+        { "lv": 9, "id": "arcane_bolt" },
+        { "lv": 13, "id": "ink_rewrite" },
+        { "lv": 17, "id": "inkcat_thick_ink" },
+        { "lv": 21, "id": "inkcat_fling" },
+        { "lv": 24, "id": "meditate" },
+        { "lv": 27, "id": "inkcat_dragon_eye" },
+        { "lv": 32, "id": "inkcat_ink_pool" },
+        { "lv": 38, "id": "inkcat_ink_rain" },
+        { "lv": 44, "id": "inkcat_scroll_reversal" }
+      ],
+      "ultimate": "u_inkcat",
+      "core": ["inkcat_splash", "inkcat_dragon_eye", "inkcat_ink_rain", "inkcat_thick_ink", "inkcat_reverse_stroke", "inkcat_fling", "inkcat_ink_dot"]
+    },
+    "eldarin": {
+      "mechanic": {
+        "name": "契約條款",
+        "text": "艾爾達林入場時，以及使用「約」類技能時，會締結一條「條款」（3 回合；同時只有一條，新的取代舊的；艾爾達林離場時失效）。條款約束雙方：回合結束時，本回合違反條款的一方「違約」，交給對方 2 點靈能（每缺 1 點改為失去 6% 最大生命）。對手的違約次數記在條款上，由清算之爪等技能兌現。締結的當回合只計算締結之後的行動。"
+      },
+      "trait": {
+        "name": "初契",
+        "text": "入場時締結「交鋒之約」3 回合；入場後使用的第一個技能不消耗靈能（奧義除外）。"
+      },
+      "concept": "寫下雙方都得遵守的條款：守約就被封住格擋、秘術或主力技，違約就把靈能賠給艾爾達林；再把靈能傾注成龍息，或清算違約討回。",
+      "learnset": [
+        { "lv": 1, "id": "eldarin_sigil_claw" },
+        { "lv": 1, "id": "pact_breath" },
+        { "lv": 5, "id": "eldarin_oath_flame" },
+        { "lv": 9, "id": "eldarin_sigil_bolt" },
+        { "lv": 12, "id": "eldarin_oath_scale" },
+        { "lv": 16, "id": "eldarin_binding_tail" },
+        { "lv": 20, "id": "eldarin_hush_pact" },
+        { "lv": 24, "id": "eldarin_pact_breaker" },
+        { "lv": 30, "id": "eldarin_clash_pact" },
+        { "lv": 34, "id": "eldarin_settlement" },
+        { "lv": 38, "id": "eldarin_oathwing" },
+        { "lv": 45, "id": "eldarin_verdict_fang" },
+        { "lv": 50, "id": "eldarin_name_pact" }
+      ],
+      "ultimate": "u_eldarin",
+      "core": ["eldarin_oath_flame", "eldarin_sigil_claw", "eldarin_oath_scale", "eldarin_settlement", "eldarin_binding_tail", "pact_breath"]
+    }
+  },
+  "skills": [
+    {
+      "id": "relic_blade_edge", "name": "古刃斬", "en": "Relic Edge",
+      "element": "neutral", "category": "physical",
+      "cost": 0, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "若本回合先受到攻擊，威力 +20。",
+      "tags": { "cond": 10 },
+      "note": "+20 × 後手的機率約 0.5 ≈ 10。也是「返刃」「殘心」「劍界」反擊時用的招式（反擊都在受擊之後，常吃到 +20）。"
+    },
+    {
+      "id": "iaido", "name": "拔刀・一閃", "en": "Iaido",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": -2,
+      "exclusive": "relic_blade",
+      "text": "若本回合在此技能之前受到攻擊，威力 +70。",
+      "tags": { "cond": 60 },
+      "note": "覆寫舊技能：條件從「武技」放寬為任何攻擊，加成從 +80 降為 +70。先制 −2 幾乎一定後手，+70 × 對手本回合攻擊的機率約 0.85 ≈ 60。"
+    },
+    {
+      "id": "relic_moon_drill", "name": "月下練劍", "en": "Moonlit Drill",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "力量 +1 階，獲得 1 層「劍意」。",
+      "tags": { "self.atk": 1, "custom": 45 },
+      "note": "劍意 1 層約 45：+15% 暴擊率持續數次攻擊，並讓一之太刀 +50。"
+    },
+    {
+      "id": "relic_break_stance", "name": "破勢斬", "en": "Stance Breaker",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": -1,
+      "exclusive": "relic_blade",
+      "text": "驅散對手的能力提升與護盾；若對手本回合在此技能之前使用了秘術，威力 +50。",
+      "tags": { "dispel": 1, "cond": 15 },
+      "note": "讀「強化」的一刀：先制 −1 等對手先強化再斬。+50 × 對手本回合用秘術的機率約 0.3 ≈ 15。"
+    },
+    {
+      "id": "relic_swallow", "name": "燕返", "en": "Swallow Reversal",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "連擊 2 次；若本回合先受到攻擊，改為連擊 3 次。",
+      "tags": { "hits": 2, "cond": 22 },
+      "note": "每段 45。多 1 段（+45）× 後手約 0.5 ≈ 22。多段也是打護盾與替身的手段。"
+    },
+    {
+      "id": "relic_zanshin", "name": "殘心", "en": "Zanshin",
+      "element": "neutral", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "trapSpeed": "normal", "trigger": "對手的攻擊命中時",
+      "text": "該次傷害 −30%；攻擊結算後以「古刃斬」反擊。",
+      "tags": { "reduce": 0.3, "custom": 55, "odds": 0.85 },
+      "note": "反擊的古刃斬（受擊後，75 威力）約 55，並可觸發見切。觸發機率 0.85。"
+    },
+    {
+      "id": "relic_guardbreak", "name": "破陣斬", "en": "Guardbreaker",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "無視「格擋」；擊破格擋時，威力 +40 並獲得 1 層「劍意」。",
+      "tags": { "ignoreGuard": 1, "cond": 10, "custom": 11 },
+      "note": "讀「格擋」的一刀。+40 × 對手格擋約 0.25 ≈ 10；劍意 45 × 0.25 ≈ 11。"
+    },
+    {
+      "id": "relic_first_cut", "name": "一之太刀", "en": "The First Cut",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "出手時消耗全部「劍意」（被格擋也一樣），每層威力 +50。",
+      "tags": { "cond": 56, "sig": 1 },
+      "note": "招牌技（兌現）。出手時劍意期望約 1.5 層 × 50 × 0.75 ≈ 56；劍意同時提高這一刀的暴擊率。"
+    },
+    {
+      "id": "relic_iron_cleave", "name": "斬鐵", "en": "Iron Cleave",
+      "element": "neutral", "category": "physical",
+      "cost": 3, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "無視目標 30% 護甲。",
+      "tags": { "armorPen": 0.3 },
+      "note": "不需要讀心的重斬：對付坦克。"
+    },
+    {
+      "id": "relic_oath_thrust", "name": "銀誓突", "en": "Silver Oath Thrust",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 1,
+      "exclusive": "relic_blade",
+      "text": "若有 3 層「劍意」，必定暴擊。",
+      "tags": { "cond": 5 },
+      "note": "先制收尾。必定暴擊（+27）× 滿劍意約 0.2 ≈ 5。"
+    },
+    {
+      "id": "relic_sword_domain", "name": "劍界", "en": "Sword Domain",
+      "element": "neutral", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "3 回合內，每次受到攻擊後，立刻以「古刃斬」反擊（威力 ×0.6；反擊不會再引發反擊）。",
+      "tags": { "custom": 170, "sig": 1 },
+      "note": "招牌技（第五技能）。3 回合約 2 次受擊：反擊 75 × 0.6 ≈ 45 × 2 = 90，每次反擊都是見切（劍意 +1，約 40 × 2 = 80）。"
+    },
+    {
+      "id": "u_relic_blade", "name": "千年一閃", "en": "Millennial Flash",
+      "element": "neutral", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 180, "accuracy": 100, "priority": 0,
+      "exclusive": "relic_blade",
+      "text": "無視「格擋」；出手時消耗全部「劍意」，每層威力 +40。",
+      "tags": { "ignoreGuard": 1, "cond": 48 },
+      "note": "劍意期望 1.5 層 × 40 × 0.8 ≈ 48。"
+    },
+    {
+      "id": "transcribe", "name": "複寫術", "en": "Transcribe",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "施展「抄本」中最新的一頁（威力 ×0.8；武技改以魔力計算）；費用改為該技能的費用（至少 1）。",
+      "tags": { "custom": 90 },
+      "note": "覆寫舊技能。價值取決於抄到的技能；以同費用的標準技能估值，另加「對手的屬性與附加效果」約 5。"
+    },
+    {
+      "id": "grimoire_page_flare", "name": "焚頁彈", "en": "Page Flare",
+      "element": "neutral", "category": "magic",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "出手時撕掉「抄本」最舊的一頁，威力 +40。",
+      "tags": { "cond": 32, "custom": -8 },
+      "note": "+40 × 抄本有頁約 0.8 ≈ 32；失去一頁 −8。"
+    },
+    {
+      "id": "grimoire_page_ward", "name": "頁之壁", "en": "Page Ward",
+      "element": "neutral", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "3 回合內，受到「抄本」中技能的攻擊時，傷害 −50%。",
+      "tags": { "custom": 62 },
+      "note": "3 回合約 2 次受擊 × 抄本命中約 0.7 × 減傷 50%（44）≈ 62。"
+    },
+    {
+      "id": "grimoire_page_storm", "name": "書頁風暴", "en": "Page Storm",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "連擊次數 = 「抄本」頁數 + 1（每段威力 35）。",
+      "tags": { "hits": 2, "custom": 35 },
+      "note": "期望 2 頁 → 3 段 105 威力，比標示多 35。多段也能打穿護盾與替身。"
+    },
+    {
+      "id": "grimoire_seal_break", "name": "破咒頁", "en": "Spellbreak Page",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "破壞對手的伏技，並獲得 1 點靈能。",
+      "tags": { "destroyTrap": 1, "aeGain": 1 },
+      "note": "秘典書靈版的破咒：讀過的咒文就能拆解。"
+    },
+    {
+      "id": "grimoire_burn_all", "name": "萬頁焚書", "en": "Bookburning",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "出手時撕掉「抄本」的全部頁數（被格擋也一樣），每頁威力 +50。",
+      "tags": { "cond": 85, "custom": -15, "sig": 1 },
+      "note": "招牌技（兌現）。期望 2 頁 × 50 × 0.85 ≈ 85；清空抄本 −15。"
+    },
+    {
+      "id": "grimoire_mirror_page", "name": "倒寫之頁", "en": "Mirror Page",
+      "element": "neutral", "category": "trap",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "trapSpeed": "normal", "trigger": "對手使用「抄本」中的攻擊技能時",
+      "text": "使該次攻擊無效，並以同一技能反擊（威力 ×0.8，武技改以魔力計算）。",
+      "tags": { "negateSkill": 1, "custom": 72, "odds": 0.55 },
+      "note": "無效技能 90 ＋ 反擊（約 90 × 0.8）72；對手用抄本裡的攻擊約 0.55。"
+    },
+    {
+      "id": "grimoire_annotate", "name": "朱筆批註", "en": "Red Annotation",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "魔力 +1 階；下一次「複寫」類技能的威力 ×1.5。",
+      "tags": { "self.mag": 1, "custom": 42 },
+      "note": "下一次複寫約 +45 威力 × 0.9 ≈ 42。"
+    },
+    {
+      "id": "grimoire_final_chapter", "name": "秘典・終章", "en": "Final Chapter",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "施展「抄本」中威力最高的攻擊頁（武技改以魔力計算），費用改為該技能的費用（至少 2）；「抄本」滿 3 頁時，威力 ×1.3。",
+      "tags": { "custom": 121, "sig": 1 },
+      "note": "招牌技（複寫）。抄本裡最強的一招約 110 威力，扣掉只能用攻擊頁的限制約 −4；滿 3 頁 ×1.3 的 +33 約 45% 的時候成立 ≈ +15。"
+    },
+    {
+      "id": "u_grimoire", "name": "萬象禁典", "en": "Codex of All Things",
+      "element": "neutral", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "grimoire",
+      "text": "命中後，依序施展「抄本」中所有攻擊頁（每頁威力 ×0.5，武技改以魔力計算）。",
+      "tags": { "custom": 70 },
+      "note": "期望 1.5 個攻擊頁 × 約 90 × 0.5 ≈ 70。"
+    },
+    {
+      "id": "eldarin_sigil_claw", "name": "契印爪", "en": "Sigil Claw",
+      "element": "neutral", "category": "physical",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "若「條款」生效中，命中時獲得 1 點靈能。",
+      "tags": { "custom": 17 },
+      "note": "入場就有交鋒之約，條款生效的時間約七成：靈能 1 點 25 × 0.7 ≈ 17。威力比基礎攻擊低 10，換成下一口龍息的燃料。"
+    },
+    {
+      "id": "pact_breath", "name": "初契之息", "en": "Breath of the First Pact",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "「傾注」：消耗剩餘的全部靈能，每點威力 +20；「條款」生效中改為每點 +25。",
+      "tags": { "aetherPower": 20, "cond": 9 },
+      "note": "覆寫舊技能：階段 I 的龍息，從 Lv 1 就讓條款與傾注連動（誓約龍炎是它的完成形：93 威力、每點 +30）。條款中每點多 5 × 期望 2 點 × 條款生效約 0.85 ≈ 9；基礎威力 80 → 75。"
+    },
+    {
+      "id": "eldarin_sigil_bolt", "name": "契文彈", "en": "Sigil Bolt",
+      "element": "neutral", "category": "magic",
+      "cost": 1, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "若對手在目前的「條款」期間「違約」過，威力 +50。",
+      "tags": { "cond": 20 },
+      "note": "+50 × 條款生效且對手違約過的機率約 0.4 ≈ 20。"
+    },
+    {
+      "id": "eldarin_oath_scale", "name": "盟誓之鱗", "en": "Oath Scale",
+      "element": "neutral", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "trapSpeed": "normal", "trigger": "對手的攻擊命中時",
+      "text": "該次傷害 −40%；若「條款」生效中，對手「違約」。",
+      "tags": { "reduce": 0.4, "custom": 49, "odds": 0.9 },
+      "note": "不是格擋，所以不受交鋒之約限制：艾爾達林守約時的護身手段。違約 1 次（對手 −2、自己 +2 靈能；對手付不出時改扣生命）約 70 × 條款生效約 0.7 ≈ 49。觸發機率 0.9。"
+    },
+    {
+      "id": "eldarin_binding_tail", "name": "繫約之尾", "en": "Binding Tail",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 95, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "命中時，「條款」延長 1 回合（最多 3 回合）。",
+      "tags": { "custom": 21 },
+      "note": "條款多 1 回合約值 30 × 條款生效約 0.7 ≈ 21。"
+    },
+    {
+      "id": "eldarin_hush_pact", "name": "禁術之約", "en": "Pact of Hush",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "締結「禁術之約」3 回合：使用秘術或設置伏技的一方「違約」。",
+      "tags": { "custom": 88 },
+      "note": "條款：封住強化、回復、場地與伏技 3 回合（約 45）＋ 對手違約期望約 0.45 次（約 45）；艾爾達林自己幾乎只用攻擊，代價小，但也不能設盟誓之鱗。"
+    },
+    {
+      "id": "eldarin_pact_breaker", "name": "破約爪", "en": "Pactbreaker Claw",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "消除對手的「回合類效果」。",
+      "tags": { "dispelTurns": 1 },
+      "note": "艾爾達林版的消回合：撕掉別人的約定（晶壁、光幕、順風、持續效果）。"
+    },
+    {
+      "id": "eldarin_oath_flame", "name": "誓約龍炎", "en": "Oathflame",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 93, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "「傾注」：消耗剩餘的全部靈能，每點威力 +20；「條款」生效中改為每點 +30。",
+      "tags": { "aetherPower": 20, "cond": 14, "sig": 1 },
+      "note": "招牌技（龍息）。條款中每點多 10 × 期望 2 點 × 條款生效約 0.7 ≈ 14。"
+    },
+    {
+      "id": "eldarin_clash_pact", "name": "交鋒之約", "en": "Pact of Clash",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "締結「交鋒之約」3 回合：使用「格擋」或主動替換的一方「違約」。",
+      "tags": { "custom": 92 },
+      "note": "條款：格擋與替換都要付 2 點違約金，約 3 回合的封鎖價值 40；對手違約期望 0.5 次 × 靈能淨差 4 點（對手 −2、自己 +2，約 100）≈ 50；自己也受約束，扣回一些。"
+    },
+    {
+      "id": "eldarin_settlement", "name": "清算之爪", "en": "Settling Claw",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "對手在目前的「條款」期間每「違約」1 次，威力 +60（最多 +180）；攻擊後結束條款。",
+      "tags": { "cond": 45, "custom": -10, "sig": 1 },
+      "note": "招牌技（兌現）。期望違約約 0.75 次 × 60 ≈ 45；結束條款是代價 −10。改成武技，補上龍息（魔法）以外的打點。"
+    },
+    {
+      "id": "eldarin_oathwing", "name": "契翼突襲", "en": "Oathwing Raid",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "若「條款」生效中，先制 +1。",
+      "tags": { "cond": 17 },
+      "note": "先制 +1（25）× 條款生效約 0.7 ≈ 17。"
+    },
+    {
+      "id": "eldarin_verdict_fang", "name": "裁決之牙", "en": "Verdict Fang",
+      "element": "neutral", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "無視「格擋」；若對手在目前的「條款」期間「違約」過，必定暴擊。",
+      "tags": { "ignoreGuard": 1, "cond": 16 },
+      "note": "必定暴擊（×1.5，約 +55）× 條款生效且對手違約過約 0.3 ≈ 16。"
+    },
+    {
+      "id": "eldarin_name_pact", "name": "真名之約", "en": "Pact of True Names",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "指定對手最後使用的技能（奧義除外），締結「真名之約」3 回合：對手使用該技能即「違約」。",
+      "tags": { "custom": 122, "sig": 1 },
+      "note": "招牌技（第五技能式的壓軸）。軟封印對手的主力技能 3 回合：守約就等於封印（封印 3 回合約 105），硬用就每次付違約金（靈能淨差約 70）；要花一回合締結，扣回一些。"
+    },
+    {
+      "id": "u_eldarin", "name": "真名・艾爾達林", "en": "True Name: Eldarin",
+      "element": "neutral", "category": "ultimate", "damageType": "auto",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "eldarin",
+      "text": "無視「格擋」；命中後締結「萬約」3 回合：攻擊以外的一切行動（格擋、替換、秘術、伏技）都算「違約」。",
+      "tags": { "ignoreGuard": 1, "custom": 85 },
+      "note": "覆寫舊奧義。真名解放：契約之龍的一擊不容閃躲（無視格擋 20）；萬約＝交鋒之約＋禁術之約同時生效 3 回合，兩者重疊的部分不重複計，約 85。"
+    },
+    {
+      "id": "inkcat_splash", "name": "潑墨", "en": "Ink Splash",
+      "element": "neutral", "category": "magic",
+      "cost": 1, "power": 95, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「潑墨」：命中後自身防禦 −1 階。",
+      "tags": { "self.def": -1 },
+      "note": "墨漬的來源（第一步）。1 費 95 威力，扣掉防禦 −1 的代價 22.5。"
+    },
+    {
+      "id": "inkcat_reverse_stroke", "name": "逆筆", "en": "Reverse Stroke",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「反轉」自身的墨漬：每項能力下降變成等量的提升（−2 變 +2）。",
+      "tags": { "custom": 85 },
+      "note": "兌現（第二步）。每階墨漬翻面約 50（抹掉 −1 約 26 ＋ 得到 +1 約 35，離場會失去而打折）× 出手時期望 1.7 階 ≈ 85。沒有墨漬時不能使用。"
+    },
+    {
+      "id": "inkcat_ink_dot", "name": "點墨", "en": "Ink Dot",
+      "element": "neutral", "category": "magic",
+      "cost": 0, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「潑墨」：命中後自身速度 −1 階。",
+      "tags": { "self.spd": -1 },
+      "note": "0 費的潑墨：70 威力，扣掉速度 −1 的代價 18.75。一路點下去，速度的墨漬翻面後變成先手。"
+    },
+    {
+      "id": "ink_rewrite", "name": "塗改", "en": "Ink Rewrite",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「反轉」對手的能力提升（+2 變 −2；下降不變），自身魔力 +1 階。",
+      "tags": { "custom": 60, "self.mag": 1 },
+      "note": "覆寫舊技能：只反轉提升（不會把甩過去的墨漬翻回給對手）。估值同舊的「反轉」60 ＋ 魔力 +1。"
+    },
+    {
+      "id": "inkcat_thick_ink", "name": "濃墨", "en": "Thick Ink",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「潑墨」：命中後自身魔力 −1 階，對手抗魔 −1 階（濃墨也濺到對手身上）。",
+      "tags": { "self.mag": -1, "foe.res": -1 },
+      "note": "重的一筆，雙方都沾墨：110 威力，扣掉自身魔力 −1 的代價 30，加上對手抗魔 −1 的 30。自身魔力的墨漬翻面後，下一擊雙倍受惠。"
+    },
+    {
+      "id": "inkcat_fling", "name": "甩墨", "en": "Fling Ink",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "把自身的墨漬全部甩到對手身上：自身的能力下降歸零，對手的同一項能力降低等量的階數。",
+      "tags": { "custom": 90 },
+      "note": "另一種兌現（干擾）。每階約 58（抹掉自身 −1 約 26 ＋ 對手 −1 約 35，對手替換就消失而打折）× 期望 1.7 階 × 0.9 ≈ 90。"
+    },
+    {
+      "id": "inkcat_dragon_eye", "name": "畫龍點睛", "en": "Dotting the Eye",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "出手時「反轉」自身的墨漬，這次攻擊以反轉後的魔力計算。",
+      "tags": { "custom": 68, "sig": 1 },
+      "note": "招牌技：第二步與出手合成一招。翻面的價值 85 × 出手時有墨漬約 0.8 ≈ 68。"
+    },
+    {
+      "id": "inkcat_ink_pool", "name": "墨池", "en": "Ink Pool",
+      "element": "neutral", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "trapSpeed": "normal", "trigger": "對手能力提升時",
+      "text": "回合結束時，「反轉」對手的能力提升（下降不變）。",
+      "tags": { "custom": 110, "odds": 0.4 },
+      "note": "對付強化的伏技。常見的強化 +2 翻成 −2，約 4 階 × 28 ≈ 110；對手在伏技有效期間強化約 0.4。"
+    },
+    {
+      "id": "inkcat_ink_rain", "name": "墨雨", "en": "Ink Rain",
+      "element": "neutral", "category": "magic",
+      "cost": 3, "power": 165, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「潑墨」：命中後自身速度 −2 階。",
+      "tags": { "self.spd": -2 },
+      "note": "最重的潑墨：165 威力，扣掉代價（速度 −2 階）37.5；一次沾上 2 階墨漬。墨漬只在速度上：畫龍點睛吃不到魔力加成，要用逆筆翻成速度 +2 搶先。"
+    },
+    {
+      "id": "inkcat_scroll_reversal", "name": "逆卷", "en": "Reversed Scroll",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "「反轉」自身的墨漬，並「反轉」對手的能力提升（下降不變）。",
+      "tags": { "custom": 112 },
+      "note": "逆筆與塗改合成一招：翻面 85 ＋ 反轉對手強化（60 × 對手有強化約 0.45 ≈ 27）。"
+    },
+    {
+      "id": "u_inkcat", "name": "萬象繪卷", "en": "Scroll of All Things",
+      "element": "neutral", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "inkcat",
+      "text": "命中後，把自身的墨漬全部甩到對手身上（同「甩墨」）。",
+      "tags": { "custom": 64 },
+      "note": "覆寫舊奧義。甩墨的價值 90 × 出手時有墨漬約 0.7 ≈ 64。"
+    },
+    {
+      "id": "cloudfluff_hum", "name": "哼歌", "en": "Hum",
+      "element": "neutral", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "「蓬鬆」+1，並獲得 1 點靈能。",
+      "tags": { "aeGain": 1, "custom": 30 },
+      "note": "Lv 1 的招牌小動作，新手教學的絨雲也會用（不傷人、不回血）。每層蓬鬆約 25～30：暖絨多 5% 護盾、絨球多 35 威力。"
+    },
+    {
+      "id": "cloudfluff_puffball", "name": "絨球彈", "en": "Puffball",
+      "element": "neutral", "category": "magic",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "「絨球」：消耗全部「蓬鬆」，每層威力 +35。",
+      "tags": { "cond": 42, "custom": -6 },
+      "note": "兌現。出手時蓬鬆期望 1.5 層 × 35 × 0.8 ≈ 42；用掉蓬鬆（少了之後暖絨的護盾）−6。"
+    },
+    {
+      "id": "cloudfluff_cushion", "name": "軟墊", "en": "Soft Cushion",
+      "element": "neutral", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "trapSpeed": "normal", "trigger": "對手的攻擊命中時",
+      "text": "該次傷害 −30%，並使「蓬鬆」+1。",
+      "tags": { "reduce": 0.3, "custom": 20, "odds": 0.85 },
+      "note": "被打也能蓬起來。減傷 26 ＋ 蓬鬆 20，觸發機率 0.85。"
+    },
+    {
+      "id": "cloudfluff_puff_up", "name": "蓬蓬", "en": "Puff Up",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "自身防禦 +1 階、抗魔 +1 階，「蓬鬆」+1。",
+      "tags": { "self.def": 1, "self.res": 1, "custom": 25 },
+      "note": "蓬起來變得更軟更耐打。防禦 30 ＋ 抗魔 30 ＋ 蓬鬆 25。"
+    },
+    {
+      "id": "cloudfluff_fluff_pounce", "name": "軟綿綿撲", "en": "Fluffy Pounce",
+      "element": "neutral", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "命中後「蓬鬆」+1。",
+      "tags": { "custom": 20 },
+      "note": "0 費的蓄蓬鬆手段：正面對打時邊打邊攢蓬鬆，留給絨球或接班的夥伴。蓬鬆 +1（命中才有）≈ 20。"
+    },
+    {
+      "id": "cloudfluff_roll_away", "name": "滾滾", "en": "Roll Away",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "命中後滾回後備，換夥伴上場（觸發「暖絨」）。",
+      "tags": { "pivot": 1 },
+      "note": "支援的核心：打一下就把蓬鬆送給接班的夥伴。"
+    },
+    {
+      "id": "cloudfluff_cloud_nap", "name": "絨雲小憩", "en": "Cloud Nap",
+      "element": "neutral", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "自身回復 25% 最大生命，「蓬鬆」上滿 3 層。",
+      "tags": { "heal": 25, "custom": 50, "sig": 1 },
+      "note": "招牌技：窩成一朵雲睡一下，醒來蓬到最滿。回復 62.5 ＋ 蓬鬆補滿（平均補 2 層 × 25）50。"
+    },
+    {
+      "id": "cloudfluff_fluff_shield", "name": "絨毛護罩", "en": "Fluff Shield",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "獲得最大生命 25% 的護盾，「蓬鬆」+1。",
+      "tags": { "shield": 25, "custom": 25 },
+      "note": "護盾 55 ＋ 蓬鬆 25。"
+    },
+    {
+      "id": "cloudfluff_big_puffball", "name": "大絨球", "en": "Giant Puffball",
+      "element": "neutral", "category": "magic",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "「絨球」：消耗全部「蓬鬆」，每層威力 +30。",
+      "tags": { "cond": 36, "custom": -10 },
+      "note": "大一號的絨球。蓬鬆期望 1.5 層 × 30 × 0.8 ≈ 36；用掉蓬鬆（少了暖絨的護盾）−10。"
+    },
+    {
+      "id": "u_cloudfluff", "name": "絨雲大合唱", "en": "Cloud Chorus",
+      "element": "neutral", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "cloudfluff",
+      "text": "命中後，我方全隊（包含後備）回復 15% 最大生命。",
+      "tags": { "teamHeal": 15 },
+      "note": "全隊一起哼歌。"
+    },
+    {
+      "id": "clockmouse_gear_bite", "name": "齒輪咬", "en": "Gear Bite",
+      "element": "neutral", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「放條」：有發條時先制 +1；出手後發條 −1。",
+      "tags": { "custom": 19 },
+      "note": "Lv 1 的 0 費收尾。先制 +1（25）× 有發條的機率約 0.75 ≈ 19。"
+    },
+    {
+      "id": "clockmouse_wind_up", "name": "上緊發條", "en": "Wind Up",
+      "element": "neutral", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「發條」上滿 3 圈。",
+      "tags": { "custom": 55 },
+      "note": "每圈發條約 20（一次先制），平均補 2.5 圈 ≈ 55。"
+    },
+    {
+      "id": "windup_dash", "name": "發條衝刺", "en": "Windup Dash",
+      "element": "neutral", "category": "physical",
+      "cost": 1, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「放條」：有發條時先制 +1；出手後發條 −1。",
+      "tags": { "custom": 19 },
+      "note": "以同 id 改寫舊技能：拿掉「連環」連用倍率（與雪球類技能重疊），改成發條的先制。先制 25 × 有發條約 0.75 ≈ 19。"
+    },
+    {
+      "id": "clockmouse_gear_jam", "name": "齒輪卡榫", "en": "Gear Jam",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「封印」對手上一次使用的技能 2 回合。",
+      "tags": { "disable": 2 },
+      "note": "把齒輪卡進對手的招式：專治一招打天下的對手。"
+    },
+    {
+      "id": "clockmouse_mousetrap", "name": "鼠夾", "en": "Mousetrap",
+      "element": "neutral", "category": "trap",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "trapSpeed": "normal", "trigger": "對手的精靈入場時",
+      "text": "以「齒輪咬」攻擊入場的精靈（威力 ×1.5，不消耗發條）。",
+      "tags": { "custom": 60, "odds": 0.35 },
+      "note": "抓換人的陷阱：齒輪咬 45 × 1.5 ≈ 67，扣掉對手可能格擋約 60；對手在伏技有效期間替換約 0.35。"
+    },
+    {
+      "id": "clockmouse_rewind", "name": "倒轉齒輪", "en": "Rewind Gear",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "命中後「發條」+1 圈。不是放條攻擊：這回合結束時「上發條」照樣轉。",
+      "tags": { "custom": 25 },
+      "note": "2 費的蓄條重擊：邊打邊上發條（與特性合計一回合 +2 圈），換來下一輪的先制；也是 Lv 17 前唯一的 2 費出口。發條 +1 ≈ 一次先制 25。"
+    },
+    {
+      "id": "clockmouse_chain_release", "name": "發條連打", "en": "Rapid Release",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「放條」：有發條時先制 +1；連擊次數 = 發條圈數 + 1（最多 4 段，每段 35），出手後發條歸零。",
+      "tags": { "hits": 2, "custom": 47, "sig": 1 },
+      "note": "招牌技：一口氣放完發條。先制 19 ＋ 期望多 0.8 段 × 35 ≈ 28（滿發條時多 2 段，但放掉的 3 圈本來能換 3 次先制）。"
+    },
+    {
+      "id": "clockmouse_mainspring", "name": "主發條", "en": "Mainspring",
+      "element": "neutral", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「發條」上滿 3 圈，自身力量 +1 階。",
+      "tags": { "self.atk": 1, "custom": 50 },
+      "note": "上緊發條的升級版。補發條 50 ＋ 力量 40。"
+    },
+    {
+      "id": "clockmouse_full_gear", "name": "全速齒輪", "en": "Full Gear",
+      "element": "neutral", "category": "physical",
+      "cost": 3, "power": 130, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "「放條」：有發條時先制 +1；出手後發條 −1。",
+      "tags": { "custom": 19 },
+      "note": "最重的一擊也能搶先。"
+    },
+    {
+      "id": "u_clockmouse", "name": "萬輪齊轉", "en": "All Gears Turning",
+      "element": "neutral", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 180, "accuracy": 100, "priority": 0,
+      "exclusive": "clockmouse",
+      "text": "有發條時先制 +1；消耗全部發條，每圈威力 +20。",
+      "tags": { "custom": 51 },
+      "note": "先制 19 ＋ 期望 2 圈 × 20 × 0.8 ≈ 32。"
+    }
+  ]
+}

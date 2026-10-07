@@ -1,0 +1,921 @@
+{
+  "spirits": {
+    "monolith": {
+      "concept": "會自己滾來的小石頭長成的巨像：挑釁對手只准攻擊，再靠「石誓」硬撐致命一擊，以護甲回敬。",
+      "mechanic": { "name": "石誓", "text": "磐石巨像身上有「石誓」時（顯示在身上），生命在 30% 以上時受到致命的攻擊傷害，改為保留 1 點生命，然後石誓破碎（多段攻擊每段分開算）。寫著〔立誓〕的技能立下石誓（最多 1 個）。滿血時由特性【堅石】先擋，石誓留著。" },
+      "learnset": [
+        { "lv": 1, "id": "rock_throw" },
+        { "lv": 1, "id": "provoke" },
+        { "lv": 5, "id": "monolith_engrave" },
+        { "lv": 9, "id": "monolith_roll" },
+        { "lv": 13, "id": "seismic_stomp" },
+        { "lv": 17, "id": "crystal_spikes" },
+        { "lv": 21, "id": "meditate" },
+        { "lv": 25, "id": "monolith_colossus_vow" },
+        { "lv": 30, "id": "body_press" },
+        { "lv": 36, "id": "stone_wall" },
+        { "lv": 42, "id": "quake" }
+      ],
+      "ultimate": "u_earth",
+      "core": ["monolith_colossus_vow", "body_press", "monolith_engrave", "quake"]
+    },
+    "sand_reaper": {
+      "concept": "把伏技埋進沙裡、越埋越深：對手踩中就被沙鉗夾碎；遲遲不踩，就由沙鐮蠍親手掀開，化成巨鐮一擊。",
+      "mechanic": { "name": "深埋", "text": "沙鐮蠍設置的伏技埋下時「深埋」1 層，沙鐮蠍在場時每回合結束再 +1（最多 3 層，顯示在沙鐮蠍身上）。伏技發動時，每層深埋使對手受到其最大生命 6% 的傷害（「沙鉗」）。「掀沙」技能能掀開已深埋的伏技（不發動），把深埋化為威力。伏技離開伏技槽時，深埋歸零。" },
+      "learnset": [
+        { "lv": 1, "id": "sand_reaper_pincer_jab" },
+        { "lv": 1, "id": "sand_reaper_scythe_pit" },
+        { "lv": 5, "id": "sand_reaper_tail_sting" },
+        { "lv": 9, "id": "sand_reaper_reaping_counter" },
+        { "lv": 13, "id": "sand_reaper_burrow" },
+        { "lv": 17, "id": "sand_reaper_upheaval" },
+        { "lv": 20, "id": "sand_reaper_molt" },
+        { "lv": 22, "id": "seismic_stomp" },
+        { "lv": 26, "id": "sand_reaper_throat_snare" },
+        { "lv": 30, "id": "sand_reaper_chase" },
+        { "lv": 35, "id": "sand_reaper_scythe_storm" },
+        { "lv": 45, "id": "sand_reaper_sand_burial" }
+      ],
+      "ultimate": "u_sand_reaper",
+      "core": ["sand_reaper_scythe_pit", "sand_reaper_pincer_jab", "sand_reaper_reaping_counter", "sand_reaper_sand_burial", "sand_reaper_throat_snare"]
+    },
+    "terragon": {
+      "concept": "沙暴裡堆起岩層，讓每一擊最多只削去 25% 生命；時機到了就崩落岩層化為重擊或回復。山崩之後，山又會立起來。",
+      "mechanic": { "name": "岩層", "text": "最多 3 層，顯示在身上。泰拉岡有岩層時，受到的每一段攻擊傷害最多為其最大生命的 25%，被削減的那一段會擊碎 1 層岩層。岩層可以「崩落」（全部消耗）換取威力或回復；離場時歸零。" },
+      "trait": { "name": "不動磐岳", "text": "入場時展開「沙暴」3 回合並獲得 1 層「岩層」；「沙暴」中每回合結束時再獲得 1 層。不會被強制替換。" },
+      "learnset": [
+        { "lv": 1, "id": "terragon_shell_ram" },
+        { "lv": 1, "id": "terragon_stratify" },
+        { "lv": 5, "id": "provoke" },
+        { "lv": 9, "id": "terragon_rockslide" },
+        { "lv": 13, "id": "terragon_ridge_charge" },
+        { "lv": 17, "id": "terragon_tremor" },
+        { "lv": 20, "id": "terragon_soil_mend" },
+        { "lv": 24, "id": "terragon_bedrock" },
+        { "lv": 28, "id": "terragon_sand_surge" },
+        { "lv": 32, "id": "terragon_mountain_press" },
+        { "lv": 36, "id": "terragon_avalanche" },
+        { "lv": 40, "id": "terragon_backlash" },
+        { "lv": 45, "id": "terragon_kingdom" }
+      ],
+      "ultimate": "u_terragon",
+      "core": ["terragon_stratify", "terragon_shell_ram", "terragon_avalanche", "terragon_kingdom", "terragon_rockslide"]
+    },
+    "digmole": {
+      "concept": "矮人礦工的好幫手：鑽進地底讓對手撲空，再從腳下「破土」奇襲；撲空的對手連格擋都擋不住。",
+      "mechanic": { "name": "破土", "text": "寫著「潛地」的技能在使用的回合鑽進地底（攻擊打不到牠），下一回合「破土」出擊。掘晶鼴王在地底時，對手的攻擊「撲空」的話，下一次破土威力 +50%，並且無視「格擋」。" },
+      "learnset": [
+        { "lv": 1, "id": "digmole_drill_nose" },
+        { "lv": 1, "id": "dig_strike" },
+        { "lv": 5, "id": "rock_throw" },
+        { "lv": 9, "id": "digmole_rock_bore" },
+        { "lv": 13, "id": "seismic_stomp" },
+        { "lv": 17, "id": "digmole_upturn" },
+        { "lv": 20, "id": "digmole_crystal_burst" },
+        { "lv": 23, "id": "meditate" },
+        { "lv": 28, "id": "sandstorm" },
+        { "lv": 38, "id": "stone_edge" }
+      ],
+      "trait": { "name": "探脈", "text": "入場時翻開對手設置中的伏技。" },
+      "ultimate": "u_digmole",
+      "core": ["dig_strike", "digmole_drill_nose", "digmole_crystal_burst", "digmole_upturn", "digmole_rock_bore"]
+    },
+    "gargoyle": {
+      "concept": "蹲在城門上的石像：凝視讓對手的腳步化成石頭，再一口氣「碎紋」，把石化的部分連皮帶骨敲碎。",
+      "mechanic": { "name": "石紋", "text": "守門石魔入場時與每回合結束時，對手速度 −1 階。對手的速度下降就是「石紋」（每 −1 階 1 道，顯示在守門石魔身上）。寫著「碎紋」的技能每道石紋提升威力（寫在技能上），命中後擊碎全部石紋：對手的速度下降歸零。" },
+      "learnset": [
+        { "lv": 1, "id": "gargoyle_grit" },
+        { "lv": 1, "id": "stone_gaze" },
+        { "lv": 5, "id": "shadow_claw" },
+        { "lv": 9, "id": "gargoyle_crack" },
+        { "lv": 13, "id": "seismic_stomp" },
+        { "lv": 17, "id": "hex" },
+        { "lv": 19, "id": "gargoyle_shatter" },
+        { "lv": 21, "id": "rock_throw" },
+        { "lv": 28, "id": "gargoyle_gate_drop" },
+        { "lv": 36, "id": "gargoyle_moonwake" }
+      ],
+      "ultimate": "u_gargoyle",
+      "core": ["gargoyle_grit", "gargoyle_shatter", "gargoyle_gate_drop", "stone_gaze", "gargoyle_crack"]
+    },
+    "rhino": {
+      "concept": "只朝前方衝的戰犀：刨地起跑，全速衝撞連格擋一起撞穿；撞穿後慢下來，得冒著撞牆的險重新加速。",
+      "mechanic": { "name": "奔勢", "text": "寫著「助跑」的技能使峽谷戰犀「奔勢」上升（最多 3 層，顯示在身上，離場歸零）。每層奔勢使武技傷害 +8%。3 層是「全速」：寫著「衝撞」的技能無視「格擋」，全速的衝撞命中後減速（奔勢 −1）。代價：未滿全速時武技被格擋會「撞牆」，奔勢歸零，每層損失 8% 最大生命；沒有使用武技或助跑技能的回合（格擋、替換、無法行動）結束時，奔勢歸零。" },
+      "learnset": [
+        { "lv": 1, "id": "rhino_horn_butt" },
+        { "lv": 1, "id": "rhino_paw_ground" },
+        { "lv": 5, "id": "horn_charge" },
+        { "lv": 9, "id": "seismic_stomp" },
+        { "lv": 13, "id": "rhino_trample" },
+        { "lv": 17, "id": "heavy_blow" },
+        { "lv": 20, "id": "rhino_head_shake" },
+        { "lv": 24, "id": "rhino_canyon_run" },
+        { "lv": 28, "id": "rhino_ironhoof" },
+        { "lv": 33, "id": "rhino_heavy_step" },
+        { "lv": 38, "id": "rhino_rage_hooves" },
+        { "lv": 45, "id": "rhino_siege_horn" }
+      ],
+      "ultimate": "u_rhino",
+      "core": ["rhino_paw_ground", "rhino_siege_horn", "rhino_horn_butt", "rhino_ironhoof", "rhino_canyon_run"]
+    },
+    "sandserpent": {
+      "concept": "把對手拖進流沙：花靈能掙扎就越陷越深，屏住不動又被絞息勒緊；七柱沙牢封住奧義與大招，無處可逃。",
+      "mechanic": { "name": "陷沒", "text": "巨蟒的特性與技能使對手「陷沒」（最多 3 層，持續 3 回合；巨蟒再使其陷沒時刷新回合數）。陷沒的精靈每次花費靈能行動（技能、格擋）都是「掙扎」：每層損失 3% 最大生命，然後陷沒 +1。" },
+      "learnset": [
+        { "lv": 1, "id": "sandserpent_sand_fang" },
+        { "lv": 1, "id": "sandserpent_quicksand_vortex" },
+        { "lv": 5, "id": "sandserpent_tail_lash" },
+        { "lv": 9, "id": "sand_constrict" },
+        { "lv": 9, "id": "seismic_stomp" },
+        { "lv": 13, "id": "sandserpent_shed_skin" },
+        { "lv": 17, "id": "sandserpent_sand_breath" },
+        { "lv": 20, "id": "heavy_blow" },
+        { "lv": 23, "id": "sandserpent_breath_squeeze" },
+        { "lv": 27, "id": "sandserpent_seven_pillars" },
+        { "lv": 30, "id": "sandserpent_engulf" },
+        { "lv": 38, "id": "sandserpent_sand_sea" },
+        { "lv": 45, "id": "sandserpent_sinking_depths" }
+      ],
+      "trait": { "name": "流沙領域", "text": "入場時使對手「陷沒」1 層。在場時，對手無法主動替換（攻擊後替換等技能效果不受限制）。" },
+      "ultimate": "u_sandserpent",
+      "core": ["sandserpent_sand_fang", "sandserpent_seven_pillars", "sandserpent_breath_squeeze", "sandserpent_engulf", "sandserpent_quicksand_vortex"]
+    },
+    "chronodragon": {
+      "concept": "在對手陣地刻下會倒數的時印，再加速、延宕或收束它的應驗。替換與倒下都擋不住預言，只有看準時機的格擋。",
+      "mechanic": { "name": "時印", "text": "刻在對手陣地的預言（最多 5 層）。刻下後 2 回合的回合結束時「應驗」：對手在場精靈每層受到其最大生命 10% 的傷害。「時印 +N 層」在沒有時印時會刻下新的時印；加層不會重設倒數。應驗時若對手本回合格擋，時印被擋下並碎裂。替換與克羅諾斯倒下都不會讓時印消失。" },
+      "learnset": [
+        { "lv": 1, "id": "chronodragon_sand_bolt" },
+        { "lv": 1, "id": "sand_prophecy" },
+        { "lv": 6, "id": "chronodragon_hasten" },
+        { "lv": 10, "id": "cyclone" },
+        { "lv": 14, "id": "chronodragon_dune_breath" },
+        { "lv": 18, "id": "time_loan" },
+        { "lv": 20, "id": "chronodragon_rewind" },
+        { "lv": 24, "id": "chronodragon_convergence" },
+        { "lv": 28, "id": "chronodragon_time_corridor" },
+        { "lv": 32, "id": "chronodragon_era_gale" },
+        { "lv": 36, "id": "chronodragon_hourglass_flip" },
+        { "lv": 45, "id": "chronodragon_eternal_return" },
+        { "lv": 50, "id": "chronodragon_millennium" }
+      ],
+      "ultimate": "u_chronodragon",
+      "core": ["sand_prophecy", "chronodragon_sand_bolt", "chronodragon_convergence", "chronodragon_eternal_return", "chronodragon_dune_breath"]
+    }
+  },
+  "skills": [
+    {
+      "id": "terragon_shell_ram", "name": "岩殼撞", "en": "Shell Ram",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "每有 1 層「岩層」，威力 +10。",
+      "tags": { "cond": 18 },
+      "note": "守住岩層的報酬：平均約 1.8 層，估 +18"
+    },
+    {
+      "id": "terragon_stratify", "name": "積岩", "en": "Stratify",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "獲得 2 層「岩層」；「沙暴」中改為 3 層。",
+      "tags": { "custom": 80 },
+      "note": "岩層每層估 30（擋下一次大傷害的期望）；沙暴中期望多 0.6 層；已有岩層時會溢出，打 0.9 折"
+    },
+    {
+      "id": "terragon_rockslide", "name": "崩岩擊", "en": "Rockslide",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "「崩落」：消耗所有「岩層」，每層威力 +40。",
+      "tags": { "cond": 40 },
+      "note": "平均崩落 1.5 層 = +60 威力，扣掉失去岩層的防禦價值約 20"
+    },
+    {
+      "id": "terragon_ridge_charge", "name": "山脊衝撞", "en": "Ridge Charge",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "命中時獲得 1 層「岩層」。",
+      "tags": { "custom": 27 },
+      "note": "1 層岩層 30，上限溢出打 0.9 折"
+    },
+    {
+      "id": "terragon_tremor", "name": "震脈", "en": "Tremor",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "命中時，破壞對手設置中的伏技。",
+      "tags": { "custom": 26 },
+      "note": "破壞伏技 65 × 對手設有伏技的機率約 0.4"
+    },
+    {
+      "id": "terragon_soil_mend", "name": "化岩為壤", "en": "Soil Mend",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "回復 25% 最大生命；「崩落」所有「岩層」，每層再回復 10%。",
+      "tags": { "heal": 25, "custom": 15 },
+      "note": "崩落平均 1.5 層 = 回復 15%（37.5），扣掉失去岩層的價值約 22"
+    },
+    {
+      "id": "terragon_bedrock", "name": "萬古磐岩", "en": "Ageless Bedrock",
+      "element": "earth", "category": "status",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "獲得 1 層「岩層」；3 回合內「岩層」不會被擊碎（傷害上限照常作用）。",
+      "tags": { "custom": 150, "sig": 1 },
+      "note": "1 層岩層 27；鎖住岩層 3 回合：每次大傷害（約 45%→25%）省下 20% 生命 = 60，3 回合 × 0.7 機率 ≈ 126"
+    },
+    {
+      "id": "terragon_sand_surge", "name": "地脈沙暴", "en": "Leyline Sandstorm",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "展開「沙暴」5 回合，並獲得 1 層「岩層」。",
+      "tags": { "field": 1, "custom": 27 },
+      "note": "場地 90；1 層岩層 27"
+    },
+    {
+      "id": "terragon_mountain_press", "name": "山體壓制", "en": "Mountain Press",
+      "element": "neutral", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "「以守為攻」：以自身的護甲取代力量計算傷害。",
+      "tags": { "useDef": 1, "cond": 15 },
+      "note": "泰拉岡護甲／力量 ≈ 1.18，約 +15 威力；無屬性，補足對風屬性的打點"
+    },
+    {
+      "id": "terragon_avalanche", "name": "山崩", "en": "Avalanche",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "無視格擋。「崩落」：消耗所有「岩層」，每層威力 +40。",
+      "tags": { "ignoreGuard": 1, "cond": 45, "sig": 1 },
+      "note": "平均崩落 1.7 層 = +68 威力，扣掉失去岩層的防禦價值約 23"
+    },
+    {
+      "id": "terragon_backlash", "name": "磐岳反震", "en": "Mountain Backlash",
+      "element": "earth", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "對手的攻擊命中泰拉岡時",
+      "exclusive": "terragon",
+      "text": "在傷害前獲得 1 層「岩層」；這次被「岩層」削減的傷害全數反彈給攻擊者。",
+      "tags": { "custom": 72, "odds": 0.9 },
+      "note": "1 層岩層 27；反彈的傷害平均約為對手最大生命 20%（60）× 大傷害機率 0.75 = 45；泰拉岡在場才會發動"
+    },
+    {
+      "id": "terragon_kingdom", "name": "磐心王國", "en": "Stoneheart Kingdom",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "獲得 1 層「岩層」；3 回合內，每失去 1 層「岩層」（擊碎或崩落），對手受到其最大生命 8% 的傷害。",
+      "tags": { "custom": 115, "sig": 1 },
+      "note": "1 層岩層 27；3 回合內平均失去約 3.5 層（被擊碎＋崩落）× 8% × 3 ≈ 84"
+    },
+    {
+      "id": "u_terragon", "name": "山岳崩天", "en": "Mountainfall",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 180, "accuracy": 100, "priority": 0,
+      "exclusive": "terragon",
+      "text": "「崩落」：消耗所有「岩層」，每層威力 +50；之後獲得 3 層「岩層」。",
+      "tags": { "cond": 60, "custom": 72 },
+      "note": "崩落平均 1.7 層 +85 威力，扣掉失去岩層約 25；之後補滿 3 層岩層 30 × 3 × 0.8"
+    },
+    {
+      "id": "chronodragon_sand_bolt", "name": "流砂彈", "en": "Sand Bolt",
+      "element": "earth", "category": "magic",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "若對手陣地已有「時印」，時印 +1 層。",
+      "tags": { "custom": 14 },
+      "note": "時印每層估 24（10% 生命 30，延遲與格擋風險打 0.8 折）× 已有時印的機率 0.6"
+    },
+    {
+      "id": "sand_prophecy", "name": "預言之砂", "en": "Sands of Prophecy",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "「時印」+4 層；若對手本回合格擋，時印倒數 +1。",
+      "tags": { "custom": 105 },
+      "note": "4 層時印 × 24 × 0.95（上限溢出）≈ 91；看穿格擋的延宕約 14。沿用舊版預言之砂的 id（2 回合後 40%）"
+    },
+    {
+      "id": "chronodragon_hasten", "name": "時光飛逝", "en": "Time Flies",
+      "element": "wind", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "消除對手的「回合類效果」；「時印」倒數 −1。",
+      "tags": { "dispelTurns": 1, "custom": 20 },
+      "note": "提前應驗：少等一回合，降低被格擋、被替換消化的風險"
+    },
+    {
+      "id": "chronodragon_dune_breath", "name": "流年吐息", "en": "Breath of Years",
+      "element": "earth", "category": "magic",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "命中時「時印」+1 層。",
+      "tags": { "custom": 22 },
+      "note": "1 層時印 24 × 0.9（上限溢出）"
+    },
+    {
+      "id": "time_loan", "name": "時砂預支", "en": "Borrowed Sands",
+      "element": "earth", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "「預支」：立即獲得 5 點靈能；之後 3 次回合結束時，我方靈能回復各 −1。",
+      "tags": { "aeGain": 5, "aeLoan": 3 },
+      "note": "沿用舊版時砂預支的數值"
+    },
+    {
+      "id": "chronodragon_rewind", "name": "回溯", "en": "Rewind",
+      "element": "wind", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "回復 25% 最大生命；若後出手，改為回到本回合開始時的生命（至少回復 25%）。",
+      "tags": { "custom": 75 },
+      "note": "回復 25% = 62.5；後出手時平均多回復約 10%（約一半機率）= 12.5"
+    },
+    {
+      "id": "chronodragon_convergence", "name": "時之收束", "en": "Convergence",
+      "element": "earth", "category": "magic",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "命中後，「時印」立刻「應驗」，每層傷害 +20%。",
+      "tags": { "custom": 36, "sig": 1 },
+      "note": "平均 3.5 層 × 2% 生命 × 3 = 21；立刻應驗、不給對手格擋或替換的機會約 15"
+    },
+    {
+      "id": "chronodragon_time_corridor", "name": "時砂迴廊", "en": "Corridor of Sand",
+      "element": "earth", "category": "trap",
+      "cost": 3, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "counter", "trigger": "對手的攻擊命中我方精靈時",
+      "exclusive": "chronodragon",
+      "text": "使這次攻擊無效，並使「時印」+2 層。",
+      "tags": { "negateSkill": 1, "custom": 48, "odds": 0.7 },
+      "note": "無效技能 90；2 層時印 48"
+    },
+    {
+      "id": "chronodragon_era_gale", "name": "歲月狂嵐", "en": "Gale of Ages",
+      "element": "wind", "category": "magic",
+      "cost": 4, "power": 135, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "命中時「時印」倒數 −1。",
+      "tags": { "custom": 20 },
+      "note": "提前應驗 20（同時光飛逝）"
+    },
+    {
+      "id": "chronodragon_hourglass_flip", "name": "沙漏翻轉", "en": "Hourglass Flip",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "把自身所有異常狀態轉移給對手，並使「時印」+1 層。",
+      "tags": { "transferStatus": 1, "custom": 22 },
+      "note": "嫁禍 60；1 層時印 22"
+    },
+    {
+      "id": "chronodragon_eternal_return", "name": "永劫回歸", "en": "Eternal Return",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "3 回合內，「時印」應驗後以一半的層數（至少 1 層）重新刻下。",
+      "tags": { "custom": 125, "sig": 1 },
+      "note": "3 回合內平均應驗 1.5 次、每次重刻約 2.5 層 × 24 ≈ 90；和時之收束、時之終焉連段時再多約 35"
+    },
+    {
+      "id": "chronodragon_millennium", "name": "千年砂流", "en": "Millennium Sands",
+      "element": "earth", "category": "magic",
+      "cost": 4, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "每有 1 層「時印」，威力 +15（不消耗時印）。",
+      "tags": { "cond": 45 },
+      "note": "平均 3 層 = +45 威力"
+    },
+    {
+      "id": "u_chronodragon", "name": "時之終焉", "en": "End of Time",
+      "element": "earth", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "chronodragon",
+      "text": "命中後，「時印」立刻「應驗」，每層傷害 ×2。",
+      "tags": { "custom": 115 },
+      "note": "平均 3.5 層 × 10% 生命 × 3 = 105 的額外傷害；立刻應驗約 10"
+    },
+    {
+      "id": "sand_reaper_pincer_jab", "name": "鐮鉗突刺", "en": "Pincer Jab",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "我方有設置中的伏技時，先制 +1。",
+      "tags": { "cond": 15 },
+      "note": "先制 +1 價值 25 × 有設伏的回合約 60%"
+    },
+    {
+      "id": "sand_reaper_scythe_pit", "name": "鐮沙坑", "en": "Scythe Pit",
+      "element": "earth", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "對手的攻擊命中我方精靈時",
+      "exclusive": "sand_reaper",
+      "text": "這次攻擊的傷害 −20%。",
+      "tags": { "reduce": 0.2, "custom": 36, "odds": 0.95 },
+      "note": "減傷 20% = 18；「沙鉗」通常在深埋 2 層時發動（12% = 36）"
+    },
+    {
+      "id": "sand_reaper_tail_sting", "name": "毒尾針", "en": "Venom Tail",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "命中時使對手「中毒」1 層。",
+      "tags": { "status.poison": 1 }
+    },
+    {
+      "id": "sand_reaper_reaping_counter", "name": "伏鐮反剪", "en": "Reaping Counter",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": -1,
+      "exclusive": "sand_reaper",
+      "text": "若本回合我方伏技已發動，威力 +50。",
+      "tags": { "cond": 25 },
+      "note": "後攻（先制 −1）讓對手先踩中伏技；+50 威力 × 本回合伏技發動的機率約 50%"
+    },
+    {
+      "id": "sand_reaper_burrow", "name": "潛沙", "en": "Burrow",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "我方伏技「深埋」+2；自身護甲 +1 階。",
+      "tags": { "self.def": 1, "custom": 50 },
+      "note": "2 層深埋 = 沙鉗 12%（36）或掀沙 +60～70 威力；需要已設置沙鐮蠍的伏技（約 75%）"
+    },
+    {
+      "id": "sand_reaper_upheaval", "name": "掀沙鐮", "en": "Upheaval Scythe",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 65, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "「掀沙」：若我方伏技已「深埋」，掀開它（不發動），每層威力 +30。",
+      "tags": { "cond": 50 },
+      "note": "平均 2.2 層 × 30 = 66 × 有沙鐮蠍的伏技約 0.8 ≈ 53，扣掉放棄伏技效果"
+    },
+    {
+      "id": "sand_reaper_molt", "name": "沙底蟄伏", "en": "Lurk Below",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "回復 25% 最大生命；我方伏技「深埋」+1。",
+      "tags": { "heal": 25, "custom": 22 },
+      "note": "1 層深埋 ≈ 沙鉗 6% 或掀沙 +30 威力 × 有伏技約 0.75"
+    },
+    {
+      "id": "sand_reaper_throat_snare", "name": "流沙鎖喉", "en": "Throat Snare",
+      "element": "earth", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal", "trigger": "對手使用秘術時",
+      "exclusive": "sand_reaper",
+      "text": "使那個秘術無效，並使對手「沉默」2 回合。",
+      "tags": { "negateSkill": 1, "status.silence": 1, "custom": 45, "sig": 1, "odds": 0.4 },
+      "note": "沙鉗平均 2.5 層 = 15%（45）；觸發機率 0.4（許多對手很少用秘術）。沒被觸發時由掀沙兌現（價值算在掀沙技能）"
+    },
+    {
+      "id": "sand_reaper_chase", "name": "逐沙鐮", "en": "Sand Chase",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "「追擊」：對手本回合替換時，在牠離場前以 2 倍威力攻擊。",
+      "tags": { "custom": 25 },
+      "note": "追擊：對手替換的回合約 20% × 額外 75 威力 + 讓對手不敢隨意替換"
+    },
+    {
+      "id": "sand_reaper_scythe_storm", "name": "沙暴鐮舞", "en": "Scythe Storm",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "命中時，我方伏技「深埋」+1。",
+      "tags": { "custom": 20 },
+      "note": "1 層深埋 × 有伏技約 0.75"
+    },
+    {
+      "id": "sand_reaper_sand_burial", "name": "沙葬巨鐮", "en": "Sand Burial",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "無視格擋。「掀沙」：若我方伏技已「深埋」，掀開它（不發動），每層威力 +35。",
+      "tags": { "ignoreGuard": 1, "cond": 62, "sig": 1 },
+      "note": "平均 2.2 層 × 35 = 77 × 有沙鐮蠍的伏技約 0.8 ≈ 62"
+    },
+    {
+      "id": "u_sand_reaper", "name": "萬鐮沙獄", "en": "Pit of a Thousand Scythes",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "sand_reaper",
+      "text": "「掀沙」：若我方伏技已「深埋」，掀開它，每層威力 +40；之後設置的下一張伏技立刻「深埋」3 層。",
+      "tags": { "cond": 70, "custom": 40 },
+      "note": "掀沙平均 2.2 層 × 40 × 0.8 ≈ 70；下一張伏技直接 3 層（比平常多 2 層）≈ 沙鉗 +12% 或掀沙 +70 威力"
+    },
+    {
+      "id": "sandserpent_sand_fang", "name": "流沙咬", "en": "Sand Fang",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "命中時對手「陷沒」+1。",
+      "tags": { "custom": 22 },
+      "note": "1 層陷沒（刷新 3 回合）：對手之後的掙扎每次 +3%，並因掙扎繼續加深"
+    },
+    {
+      "id": "sandserpent_quicksand_vortex", "name": "流沙漩渦", "en": "Quicksand Vortex",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "對手「陷沒」+2；速度 −1 階。",
+      "tags": { "foe.spd": -1, "custom": 55 },
+      "note": "2 層陷沒：3 回合內對手約掙扎 2.4 次（6%→9%→9%）≈ 19%，扣掉與其他陷沒來源重疊、對手改用 0 費技能的部分"
+    },
+    {
+      "id": "sandserpent_tail_lash", "name": "甩尾沙浪", "en": "Tail Lash",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "命中時對手「陷沒」+1。",
+      "tags": { "custom": 28 },
+      "note": "1 層陷沒 ≈ 9%（另會因掙扎加深）"
+    },
+    {
+      "id": "sand_constrict", "name": "沙蟒絞殺", "en": "Sand Constrict",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "使對手「纏繞」3 回合：無法替換，每回合結束損失 8% 最大生命。",
+      "tags": { "bind": 8 },
+      "note": "沿用舊版沙蟒絞殺的 id 與數值"
+    },
+    {
+      "id": "sandserpent_shed_skin", "name": "蛻皮", "en": "Shed Skin",
+      "element": "earth", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "淨化自身的異常狀態；回復 15% 最大生命。",
+      "tags": { "cleanse": 1, "heal": 15 }
+    },
+    {
+      "id": "sandserpent_sand_breath", "name": "沙之呼吸", "en": "Breath of Sand",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "回復 25% 最大生命；對手每層「陷沒」再回復 5%。",
+      "tags": { "heal": 25, "cond": 20 },
+      "note": "平均 1.5 層 × 5% × 2.5"
+    },
+    {
+      "id": "sandserpent_breath_squeeze", "name": "絞息", "en": "Breath Squeeze",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "對手每有 1 點靈能，威力 +10（最多 +80）。",
+      "tags": { "cond": 45 },
+      "note": "對手平均保留約 4～5 點靈能；陷沒逼對手少花靈能時更高"
+    },
+    {
+      "id": "sandserpent_seven_pillars", "name": "七柱沙牢", "en": "Prison of Seven Pillars",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "命中時對手「陷沒」+1；接下來 3 回合，陷沒的對手無法使用費用 4 以上的技能與奧義。",
+      "tags": { "custom": 70, "sig": 1 },
+      "note": "1 層陷沒 22；封住奧義與 4 費以上的大招 3 回合（奧義溢價 80＋被迫降級的損失）≈ 48"
+    },
+    {
+      "id": "sandserpent_engulf", "name": "沙崩吞噬", "en": "Engulf",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "對手「陷沒」時，無視格擋。",
+      "tags": { "cond": 15 },
+      "note": "無視格擋 20 × 對手陷沒約 0.75"
+    },
+    {
+      "id": "sandserpent_sand_sea", "name": "沙海崩落", "en": "Collapse of the Sand Sea",
+      "element": "earth", "category": "physical",
+      "cost": 4, "power": 140, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "對手「陷沒」3 層時，威力 +40。",
+      "tags": { "cond": 20 },
+      "note": "+40 × 3 層的機率約 0.5"
+    },
+    {
+      "id": "sandserpent_sinking_depths", "name": "流沙沒頂", "en": "Engulfing Depths",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "命中時，對手每層「陷沒」失去 1 點靈能。",
+      "tags": { "cond": 45, "sig": 1 },
+      "note": "奪走靈能 25/點 × 平均 2.2 層 × 對手有靈能約 0.85"
+    },
+    {
+      "id": "u_sandserpent", "name": "萬丈流沙", "en": "Endless Quicksand",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "sandserpent",
+      "text": "命中後，對手「陷沒」變為 3 層（刷新回合數），並「纏繞」3 回合（每回合損失 8%）。",
+      "tags": { "bind": 8, "custom": 55 },
+      "note": "3 層陷沒 ≈ 3 回合 × 9% × 0.8 ≈ 20% 扣掉已有的層數。沿用舊版萬丈流沙的 id"
+    },
+    {
+      "id": "rhino_horn_butt", "name": "頂角", "en": "Horn Butt",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：命中時「奔勢」+1。",
+      "tags": { "custom": 15 },
+      "note": "1 層奔勢 ≈ 之後約 2 次武技 × 8% ≈ 15（往全速推進的價值算在衝撞技能上）"
+    },
+    {
+      "id": "rhino_paw_ground", "name": "刨地", "en": "Paw the Ground",
+      "element": "earth", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "只能在「奔勢」0 層時使用（起跑）。「助跑」：「奔勢」變為 3 層（「全速」）。",
+      "tags": { "custom": 52 },
+      "note": "全速本身的價值算在衝撞技能上；這裡只算 3 層奔勢讓之後約 2 次武技 +24% ≈ 40，加上不會撞牆的安全起跑 ≈ 12"
+    },
+    {
+      "id": "horn_charge", "name": "犀角衝撞", "en": "Horn Charge",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「衝撞」：「全速」時威力 +70。",
+      "tags": { "cond": 72 },
+      "note": "全速約 0.8 ×（+70 威力 + 無視格擋 20）≈ 72。沿用舊版犀角衝撞的 id"
+    },
+    {
+      "id": "rhino_trample", "name": "踐踏", "en": "Trample",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：命中時「奔勢」+1，對手速度 −1 階。",
+      "tags": { "foe.spd": -1, "custom": 15 },
+      "note": "1 層奔勢 ≈ 之後約 2 次武技 × 8% ≈ 15（往全速推進的價值算在衝撞技能上）"
+    },
+    {
+      "id": "rhino_head_shake", "name": "甩頭", "en": "Head Shake",
+      "element": "earth", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：淨化自身的異常狀態；「奔勢」+1。",
+      "tags": { "cleanse": 1, "custom": 30 },
+      "note": "1 層奔勢；減速後用秘術補回全速不會撞牆，以 30 計"
+    },
+    {
+      "id": "rhino_canyon_run", "name": "峽谷奔襲", "en": "Canyon Run",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：命中時「奔勢」+1；已經「全速」時改為威力 +30。",
+      "tags": { "cond": 20 },
+      "note": "奔勢 +1（15）× 未滿約 0.6 = 9；+30 × 全速約 0.4 = 12"
+    },
+    {
+      "id": "rhino_ironhoof", "name": "鐵蹄破陣", "en": "Ironhoof Breach",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「衝撞」：無視「格擋」；對手格擋時，威力 +40。",
+      "tags": { "ignoreGuard": 1, "cond": 10, "sig": 1 },
+      "note": "+40 × 對手格擋的機率約 0.25（減速後奔勢 1～2 層時對手最想格擋）"
+    },
+    {
+      "id": "rhino_heavy_step", "name": "重步", "en": "Heavy Stride",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：「奔勢」+1；回復 30% 最大生命。",
+      "tags": { "heal": 30, "custom": 25 },
+      "note": "1 層奔勢（秘術不會撞牆）"
+    },
+    {
+      "id": "rhino_rage_hooves", "name": "怒蹄", "en": "Raging Hooves",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 120, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「助跑」：命中時「奔勢」+1。自身受到造成傷害 20% 的反衝。",
+      "tags": { "recoil": 0.2, "custom": 15 },
+      "note": "1 層奔勢 ≈ 之後約 2 次武技 × 8% ≈ 15（往全速推進的價值算在衝撞技能上）"
+    },
+    {
+      "id": "rhino_siege_horn", "name": "撞城角", "en": "Siege Horn",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「衝撞」：「全速」時威力 +90，命中後對手被「撞飛」（強制替換）。",
+      "tags": { "cond": 88, "custom": 25, "sig": 1 },
+      "note": "全速約 0.8 ×（+90 威力 + 無視格擋 20）≈ 88；撞飛 = 強制替換 50 × 全速 0.8 × 對手有後備約 0.6 ≈ 25"
+    },
+    {
+      "id": "u_rhino", "name": "峽谷崩衝", "en": "Canyon Rampage",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "rhino",
+      "text": "「衝撞」：命中後「奔勢」變為 3 層（「全速」）。",
+      "tags": { "cond": 10, "custom": 50 },
+      "note": "全速時無視格擋 20 × 0.5 = 10；命中後直接全速：下一次衝撞無視格擋並 +70～90 威力、之後的武技 +24% ≈ 50。沿用舊版峽谷崩衝的 id"
+    },
+    {
+      "id": "monolith_engrave", "name": "刻名", "en": "Engrave",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 30, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "命中後〔立誓〕：立下「石誓」。",
+      "tags": { "custom": 38 },
+      "note": "石誓 = 保留 1 點生命（100）× 生命 30%～99% 時真的吃到致命一擊的機率約 0.4 ≈ 40；已有石誓時白費 −2"
+    },
+    {
+      "id": "monolith_roll", "name": "滾石撞", "en": "Rolling Slam",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "「以守為攻」：以自身的護甲取代力量計算傷害。命中時自身護甲 +1 階。",
+      "tags": { "useDef": 1, "cond": 15, "self.def": 1 },
+      "note": "以守為攻：磐石巨像護甲比力量高約 29% ≈ 15"
+    },
+    {
+      "id": "body_press", "name": "鐵壁衝撞", "en": "Body Press",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 60, "accuracy": 100, "priority": -1,
+      "exclusive": "monolith",
+      "text": "先制 −1。「以守為攻」：以自身的護甲取代力量計算傷害。本回合受到攻擊之後，威力 +30。",
+      "tags": { "useDef": 1, "cond": 48 },
+      "note": "+30 × 先制 −1、多半後攻時已經被打的機率約 0.8 ≈ 24；以守為攻：磐石巨像護甲比力量高約 29%，(60 + 24) × 0.29 ≈ 24。沿用舊版鐵壁衝撞的 id"
+    },
+    {
+      "id": "crystal_spikes", "name": "晶刺地雷", "en": "Crystal Spikes",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "在對手陣地佈下「入場陷阱」：對手之後每次替換入場時受到其最大生命 12% 的傷害。自身護甲 +1 階。",
+      "tags": { "hazard": 12, "self.def": 1 },
+      "note": "沿用舊版晶刺地雷的 id 與數值"
+    },
+    {
+      "id": "stone_wall", "name": "岩壁", "en": "Stone Wall",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "自身護甲 +2 階、抗魔 +2 階。",
+      "tags": { "self.def": 2, "self.res": 2 },
+      "note": "沿用舊版岩壁的 id 與數值"
+    },
+    {
+      "id": "monolith_colossus_vow", "name": "巍然立誓", "en": "Colossal Vow",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 1,
+      "exclusive": "monolith",
+      "text": "先制 +1。使對手「挑釁」2 回合。〔立誓〕：立下「石誓」。",
+      "tags": { "status.taunt": 1, "custom": 40, "sig": 1 },
+      "note": "挑釁 55；石誓 = 保留 1 點生命（100）× 生命 30%～99% 時真的吃到致命一擊的機率約 0.4 ≈ 40；先制 +1 讓挑釁趕在對手的秘術之前（秘術的先制不計價）"
+    },
+    {
+      "id": "quake", "name": "地震", "en": "Quake",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "「以守為攻」：以自身的護甲取代力量計算傷害。",
+      "tags": { "useDef": 1, "cond": 32 },
+      "note": "以守為攻：磐石巨像護甲比力量高約 29% ≈ 32。沿用舊版地震的 id"
+    },
+    {
+      "id": "u_earth", "name": "大地崩裂", "en": "Earthsplitter",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "monolith",
+      "text": "「以守為攻」：以自身的護甲取代力量計算傷害。命中後〔立誓〕：立下「石誓」。",
+      "tags": { "useDef": 1, "cond": 46, "custom": 40 },
+      "note": "以守為攻：磐石巨像護甲比力量高約 29% ≈ 46；石誓 = 保留 1 點生命（100）× 生命 30%～99% 時真的吃到致命一擊的機率約 0.4 ≈ 40。沿用舊版大地崩裂的 id（原本三隻 N 共用，現在是磐石巨像的奧義）"
+    },
+    {
+      "id": "digmole_drill_nose", "name": "鑽鼻突", "en": "Drill Nose",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 40, "accuracy": 100, "priority": 1,
+      "exclusive": "digmole",
+      "text": "先制 +1。",
+      "tags": {},
+      "note": "先制 +1 = 25"
+    },
+    {
+      "id": "dig_strike", "name": "潛地突襲", "en": "Dig Strike",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "「潛地」：使用的回合鑽進地底，下一回合「破土」出擊。",
+      "tags": { "charge": 1, "dig": 1, "cond": 36 },
+      "note": "蓄力 −45、潛地閃避 +45；撲空（40 威力 + 無視格擋 20）× 對手在潛地時出手的機率約 0.6（模擬實測約六成）≈ 36。沿用舊版潛地突襲的 id"
+    },
+    {
+      "id": "digmole_rock_bore", "name": "鑽岩", "en": "Rock Bore",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "無視目標 30% 護甲。",
+      "tags": { "armorPen": 0.3 }
+    },
+    {
+      "id": "digmole_upturn", "name": "翻土奇襲", "en": "Upturn Ambush",
+      "element": "earth", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "「潛地」：使用的回合鑽進地底，下一回合「破土」出擊。",
+      "tags": { "charge": 1, "dig": 1, "cond": 27 },
+      "note": "蓄力 −45、潛地閃避 +45；撲空（25 威力 + 無視格擋 20）× 對手在潛地時出手的機率約 0.6（模擬實測約六成）≈ 27"
+    },
+    {
+      "id": "sandstorm", "name": "沙暴", "en": "Sandstorm",
+      "element": "earth", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "場地變為「沙暴」5 回合。自身護甲 +1 階。",
+      "tags": { "field": 1, "self.def": 1 },
+      "note": "沿用舊版沙暴的 id 與數值"
+    },
+    {
+      "id": "digmole_crystal_burst", "name": "晶礦奇襲", "en": "Crystal Ambush",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "「潛地」：使用的回合鑽進地底，下一回合「破土」出擊。破土時若對手撲空過，獲得 2 點靈能。",
+      "tags": { "charge": 1, "dig": 1, "cond": 69, "sig": 1 },
+      "note": "蓄力 −45、潛地閃避 +45；撲空（45 威力 + 無視格擋 20）× 對手在潛地時出手的機率約 0.6（模擬實測約六成）≈ 39；撲空時靈能 +2（50）× 0.6 ≈ 30（併入 cond）"
+    },
+    {
+      "id": "stone_edge", "name": "裂岩刃", "en": "Stone Edge",
+      "element": "earth", "category": "physical",
+      "cost": 4, "power": 140, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "暴擊率 +30%。",
+      "tags": { "critRate": 0.3 },
+      "note": "沿用舊版裂岩刃的 id"
+    },
+    {
+      "id": "u_digmole", "name": "晶脈崩落", "en": "Veinbreaker",
+      "element": "earth", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "digmole",
+      "text": "「潛地」：使用的回合鑽進地底，下一回合「破土」出擊。",
+      "tags": { "charge": 1, "dig": 1, "cond": 60 },
+      "note": "蓄力 −45、潛地閃避 +45；撲空（80 威力 + 無視格擋 20）× 對手在潛地時出手的機率約 0.6（模擬實測約六成）≈ 60"
+    },
+    {
+      "id": "gargoyle_grit", "name": "石屑爪", "en": "Grit Claw",
+      "element": "earth", "category": "physical",
+      "cost": 0, "power": 40, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "命中時對手速度 −1 階。",
+      "tags": { "foe.spd": -1 }
+    },
+    {
+      "id": "stone_gaze", "name": "石之凝視", "en": "Stone Gaze",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "使對手速度 −2 階，並「束縛」2 回合。",
+      "tags": { "foe.spd": -2, "status.root": 1 },
+      "note": "沿用舊版石之凝視的 id 與數值"
+    },
+    {
+      "id": "gargoyle_crack", "name": "碎紋爪", "en": "Crackling Claw",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "「碎紋」：每道「石紋」威力 +30，命中後石紋歸零。",
+      "tags": { "cond": 44 },
+      "note": "使用時平均約 2.5 道石紋（模擬實測）：30 × 2.5 − 擊碎石紋的代價 12.5 × 2.5 ≈ 44"
+    },
+    {
+      "id": "gargoyle_moonwake", "name": "月下甦醒", "en": "Moonwake",
+      "element": "dark", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "回復 30% 最大生命；自身速度 +1 階。",
+      "tags": { "heal": 30, "self.spd": 1 }
+    },
+    {
+      "id": "gargoyle_shatter", "name": "碎像", "en": "Shatter the Statue",
+      "element": "dark", "category": "physical",
+      "cost": 3, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "「碎紋」：每道「石紋」威力 +35，命中後石紋歸零。",
+      "tags": { "cond": 72, "sig": 1 },
+      "note": "使用時平均約 3.2 道石紋（模擬實測）：35 × 3.2 − 擊碎石紋的代價 12.5 × 3.2 ≈ 72"
+    },
+    {
+      "id": "gargoyle_gate_drop", "name": "門石落", "en": "Gatestone Drop",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "命中時對手速度 −1 階。",
+      "tags": { "foe.spd": -1 }
+    },
+    {
+      "id": "u_gargoyle", "name": "千年石封", "en": "Millennial Seal",
+      "element": "dark", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "gargoyle",
+      "text": "「碎紋」：每道「石紋」威力 +40，這一擊額外算 2 道；命中後石紋歸零。",
+      "tags": { "cond": 140 },
+      "note": "額外 2 道 = 80；使用時平均約 2.2 道石紋（模擬實測）：40 × 2.2 − 擊碎石紋的代價 12.5 × 2.2 ≈ 60"
+    }
+  ]
+}

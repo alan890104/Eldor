@@ -1,0 +1,932 @@
+{
+  "spirits": {
+    "pyre_dragoon": {
+      "concept": "尾焰衝刺、龍舞提升速度累積「衝勢」，再以衝鋒把全部衝勢化為威力一口氣打出；紅蓮突擊擊倒對手還能帶著衝勢繼續衝。",
+      "mechanic": {
+        "name": "衝勢",
+        "text": "熾焰龍騎的速度提升就是「衝勢」（顯示在身上）：跑得越快，越先出手。寫著「衝鋒」的技能消耗自身全部速度提升，每階使威力提升（數值寫在技能上）。"
+      },
+      "trait": {
+        "name": "龍騎之心",
+        "text": "生命首次降到 50% 以下時，速度 +1 階（衝勢 +1；每場一次）。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "flame_claw" },
+        { "lv": 1, "id": "pyre_dragoon_tail_dash" },
+        { "lv": 5, "id": "pyre_dragoon_charge" },
+        { "lv": 10, "id": "pyre_dragoon_red_scale" },
+        { "lv": 15, "id": "blaze_slash" },
+        { "lv": 20, "id": "pyre_dragoon_pursuit" },
+        { "lv": 22, "id": "heavy_blow" },
+        { "lv": 26, "id": "pyre_dragoon_dance" },
+        { "lv": 30, "id": "pyre_dragoon_crimson_charge" },
+        { "lv": 35, "id": "pyre_dragoon_flash_thrust" },
+        { "lv": 40, "id": "pyre_dragoon_armor_break" }
+      ],
+      "ultimate": "u_pyre_dragoon",
+      "core": ["pyre_dragoon_crimson_charge", "pyre_dragoon_tail_dash", "pyre_dragoon_dance", "pyre_dragoon_charge", "flame_claw", "blaze_slash"]
+    },
+    "pyrewing": {
+      "concept": "撲粉、鱗粉幕在對手身上撒下「鱗粉」，再「點燃」一口氣引爆：每層都是穩定的百分比傷害，並必定灼燒。",
+      "mechanic": {
+        "name": "鱗粉",
+        "text": "焰翅蛾后寫著〔撒粉〕的技能在對手身上撒下「鱗粉」（最多 3 層，對手離場時散去）。寫著「點燃」的技能消耗全部鱗粉：每層使對手受到其最大生命的百分比傷害（數值寫在技能上），有鱗粉時並使其「灼燒」。"
+      },
+      "trait": {
+        "name": "火鱗粉",
+        "text": "受到武技攻擊時，攻擊者沾上 1 層「鱗粉」。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "ember" },
+        { "lv": 1, "id": "pyrewing_dust" },
+        { "lv": 5, "id": "pyrewing_ignite" },
+        { "lv": 10, "id": "pyrewing_dust_cloud" },
+        { "lv": 15, "id": "fireball" },
+        { "lv": 20, "id": "pyrewing_dust_trap" },
+        { "lv": 22, "id": "heat_up" },
+        { "lv": 26, "id": "pyrewing_moth_swarm" },
+        { "lv": 30, "id": "pyrewing_wildfire" },
+        { "lv": 35, "id": "pyrewing_eclosion" }
+      ],
+      "ultimate": "u_pyrewing",
+      "core": ["pyrewing_wildfire", "pyrewing_moth_swarm", "fireball", "pyrewing_ignite", "pyrewing_dust", "ember"]
+    },
+    "magma_golem": {
+      "concept": "用鍛拳、淬火、鐵砧在身上鍛入焰／鋒／重三道紋，再以出爐一擊全部打出：灼燒、必定暴擊、無視格擋。",
+      "mechanic": {
+        "name": "鍛紋",
+        "text": "寫著「鍛入」的技能會在熔岩魔像身上鍛入「紋」，每種最多 1 道：「焰紋」命中後使對手「灼燒」；「鋒紋」必定暴擊；「重紋」無視「格擋」與護盾。「出爐」攻擊帶著所有紋打出，使用後紋清空（被格擋也一樣）。離場時紋會冷卻消失。"
+      },
+      "trait": {
+        "name": "熔岩之軀",
+        "text": "受到武技攻擊時，30% 使攻擊者「灼燒」；身上有「焰紋」時必定灼燒。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "golem_forge_fist" },
+        { "lv": 1, "id": "golem_quench" },
+        { "lv": 5, "id": "golem_cast_strike" },
+        { "lv": 10, "id": "rock_throw" },
+        { "lv": 15, "id": "golem_anvil_stance" },
+        { "lv": 18, "id": "golem_lava_pit" },
+        { "lv": 20, "id": "golem_magma_mend" },
+        { "lv": 22, "id": "seismic_stomp" },
+        { "lv": 28, "id": "golem_lava_hammer" },
+        { "lv": 28, "id": "golem_thousand_hammers" },
+        { "lv": 36, "id": "golem_trample" },
+        { "lv": 45, "id": "golem_eternal_forge" }
+      ],
+      "ultimate": "u_magma_golem",
+      "core": ["golem_thousand_hammers", "golem_lava_hammer", "golem_quench", "golem_forge_fist", "golem_cast_strike", "golem_lava_pit", "golem_anvil_stance"]
+    },
+    "ignisar": {
+      "concept": "烈陽與挨打都讓鬃焰更熾：白焰不怕水、蒼焰擋不住。燒到蒼焰就用日冕爆釋放換回靈能，或以奧義加冕、鎖住蒼焰橫掃。",
+      "mechanic": {
+        "name": "焰色",
+        "text": "鬃焰分三色：赤焰 → 白焰 → 蒼焰（以白焰登場，離場時重置）。升溫：「烈陽」中每回合結束、每回合首次受到攻擊時，各升一階。白焰以上：火屬性攻擊不會被「抵抗」，也不受「暴雨」削弱。蒼焰：火屬性攻擊無視「格擋」與護盾，但每回合結束「過熱」，失去 8% 最大生命。"
+      },
+      "trait": {
+        "name": "王焰領域",
+        "text": "入場時展開「烈陽」3 回合。烈陽只為王者燃燒：對手的火屬性攻擊打在伊格尼薩身上時，不受烈陽加成。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "ignisar_mane_flare" },
+        { "lv": 1, "id": "ignisar_royal_roar" },
+        { "lv": 5, "id": "ignisar_white_breath" },
+        { "lv": 10, "id": "ignisar_sunrise" },
+        { "lv": 15, "id": "ignisar_radiant_claw" },
+        { "lv": 20, "id": "ignisar_purge" },
+        { "lv": 22, "id": "heavy_blow" },
+        { "lv": 24, "id": "ignisar_lion_pounce" },
+        { "lv": 28, "id": "ignisar_corona_burst" },
+        { "lv": 32, "id": "ignisar_banked_mane" },
+        { "lv": 36, "id": "ignisar_no_retreat" },
+        { "lv": 40, "id": "ignisar_royal_verdict" },
+        { "lv": 45, "id": "ignisar_high_noon" },
+        { "lv": 50, "id": "ignisar_endless_day" }
+      ],
+      "ultimate": "u_ignisar",
+      "core": ["ignisar_corona_burst", "ignisar_royal_roar", "ignisar_mane_flare", "ignisar_endless_day", "ignisar_sunrise", "ignisar_white_breath"]
+    },
+    "bellowsbeast": {
+      "concept": "鼓風或吃下對手的火焰點燃「火種」，下一個火屬性攻擊就「爆燃」；熔爐爆發把火種燒成兩倍威力。",
+      "mechanic": {
+        "name": "火種",
+        "text": "熔爐鍛獸的「火種」點燃時（顯示在身上），下一個火屬性攻擊「爆燃」：威力 +50%，之後火種熄滅。寫著「鼓風」的技能與特性【引火】會點燃火種。"
+      },
+      "trait": {
+        "name": "引火",
+        "text": "受到火屬性攻擊後，點燃「火種」。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "flame_claw" },
+        { "lv": 1, "id": "bellowsbeast_bellows" },
+        { "lv": 5, "id": "bellowsbeast_coal_roll" },
+        { "lv": 10, "id": "forge_hammer" },
+        { "lv": 15, "id": "heat_up" },
+        { "lv": 18, "id": "blaze_slash" },
+        { "lv": 22, "id": "heavy_blow" },
+        { "lv": 26, "id": "bellowsbeast_backfire" },
+        { "lv": 30, "id": "bellowsbeast_furnace_burst" },
+        { "lv": 35, "id": "bellowsbeast_ash_mend" }
+      ],
+      "ultimate": "u_bellowsbeast",
+      "core": ["bellowsbeast_furnace_burst", "forge_hammer", "bellowsbeast_bellows", "blaze_slash", "flame_claw", "bellowsbeast_coal_roll"]
+    },
+    "shieldbeetle": {
+      "concept": "舉盾、格擋、烙殼守住陣線累積「固守」（越守越硬），再以「破陣」把守下來的回合一口氣衝出去。",
+      "mechanic": {
+        "name": "固守",
+        "text": "赤鐵騎甲格擋或使用秘術、沒有攻擊的回合，回合結束時「固守」+1（最多 3 層，顯示在身上，離場歸零）。每層固守使受到的攻擊傷害 −12%。寫著「破陣」的攻擊消耗全部固守，每層威力提升（數值寫在技能上）。"
+      },
+      "trait": {
+        "name": "騎士之盾",
+        "text": "成功「格擋」攻擊時，「固守」+1（加上回合結束的 +1，格擋的回合共 +2）。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "flame_claw" },
+        { "lv": 1, "id": "shieldbeetle_raise" },
+        { "lv": 5, "id": "shield_bash" },
+        { "lv": 10, "id": "shieldbeetle_heat_shell" },
+        { "lv": 15, "id": "blaze_slash" },
+        { "lv": 20, "id": "shieldbeetle_shield_wall" },
+        { "lv": 22, "id": "heavy_blow" },
+        { "lv": 26, "id": "shieldbeetle_iron_charge" },
+        { "lv": 30, "id": "shieldbeetle_crimson_lance" },
+        { "lv": 35, "id": "shieldbeetle_oath" }
+      ],
+      "ultimate": "u_shieldbeetle",
+      "core": ["shieldbeetle_crimson_lance", "shield_bash", "shieldbeetle_shield_wall", "blaze_slash", "flame_claw", "shieldbeetle_raise"]
+    },
+    "steameel": {
+      "concept": "火接水、水接火：上一招留下的餘熱或水氣，讓下一個反屬性的專屬攻擊「汽化」，威力提升並燙傷對手。烈陽、暴雨都是牠的主場。",
+      "mechanic": {
+        "name": "汽化",
+        "text": "火屬性技能留下「餘熱」，水屬性技能留下「水氣」（只保留最新的一種，離場時散去）。帶著餘熱使用水屬性專屬攻擊、或帶著水氣使用火屬性專屬攻擊時，這一擊「汽化」：威力 +30%，命中後使對手「灼燒」；使用後餘熱／水氣散去。"
+      },
+      "trait": {
+        "name": "蒸騰",
+        "text": "「烈陽」或「暴雨」中速度 ×1.5；「汽化」的攻擊不會被這兩種場地削弱。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "ember" },
+        { "lv": 1, "id": "steameel_steam_jet" },
+        { "lv": 5, "id": "steameel_magma_spout" },
+        { "lv": 10, "id": "steameel_fog" },
+        { "lv": 15, "id": "scald_steam" },
+        { "lv": 20, "id": "steameel_hot_spring" },
+        { "lv": 22, "id": "aqua_shot" },
+        { "lv": 26, "id": "steameel_magma_surge" },
+        { "lv": 30, "id": "steameel_boiling_vortex" },
+        { "lv": 35, "id": "steameel_scald_fog" },
+        { "lv": 40, "id": "steameel_foghorn" }
+      ],
+      "ultimate": "u_steameel",
+      "core": ["steameel_boiling_vortex", "scald_steam", "steameel_magma_surge", "ember", "steameel_steam_jet", "steameel_magma_spout"]
+    },
+    "phoenix": {
+      "concept": "焚身燒掉自己的生命換強力法術與餘燼；倒下時燃盡餘燼涅槃重生。餘燼要留著重生，還是拿來燼滅？奧義再點燃一次涅槃。",
+      "mechanic": {
+        "name": "餘燼",
+        "text": "「焚身」技能在使用後燒掉自己的生命，換得「餘燼」（最多 5 點，整場保留）。餘燼是「涅槃」的燃料，也能被專屬技能消耗。焚身燒死自己也會涅槃；涅槃用過後，生命不足時無法焚身。"
+      },
+      "trait": {
+        "name": "涅槃",
+        "text": "首次被擊倒時，若有「餘燼」，燃盡全部餘燼復活：每點 10% 生命，並解除異常（每場一次；「詛咒」中無法涅槃）。重生的雛鳥動作遲緩：下一回合最後行動。"
+      },
+      "learnset": [
+        { "lv": 1, "id": "ember" },
+        { "lv": 1, "id": "phoenix_burning_plume" },
+        { "lv": 5, "id": "rebirth_flame" },
+        { "lv": 10, "id": "holy_ray" },
+        { "lv": 15, "id": "phoenix_cinder_wing" },
+        { "lv": 18, "id": "phoenix_holy_pyre" },
+        { "lv": 20, "id": "phoenix_soul_kindle" },
+        { "lv": 28, "id": "phoenix_skyfire" },
+        { "lv": 32, "id": "phoenix_dawn_wing" },
+        { "lv": 36, "id": "phoenix_ash_pact" },
+        { "lv": 40, "id": "phoenix_ember_veil" },
+        { "lv": 45, "id": "phoenix_ember_nova" }
+      ],
+      "ultimate": "u_phoenix",
+      "core": ["phoenix_skyfire", "phoenix_burning_plume", "phoenix_cinder_wing", "phoenix_holy_pyre", "rebirth_flame"]
+    }
+  },
+  "skills": [
+    {
+      "id": "ignisar_mane_flare", "name": "鬃焰", "en": "Mane Flare",
+      "element": "fire", "category": "magic",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「焰色」每一階，威力 +15（白焰 60、蒼焰 75）。",
+      "tags": { "cond": 20 },
+      "note": "0 費攻擊。烈陽中焰色會自己升，出手時期望約 1.3 階 → +20"
+    },
+    {
+      "id": "ignisar_royal_roar", "name": "王者咆哮", "en": "Royal Roar",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「焰色」升一階，並使對手力量 −1 階。",
+      "tags": { "custom": 40, "foe.atk": -1 },
+      "note": "焰色 +1 階估 40（約等於一階魔力：推進白焰／蒼焰與日冕爆的威力）"
+    },
+    {
+      "id": "ignisar_radiant_claw", "name": "煌爪", "en": "Radiant Claw",
+      "element": "fire", "category": "physical",
+      "cost": 1, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「蒼焰」時必定暴擊。",
+      "tags": { "cond": 15 },
+      "note": "必定暴擊 70 × 0.5 × 0.95 ≈ 33，蒼焰的機率約 0.45 → 15"
+    },
+    {
+      "id": "ignisar_sunrise", "name": "旭日東昇", "en": "Sunrise",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "場地變為「烈陽」5 回合，自身速度 +1 階。",
+      "tags": { "field": 1, "self.spd": 1 },
+      "note": "入場的烈陽只有 3 回合；重新升起太陽，焰色才會繼續升"
+    },
+    {
+      "id": "ignisar_white_breath", "name": "白熾吐息", "en": "White-Hot Breath",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 70, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「焰色」每一階，威力 +35；命中後焰色回到赤焰。",
+      "tags": { "cond": 56, "custom": -15 },
+      "note": "釋放時期望約 1.6 階 → +56；回到赤焰（失去白焰／蒼焰）估 −15"
+    },
+    {
+      "id": "ignisar_purge", "name": "焚盡", "en": "Purging Blaze",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "消除對手的「回合類效果」。",
+      "tags": { "dispelTurns": 1 },
+      "note": "火焰燒掉結界：晶壁、光幕、順風與「N 回合內」的增益"
+    },
+    {
+      "id": "ignisar_lion_pounce", "name": "獅王撲擊", "en": "Lion Pounce",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 95, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「蒼焰」時先制 +1。",
+      "tags": { "cond": 12 },
+      "note": "先制 +1 估 25，蒼焰的機率約 0.45 → 12（蒼焰的無視格擋是機制本身，不另計）"
+    },
+    {
+      "id": "ignisar_corona_burst", "name": "日冕爆", "en": "Corona Burst",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「焰色」每一階，威力 +40；命中後焰色回到赤焰，每消耗一階獲得 1 點靈能。",
+      "tags": { "sig": 1, "cond": 68, "custom": 27 },
+      "note": "多半在蒼焰時釋放，期望約 1.7 階：威力 +68；靈能 1.7 × 25 ≈ 42，回到赤焰 −15 → 27"
+    },
+    {
+      "id": "ignisar_banked_mane", "name": "焰鬃斂息", "en": "Banked Mane",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "消耗全部「焰色」，每階回復 20% 生命；並解除自身的異常狀態。",
+      "tags": { "custom": 70, "cleanse": 1 },
+      "note": "期望約 1.7 階 → 回復 34%（85）；回到赤焰 −15 → 70"
+    },
+    {
+      "id": "ignisar_no_retreat", "name": "王前不退", "en": "No Retreat",
+      "element": "fire", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手宣告替換時",
+      "exclusive": "ignisar",
+      "text": "使該次替換失敗，並使那隻精靈「灼燒」。",
+      "tags": { "custom": 90, "status.burn": 1, "odds": 0.45 },
+      "note": "替換失敗 = 對手白費主行動、留在場上吃蒼焰，估 90；對手在伏技有效期間主動替換的機率約 0.45"
+    },
+    {
+      "id": "ignisar_royal_verdict", "name": "王焰裁決", "en": "Royal Verdict",
+      "element": "fire", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "「驅散」對手：移除其正向能力階級與護盾。",
+      "tags": { "dispel": 1 },
+      "note": "對付強化後硬撐的對手"
+    },
+    {
+      "id": "ignisar_high_noon", "name": "烈日當空", "en": "High Noon",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "命中後「焰色」升一階。",
+      "tags": { "sig": 1, "custom": 40 },
+      "note": "邊打邊升溫：焰色 +1 階估 40"
+    },
+    {
+      "id": "ignisar_endless_day", "name": "永晝", "en": "Endless Day",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "場地變為「烈陽」5 回合；這 5 回合內伊格尼薩在場時，烈陽被覆蓋也會在回合結束時恢復。",
+      "tags": { "sig": 1, "field": 1, "custom": 50 },
+      "note": "場地爭奪中守住烈陽（焰色的燃料）估 50；是回合類效果，可被消除，離場即結束"
+    },
+    {
+      "id": "u_ignisar", "name": "日冕咆哮", "en": "Corona Roar",
+      "element": "fire", "category": "ultimate", "damageType": "auto",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "ignisar",
+      "text": "發動後進入「日冕」3 回合：「焰色」固定為蒼焰且不會「過熱」，自身技能費用 −1。",
+      "tags": { "custom": 130 },
+      "note": "日冕：鎖定蒼焰（約 60）＋免過熱（約 20）＋費用 −1（剩下兩回合約用 2 次，50）→ 130；發動後就生效，被格擋也會加冕"
+    },
+    {
+      "id": "golem_forge_fist", "name": "鍛拳", "en": "Forge Fist",
+      "element": "fire", "category": "physical",
+      "cost": 0, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "鍛入「焰紋」。",
+      "tags": { "custom": 15 },
+      "note": "0 費攻擊。焰紋要靠出爐兌現（另有熔岩之軀必定灼燒的防守價值）估 15"
+    },
+    {
+      "id": "golem_quench", "name": "淬火", "en": "Quench",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "鍛入「鋒紋」，並使自身力量 +1 階。",
+      "tags": { "self.atk": 1, "custom": 35 },
+      "note": "鋒紋：下一次出爐必定暴擊（約 100 威力 × 0.5 × 0.95 × 使用率 0.75 ≈ 35）"
+    },
+    {
+      "id": "golem_cast_strike", "name": "出爐重擊", "en": "Casting Blow",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "「出爐」：帶著身上所有「鍛紋」打出。",
+      "tags": { "cond": 20 },
+      "note": "紋的價值大多已算在鍛入的技能；這裡估 20 是紋疊在一起的額外期望（暴擊放大焰紋以外的全部威力）"
+    },
+    {
+      "id": "golem_anvil_stance", "name": "鐵砧架勢", "en": "Anvil Stance",
+      "element": "earth", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "鍛入「重紋」，並獲得最大生命 20% 的護盾。",
+      "tags": { "shield": 20, "custom": 35 },
+      "note": "重紋：下一次出爐無視格擋與護盾（無視格擋 20 ＋ AI 常在大招前格擋的情境價值 15）"
+    },
+    {
+      "id": "golem_magma_mend", "name": "熔岩修補", "en": "Magma Mend",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "回復 30% 生命，並鍛入「焰紋」。",
+      "tags": { "heal": 30, "custom": 25 },
+      "note": "焰紋估 25（秘術鍛入不佔攻擊回合）"
+    },
+    {
+      "id": "golem_lava_hammer", "name": "熔岩錘", "en": "Lava Hammer",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "鍛入「重紋」。",
+      "tags": { "custom": 25 },
+      "note": "邊打邊鍛：重紋估 25（無視格擋 20 ＋ 情境價值）"
+    },
+    {
+      "id": "golem_thousand_hammers", "name": "千錘出爐", "en": "Thousand Hammers",
+      "element": "earth", "category": "physical",
+      "cost": 3, "power": 110, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "「出爐」：帶著所有「鍛紋」打出；每道紋威力 +25。",
+      "tags": { "sig": 1, "cond": 55 },
+      "note": "出爐時期望約 1.6 道紋 → +40；紋疊加的額外期望 15"
+    },
+    {
+      "id": "golem_lava_pit", "name": "熔岩陷坑", "en": "Lava Pit",
+      "element": "fire", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的武技攻擊命中我方時",
+      "exclusive": "magma_golem",
+      "text": "該次傷害 −40%，並替熔岩魔像鍛入全部三道「鍛紋」。",
+      "tags": { "reduce": 0.4, "custom": 75, "odds": 0.65 },
+      "note": "三道紋一次到位（下回合就是滿紋出爐）估 75；只回應武技，對手用魔法時不會發動 → 0.65"
+    },
+    {
+      "id": "golem_trample", "name": "踏碎", "en": "Trample",
+      "element": "earth", "category": "physical",
+      "cost": 2, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "破壞對手設置的伏技。",
+      "tags": { "destroyTrap": 1 },
+      "note": "魔像的破陣手段：重步踏碎伏技"
+    },
+    {
+      "id": "golem_eternal_forge", "name": "永燃熔爐", "en": "Undying Forge",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "接下來 3 回合，「出爐」使用後不清空「鍛紋」；並鍛入「焰紋」。",
+      "tags": { "sig": 1, "custom": 125 },
+      "note": "3 回合內約再出爐 2 次，每次保留約 2 道紋（約 50）→ 100；焰紋 25。是回合類效果，可被消除，離場即結束"
+    },
+    {
+      "id": "u_magma_golem", "name": "熔鑄巨神", "en": "Molten Colossus",
+      "element": "fire", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "magma_golem",
+      "text": "「出爐」：帶著所有「鍛紋」打出；使用後鍛入全部三道紋。",
+      "tags": { "cond": 20, "custom": 75 },
+      "note": "出爐的紋 20；之後三道紋一次到位 75（下一擊就是滿紋出爐，配合永燃熔爐連打）"
+    },
+    {
+      "id": "phoenix_burning_plume", "name": "焚羽", "en": "Burning Plume",
+      "element": "fire", "category": "magic",
+      "cost": 1, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "「焚身」：使用後失去 5% 生命，獲得 1 點「餘燼」。",
+      "tags": { "selfDamage": 5, "custom": 18 },
+      "note": "1 點餘燼：涅槃時 +10% 生命（25），留到涅槃的機率約 0.6 → 15；燼翼／燼滅的加成 +3 → 18"
+    },
+    {
+      "id": "rebirth_flame", "name": "浴火", "en": "Rebirth Flame",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "回復 35% 生命，並解除自身的異常狀態。",
+      "tags": { "heal": 35, "cleanse": 1 },
+      "note": "焚身的燃料：把靈能換成下一次焚身的生命"
+    },
+    {
+      "id": "phoenix_cinder_wing", "name": "燼翼", "en": "Cinder Wing",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "每點「餘燼」，威力 +15（不消耗）。",
+      "tags": { "cond": 35 },
+      "note": "出手時期望約 2.3 點 → +35"
+    },
+    {
+      "id": "phoenix_soul_kindle", "name": "燃魂", "en": "Soul Kindle",
+      "element": "fire", "category": "status",
+      "cost": 0, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "「焚身」：失去 10% 生命，獲得 2 點「餘燼」與 2 點靈能。",
+      "tags": { "selfDamage": 10, "aeGain": 2, "custom": 36 },
+      "note": "以命換靈：10% 生命（−20）換 2 靈能（50）與 2 點餘燼（36）"
+    },
+    {
+      "id": "phoenix_holy_pyre", "name": "聖焚", "en": "Holy Pyre",
+      "element": "light", "category": "magic",
+      "cost": 2, "power": 100, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "「焚身」：使用後失去 5% 生命，獲得 1 點「餘燼」。",
+      "tags": { "selfDamage": 5, "custom": 18 },
+      "note": "光屬性的焚身（補火屬性打不動的對手）；1 點餘燼：涅槃時 +10% 生命（25），留到涅槃的機率約 0.6 → 15；燼翼／燼滅的加成 +3 → 18"
+    },
+    {
+      "id": "phoenix_skyfire", "name": "焚天", "en": "Skyfire",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 140, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "「焚身」：使用後失去 10% 生命，獲得 2 點「餘燼」。",
+      "tags": { "sig": 1, "selfDamage": 10, "custom": 36 },
+      "note": "大招換大代價；2 點餘燼估 36"
+    },
+    {
+      "id": "phoenix_dawn_wing", "name": "晨曦之翼", "en": "Dawn Wing",
+      "element": "light", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "自身魔力、速度 +1 階，並獲得 1 點「餘燼」。",
+      "tags": { "self.mag": 1, "self.spd": 1, "custom": 18 },
+      "note": "不燒生命的餘燼來源"
+    },
+    {
+      "id": "phoenix_ash_pact", "name": "灰燼之約", "en": "Ash Pact",
+      "element": "fire", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "我方精靈被擊倒時",
+      "exclusive": "phoenix",
+      "text": "擊倒它的對手受到其最大生命 15% 的傷害，並「灼燒」。",
+      "tags": { "trueDamage": 15, "status.burn": 1, "odds": 0.6 },
+      "note": "遊戲王式的漂浮效果；涅槃復活不算被擊倒"
+    },
+    {
+      "id": "phoenix_ember_veil", "name": "燼羽護身", "en": "Ember Veil",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "消耗全部「餘燼」，每點獲得最大生命 12% 的護盾。",
+      "tags": { "custom": 80 },
+      "note": "期望約 2.5 點 → 30% 護盾（66）＋隨時兌現的彈性 14；代價是涅槃變弱（用光就不會涅槃）"
+    },
+    {
+      "id": "phoenix_ember_nova", "name": "燼滅", "en": "Ember Nova",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "消耗全部「餘燼」，每點威力 +40。",
+      "tags": { "sig": 1, "cond": 75 },
+      "note": "期望約 2.5 點 → +100，燒掉涅槃的燃料 −25 → 75"
+    },
+    {
+      "id": "u_phoenix", "name": "不滅之焰", "en": "Undying Flame",
+      "element": "fire", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 160, "accuracy": 100, "priority": 0,
+      "exclusive": "phoenix",
+      "text": "命中後獲得 2 點「餘燼」；若已「涅槃」，重新點燃涅槃（可再復活一次）。",
+      "tags": { "custom": 95 },
+      "note": "2 點餘燼 36 ＋ 已涅槃時再一次涅槃（約 lifeSave 100 × 0.6）→ 95"
+    },
+    {
+      "id": "pyre_dragoon_tail_dash", "name": "焰尾衝刺", "en": "Tail Dash",
+      "element": "fire", "category": "physical",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "命中後自身速度 +1 階（衝勢 +1）。",
+      "tags": { "self.spd": 1 },
+      "note": "起手：邊打邊累積衝勢"
+    },
+    {
+      "id": "pyre_dragoon_charge", "name": "龍騎衝鋒", "en": "Dragoon Charge",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 75, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "「衝鋒」：消耗自身全部速度提升，每階威力 +25。",
+      "tags": { "cond": 22 },
+      "note": "出手時期望約 1.6 階 → +40；衝鋒後失去速度優勢 −18 → 22"
+    },
+    {
+      "id": "pyre_dragoon_red_scale", "name": "赤鱗護身", "en": "Red Scale",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "獲得最大生命 25% 的護盾，並使自身速度 +1 階。",
+      "tags": { "shield": 25, "self.spd": 1 },
+      "note": "受攻擊時也能累積衝勢的防守選項"
+    },
+    {
+      "id": "pyre_dragoon_pursuit", "name": "追擊斬", "en": "Pursuit Slash",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "對手替換離場時，搶在離場前以 2 倍威力追擊。",
+      "tags": { "custom": 30 },
+      "note": "龍騎不讓敵人逃走：追擊（對手替換時觸發的機率約 0.35 × 多出的 80 威力）估 30"
+    },
+    {
+      "id": "pyre_dragoon_dance", "name": "龍舞", "en": "Dragon Dance",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "自身力量 +1 階、速度 +2 階。",
+      "tags": { "self.atk": 1, "self.spd": 2 },
+      "note": "一口氣累積 2 階衝勢，下一擊就是紅蓮突擊"
+    },
+    {
+      "id": "pyre_dragoon_crimson_charge", "name": "紅蓮突擊", "en": "Crimson Charge",
+      "element": "fire", "category": "physical",
+      "cost": 3, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "「衝鋒」：消耗自身全部速度提升，每階威力 +30；擊倒對手時，消耗的衝勢全部回來。",
+      "tags": { "sig": 1, "cond": 40, "custom": 15 },
+      "note": "期望約 2.3 階（焰尾＋龍舞）→ +70，衝鋒後失去速度優勢 −30 → 40；擊倒時保留衝勢（帶著速度連續突破）估 15"
+    },
+    {
+      "id": "pyre_dragoon_flash_thrust", "name": "疾焰突刺", "en": "Flash Thrust",
+      "element": "fire", "category": "physical",
+      "cost": 1, "power": 50, "accuracy": 100, "priority": 1,
+      "exclusive": "pyre_dragoon",
+      "text": "先制 +1。",
+      "tags": {  },
+      "note": "收尾用的先制技"
+    },
+    {
+      "id": "pyre_dragoon_armor_break", "name": "破甲斬", "en": "Armor Break",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "使對手護甲 −1 階。",
+      "tags": { "foe.def": -1 },
+      "note": "替衝鋒開路"
+    },
+    {
+      "id": "u_pyre_dragoon", "name": "紅蓮龍劍", "en": "Crimson Dragonblade",
+      "element": "fire", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 180, "accuracy": 100, "priority": 0,
+      "exclusive": "pyre_dragoon",
+      "text": "無視「格擋」與護盾；自身每階速度提升，威力 +20（不消耗）。",
+      "tags": { "ignoreGuard": 1, "cond": 35 },
+      "note": "期望約 1.75 階 → +35；不消耗衝勢"
+    },
+    {
+      "id": "steameel_steam_jet", "name": "蒸汽噴射", "en": "Steam Jet",
+      "element": "water", "category": "magic",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "「汽化」時：威力 +30%，命中後使對手「灼燒」。",
+      "tags": { "cond": 34 },
+      "note": "汽化的機率約 0.5 ×（+30% 威力 18 ＋ 灼燒 70 × 0.7）"
+    },
+    {
+      "id": "steameel_magma_spout", "name": "熔岩噴泉", "en": "Magma Spout",
+      "element": "fire", "category": "magic",
+      "cost": 1, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "「汽化」時：威力 +30%，命中後使對手「灼燒」。",
+      "tags": { "cond": 34 },
+      "note": "汽化的機率約 0.5 ×（+30% 威力 18 ＋ 灼燒 70 × 0.7）"
+    },
+    {
+      "id": "steameel_fog", "name": "濃霧", "en": "Sea Fog",
+      "element": "water", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "場地變為「暴雨」5 回合，白霧籠罩海岸。",
+      "tags": { "field": 1 },
+      "note": "蒸騰：暴雨中速度 ×1.5，汽化的火屬性攻擊不被削弱；濃霧本身是水屬性，也會留下水氣"
+    },
+    {
+      "id": "scald_steam", "name": "沸騰蒸汽", "en": "Scalding Steam",
+      "element": "water", "category": "magic",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "「汽化」時：威力 +30%，命中後使對手「灼燒」。",
+      "tags": { "cond": 37 },
+      "note": "汽化的機率約 0.5 ×（+30% 威力 24 ＋ 灼燒 70 × 0.7）"
+    },
+    {
+      "id": "steameel_hot_spring", "name": "溫泉", "en": "Hot Spring",
+      "element": "water", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "回復 30% 生命，並解除自身的異常狀態。",
+      "tags": { "heal": 30, "cleanse": 1 },
+      "note": "水與火泡成的溫泉"
+    },
+    {
+      "id": "steameel_magma_surge", "name": "熔火沸浪", "en": "Magma Surge",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 85, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "「汽化」時：威力 +30%，命中後使對手「灼燒」。",
+      "tags": { "cond": 37 },
+      "note": "汽化的機率約 0.5 ×（+30% 威力 26 ＋ 灼燒 70 × 0.7）"
+    },
+    {
+      "id": "steameel_boiling_vortex", "name": "沸騰漩渦", "en": "Boiling Vortex",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "命中後，立刻以「蒸汽噴射」追擊（威力 ×0.5，必定「汽化」）。",
+      "tags": { "sig": 1, "cond": 25, "custom": 80 },
+      "note": "一招打完兩步：追擊 60 × 1.3 × 0.5 ≈ 39 ＋ 灼燒 70 × 0.6 ≈ 41 → 80（與前一招不同屬性時本身也會汽化：25）"
+    },
+    {
+      "id": "steameel_scald_fog", "name": "燙霧", "en": "Scalding Fog",
+      "element": "water", "category": "trap",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的攻擊命中我方時",
+      "exclusive": "steameel",
+      "text": "該次傷害 −40%，並使攻擊者「灼燒」。",
+      "tags": { "reduce": 0.4, "status.burn": 1, "odds": 0.65 },
+      "note": "霧裡的滾燙蒸汽"
+    },
+    {
+      "id": "steameel_foghorn", "name": "汽笛", "en": "Foghorn",
+      "element": "water", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "使對手「恐懼」，並使其速度 −1 階。",
+      "tags": { "status.fear": 1, "foe.spd": -1 },
+      "note": "汽笛長鳴：嚇得對手下一次行動不敢攻擊"
+    },
+    {
+      "id": "u_steameel", "name": "蒸汽龍捲", "en": "Steam Cyclone",
+      "element": "water", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "steameel",
+      "text": "必定「汽化」：威力 +30%，命中後使對手「灼燒」。",
+      "tags": { "custom": 85 },
+      "note": "必定汽化：170 × 0.3 = 51 ＋ 灼燒 49 → 約 85（不論身上帶著什麼）"
+    },
+    {
+      "id": "pyrewing_dust", "name": "撲粉", "en": "Dust Flutter",
+      "element": "fire", "category": "magic",
+      "cost": 1, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "〔撒粉〕命中後，對手沾上 1 層「鱗粉」。",
+      "tags": { "custom": 22 },
+      "note": "1 層鱗粉：點燃時 6% 傷害（18）＋ 讓點燃必定灼燒的份額 → 約 22"
+    },
+    {
+      "id": "pyrewing_ignite", "name": "點燃", "en": "Ignite",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 55, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "「點燃」：消耗對手身上全部「鱗粉」，每層使其受到最大生命 6% 的傷害；有鱗粉時並使其「灼燒」。",
+      "tags": { "cond": 70 },
+      "note": "55 威力 + 條件：期望約 1.8 層 → 11% × 3 ≈ 32；有鱗粉 0.85 × 灼燒 70 × 0.65（已灼燒或免疫）≈ 38 → 70；共 125 / 110 ≈ 1.14"
+    },
+    {
+      "id": "pyrewing_dust_cloud", "name": "鱗粉幕", "en": "Dust Cloud",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "〔撒粉〕對手沾上 2 層「鱗粉」，並使自身魔力 +1 階。",
+      "tags": { "self.mag": 1, "custom": 44 },
+      "note": "2 層鱗粉 → 44"
+    },
+    {
+      "id": "pyrewing_dust_trap", "name": "粉塵陷阱", "en": "Dust Snare",
+      "element": "fire", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的攻擊命中我方時",
+      "exclusive": "pyrewing",
+      "text": "該次傷害 −30%，攻擊者沾上 2 層「鱗粉」。",
+      "tags": { "reduce": 0.3, "custom": 44, "odds": 0.7 },
+      "note": "被打時撲出的鱗粉"
+    },
+    {
+      "id": "pyrewing_moth_swarm", "name": "群蛾亂舞", "en": "Moth Swarm",
+      "element": "fire", "category": "magic",
+      "cost": 2, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "兩段攻擊；〔撒粉〕每段命中，對手沾上 1 層「鱗粉」。",
+      "tags": { "hits": 2, "custom": 40 },
+      "note": "兩層鱗粉 → 40（被格擋時少一些）"
+    },
+    {
+      "id": "pyrewing_wildfire", "name": "燎原", "en": "Wildfire",
+      "element": "fire", "category": "magic",
+      "cost": 3, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "「點燃」：消耗對手身上全部「鱗粉」，每層使其受到最大生命 9% 的傷害；有鱗粉時並使其「灼燒」。",
+      "tags": { "sig": 1, "cond": 96 },
+      "note": "期望約 2.2 層 → 20% × 3 ≈ 58；灼燒份額 38 → 96"
+    },
+    {
+      "id": "pyrewing_eclosion", "name": "羽化", "en": "Eclosion",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "回復 20% 生命，並使自身魔力、速度 +1 階。",
+      "tags": { "heal": 20, "self.mag": 1, "self.spd": 1 },
+      "note": "焰翅蛾后像破繭一樣重新展開翅膀"
+    },
+    {
+      "id": "u_pyrewing", "name": "萬蛾焚天", "en": "Thousand Moth Blaze",
+      "element": "fire", "category": "ultimate", "damageType": "magic",
+      "cost": 5, "power": 150, "accuracy": 100, "priority": 0,
+      "exclusive": "pyrewing",
+      "text": "命中後，對手的「鱗粉」補滿 3 層並立刻「點燃」：每層最大生命 6% 的傷害，並使其「灼燒」。",
+      "tags": { "custom": 100 },
+      "note": "18% × 3 = 54 ＋ 灼燒 70 × 0.65 ≈ 46 → 100"
+    },
+    {
+      "id": "bellowsbeast_bellows", "name": "鼓風", "en": "Bellows",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "「鼓風」：點燃「火種」，並使自身力量 +1 階。",
+      "tags": { "self.atk": 1, "custom": 45 },
+      "note": "火種：下一個火屬性攻擊 +50%（典型 2 費 90 威力 → 45）"
+    },
+    {
+      "id": "bellowsbeast_coal_roll", "name": "炭球衝撞", "en": "Coal Roll",
+      "element": "fire", "category": "physical",
+      "cost": 1, "power": 45, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "「鼓風」：命中後點燃「火種」（這一擊爆燃時不會）。",
+      "tags": { "custom": 38 },
+      "note": "點燃火種約 45，爆燃時不點（約 0.15）→ 38"
+    },
+    {
+      "id": "forge_hammer", "name": "爐心錘擊", "en": "Forge Hammer",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 90, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "「爆燃」時，命中後使對手「灼燒」。",
+      "tags": { "cond": 25 },
+      "note": "火種點燃的機率約 0.55 × 灼燒 70 × 0.65 ≈ 25"
+    },
+    {
+      "id": "bellowsbeast_backfire", "name": "回火", "en": "Backfire",
+      "element": "fire", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的攻擊命中我方時",
+      "exclusive": "bellowsbeast",
+      "text": "該次傷害 −30%，並點燃「火種」。",
+      "tags": { "reduce": 0.3, "custom": 45, "odds": 0.7 },
+      "note": "挨打時把火吸進爐裡"
+    },
+    {
+      "id": "bellowsbeast_furnace_burst", "name": "熔爐爆發", "en": "Furnace Burst",
+      "element": "fire", "category": "physical",
+      "cost": 3, "power": 95, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "「爆燃」時威力改為 +100%（而不是 +50%），命中後使對手「灼燒」。",
+      "tags": { "sig": 1, "cond": 62 },
+      "note": "火種點燃的機率約 0.7 × 多出的 50% 威力（95）≈ 33；爆燃 0.7 × 灼燒 70 × 0.6（已灼燒或免疫）≈ 29 → 62"
+    },
+    {
+      "id": "bellowsbeast_ash_mend", "name": "炭火回生", "en": "Ember Mend",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "「鼓風」：回復 30% 生命，並點燃「火種」。",
+      "tags": { "heal": 30, "custom": 45 },
+      "note": "火種 45"
+    },
+    {
+      "id": "u_bellowsbeast", "name": "熔爐怒焰", "en": "Furnace Fury",
+      "element": "fire", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "bellowsbeast",
+      "text": "必定「爆燃」（威力 +50%），而且不會消耗「火種」。",
+      "tags": { "custom": 85 },
+      "note": "170 × 0.5 = 85；火種保留"
+    },
+    {
+      "id": "shieldbeetle_raise", "name": "舉盾", "en": "Raise Shield",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "獲得最大生命 20% 的護盾，並使自身護甲 +1 階。",
+      "tags": { "shield": 20, "self.def": 1 },
+      "note": "沒有攻擊的回合：固守 +1"
+    },
+    {
+      "id": "shield_bash", "name": "盾擊", "en": "Shield Bash",
+      "element": "fire", "category": "physical",
+      "cost": 1, "power": 35, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "「破陣」：消耗全部「固守」，每層威力 +35。",
+      "tags": { "cond": 54 },
+      "note": "出手時期望約 2 層 → +70；失去減傷 −16 → 54"
+    },
+    {
+      "id": "shieldbeetle_heat_shell", "name": "烙殼", "en": "Heated Shell",
+      "element": "fire", "category": "status",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "回復 20% 生命，並使自身抗魔 +1 階。",
+      "tags": { "heal": 20, "self.res": 1 },
+      "note": "把甲殼燒紅：沒有攻擊的回合，固守 +1"
+    },
+    {
+      "id": "shieldbeetle_shield_wall", "name": "盾牆", "en": "Shield Wall",
+      "element": "fire", "category": "trap",
+      "cost": 1, "power": 0, "accuracy": 100, "priority": 0,
+      "trapSpeed": "normal",
+      "trigger": "對手的攻擊命中我方時",
+      "exclusive": "shieldbeetle",
+      "text": "該次傷害 −50%，並「固守」+1。",
+      "tags": { "reduce": 0.5, "custom": 25, "odds": 0.7 },
+      "note": "1 層固守（減傷 12%＋下一次破陣 +35 左右）→ 25"
+    },
+    {
+      "id": "shieldbeetle_iron_charge", "name": "鐵甲衝鋒", "en": "Iron Charge",
+      "element": "fire", "category": "physical",
+      "cost": 2, "power": 60, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "「破陣」：消耗全部「固守」，每層威力 +40。",
+      "tags": { "cond": 64 },
+      "note": "期望約 2 層 → +80；失去減傷 −16 → 64"
+    },
+    {
+      "id": "shieldbeetle_crimson_lance", "name": "赤鐵騎槍", "en": "Crimson Lance",
+      "element": "fire", "category": "physical",
+      "cost": 3, "power": 80, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "「破陣」：消耗全部「固守」，每層威力 +40；3 層時無視「格擋」與護盾。",
+      "tags": { "sig": 1, "cond": 69 },
+      "note": "期望約 2 層 → +80；失去減傷 −16；滿層無視格擋 5 → 69"
+    },
+    {
+      "id": "shieldbeetle_oath", "name": "騎士誓言", "en": "Knight Oath",
+      "element": "fire", "category": "status",
+      "cost": 2, "power": 0, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "回復 20% 生命，並使自身護甲、抗魔 +1 階。",
+      "tags": { "heal": 20, "self.def": 1, "self.res": 1 },
+      "note": "沒有攻擊的回合：固守 +1"
+    },
+    {
+      "id": "u_shieldbeetle", "name": "赤鐵衝城", "en": "Crimson Siege",
+      "element": "fire", "category": "ultimate", "damageType": "physical",
+      "cost": 5, "power": 170, "accuracy": 100, "priority": 0,
+      "exclusive": "shieldbeetle",
+      "text": "「破陣」：消耗全部「固守」，每層威力 +40；命中後獲得最大生命 25% 的護盾。",
+      "tags": { "cond": 64, "shield": 25 },
+      "note": "期望約 2 層 → +80，失去減傷 −16 → 64；衝出去之後舉起盾：護盾 25% → 55"
+    }
+  ]
+}

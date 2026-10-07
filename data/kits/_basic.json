@@ -1,0 +1,711 @@
+{
+  "spirits": {},
+  "skills": [
+    {
+      "id": "strike",
+      "name": "撞擊",
+      "en": "Strike",
+      "element": "neutral",
+      "category": "physical",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本武技。",
+      "tags": {}
+    },
+    {
+      "id": "arcane_bolt",
+      "name": "魔彈",
+      "en": "Arcane Bolt",
+      "element": "neutral",
+      "category": "magic",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本魔法。",
+      "tags": {}
+    },
+    {
+      "id": "meditate",
+      "name": "冥想",
+      "en": "Meditate",
+      "element": "neutral",
+      "category": "status",
+      "cost": 0,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "獲得 2 點靈能，回復 5% 最大生命。",
+      "tags": {
+        "aeGain": 2,
+        "heal": 5
+      }
+    },
+    {
+      "id": "heavy_blow",
+      "name": "重擊",
+      "en": "Heavy Blow",
+      "element": "neutral",
+      "category": "physical",
+      "cost": 2,
+      "power": 105,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "全力的一擊。",
+      "tags": {}
+    },
+    {
+      "id": "arcane_blast",
+      "name": "秘法衝擊",
+      "en": "Arcane Blast",
+      "element": "neutral",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "無視目標 15% 抗魔。",
+      "tags": {
+        "armorPen": 0.15
+      }
+    },
+    {
+      "id": "flame_claw",
+      "name": "焰爪",
+      "en": "Flame Claw",
+      "element": "fire",
+      "category": "physical",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "10% 機率使對手「灼燒」。",
+      "tags": {
+        "status.burn": 0.1
+      }
+    },
+    {
+      "id": "ember",
+      "name": "火花",
+      "en": "Ember",
+      "element": "fire",
+      "category": "magic",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "10% 使對手「灼燒」。",
+      "tags": {
+        "status.burn": 0.1
+      }
+    },
+    {
+      "id": "heat_up",
+      "name": "升溫",
+      "en": "Heat Up",
+      "element": "fire",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "自身力量、魔力各 +1 階。",
+      "tags": {
+        "self.atk": 1,
+        "self.mag": 1
+      }
+    },
+    {
+      "id": "blaze_slash",
+      "name": "烈焰斬",
+      "en": "Blaze Slash",
+      "element": "fire",
+      "category": "physical",
+      "cost": 2,
+      "power": 95,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "暴擊率 +25%。",
+      "tags": {
+        "critRate": 0.25
+      }
+    },
+    {
+      "id": "fireball",
+      "name": "火球術",
+      "en": "Fireball",
+      "element": "fire",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 使對手「灼燒」。",
+      "tags": {
+        "status.burn": 0.2
+      }
+    },
+    {
+      "id": "aqua_claw",
+      "name": "水爪",
+      "en": "Aqua Claw",
+      "element": "water",
+      "category": "physical",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本的水屬性武技。",
+      "tags": {}
+    },
+    {
+      "id": "aqua_shot",
+      "name": "水彈",
+      "en": "Aqua Shot",
+      "element": "water",
+      "category": "magic",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本魔法。",
+      "tags": {}
+    },
+    {
+      "id": "water_shield",
+      "name": "水盾",
+      "en": "Water Shield",
+      "element": "water",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "獲得 35% 最大生命的「護盾」。",
+      "tags": {
+        "shield": 35
+      }
+    },
+    {
+      "id": "torrent_strike",
+      "name": "激流擊",
+      "en": "Torrent Strike",
+      "element": "water",
+      "category": "physical",
+      "cost": 2,
+      "power": 105,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "挾帶激流的衝撞。",
+      "tags": {}
+    },
+    {
+      "id": "tidal_surge",
+      "name": "潮湧",
+      "en": "Tidal Surge",
+      "element": "water",
+      "category": "magic",
+      "cost": 2,
+      "power": 110,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "無附加效果的穩定輸出。",
+      "tags": {}
+    },
+    {
+      "id": "vine_lash",
+      "name": "藤鞭",
+      "en": "Vine Lash",
+      "element": "nature",
+      "category": "physical",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 使對手「中毒」1 層。",
+      "tags": {
+        "status.poison": 0.2
+      }
+    },
+    {
+      "id": "seed_shot",
+      "name": "種子彈",
+      "en": "Seed Shot",
+      "element": "nature",
+      "category": "magic",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 機率使對手「中毒」1 層。",
+      "tags": {
+        "status.poison": 0.2
+      }
+    },
+    {
+      "id": "toxic_spores",
+      "name": "毒孢子",
+      "en": "Toxic Spores",
+      "element": "nature",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 90,
+      "priority": 0,
+      "basic": true,
+      "text": "使對手「中毒」3 層。",
+      "tags": {
+        "status.poison": 3
+      }
+    },
+    {
+      "id": "thorn_spike",
+      "name": "荊棘突刺",
+      "en": "Thorn Spike",
+      "element": "nature",
+      "category": "physical",
+      "cost": 2,
+      "power": 95,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "30% 使對手「中毒」1 層。",
+      "tags": {
+        "status.poison": 0.3
+      }
+    },
+    {
+      "id": "petal_storm",
+      "name": "花瓣風暴",
+      "en": "Petal Storm",
+      "element": "nature",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "30% 機率使對手「中毒」1 層。",
+      "tags": {
+        "status.poison": 0.3
+      }
+    },
+    {
+      "id": "wind_cutter",
+      "name": "風刃",
+      "en": "Wind Cutter",
+      "element": "wind",
+      "category": "physical",
+      "cost": 0,
+      "power": 35,
+      "accuracy": 100,
+      "priority": 1,
+      "basic": true,
+      "text": "先制 +1。",
+      "tags": {}
+    },
+    {
+      "id": "wind_bolt",
+      "name": "風彈",
+      "en": "Wind Bolt",
+      "element": "wind",
+      "category": "magic",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本的風屬性魔法。",
+      "tags": {}
+    },
+    {
+      "id": "sky_slash",
+      "name": "斬空",
+      "en": "Sky Slash",
+      "element": "wind",
+      "category": "physical",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 機率使對手「裂傷」。",
+      "tags": {
+        "status.bleed": 0.2
+      }
+    },
+    {
+      "id": "cyclone",
+      "name": "旋風",
+      "en": "Cyclone",
+      "element": "wind",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 機率使對手「裂傷」。",
+      "tags": {
+        "status.bleed": 0.2
+      }
+    },
+    {
+      "id": "wind_stance",
+      "name": "風之架勢",
+      "en": "Wind Stance",
+      "element": "wind",
+      "category": "status",
+      "cost": 2,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "自身速度、力量、魔力各 +1 階。",
+      "tags": {
+        "self.spd": 1,
+        "self.atk": 1,
+        "self.mag": 1
+      }
+    },
+    {
+      "id": "rock_throw",
+      "name": "落石",
+      "en": "Rock Throw",
+      "element": "earth",
+      "category": "physical",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本武技。",
+      "tags": {}
+    },
+    {
+      "id": "mud_shot",
+      "name": "泥彈",
+      "en": "Mud Shot",
+      "element": "earth",
+      "category": "magic",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "30% 機率使對手速度 −1 階。",
+      "tags": {
+        "foe.spd": -1,
+        "foeChance": 0.3
+      }
+    },
+    {
+      "id": "provoke",
+      "name": "挑釁",
+      "en": "Provoke",
+      "element": "earth",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 1,
+      "basic": true,
+      "text": "先制 +1。使對手「挑釁」2 回合；自身護甲 +1 階。",
+      "tags": {
+        "status.taunt": 1,
+        "self.def": 1
+      }
+    },
+    {
+      "id": "seismic_stomp",
+      "name": "震地踏",
+      "en": "Seismic Stomp",
+      "element": "earth",
+      "category": "physical",
+      "cost": 2,
+      "power": 80,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "使對手「束縛」2 回合；30% 使其速度 −1 階。",
+      "tags": {
+        "status.root": 1,
+        "foe.spd": -1,
+        "foeChance": 0.3
+      }
+    },
+    {
+      "id": "sand_blast",
+      "name": "沙礫衝擊",
+      "en": "Sand Blast",
+      "element": "earth",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "30% 機率使對手速度 −1 階。",
+      "tags": {
+        "foe.spd": -1,
+        "foeChance": 0.3
+      }
+    },
+    {
+      "id": "volt_claw",
+      "name": "電爪",
+      "en": "Volt Claw",
+      "element": "thunder",
+      "category": "physical",
+      "cost": 0,
+      "power": 50,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "獲得 1 層「電荷」。",
+      "tags": {
+        "charges": 1
+      }
+    },
+    {
+      "id": "spark",
+      "name": "電火花",
+      "en": "Spark",
+      "element": "thunder",
+      "category": "magic",
+      "cost": 0,
+      "power": 50,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "獲得 1 層「電荷」。",
+      "tags": {
+        "charges": 1
+      }
+    },
+    {
+      "id": "thunder_wave",
+      "name": "電磁波",
+      "en": "Thunder Wave",
+      "element": "thunder",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "使對手「麻痺」；自身獲得 2 層「電荷」。",
+      "tags": {
+        "status.paralyze": 1,
+        "charges": 2
+      }
+    },
+    {
+      "id": "thunder_punch",
+      "name": "雷拳",
+      "en": "Thunder Punch",
+      "element": "thunder",
+      "category": "physical",
+      "cost": 2,
+      "power": 95,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 機率使對手「麻痺」。",
+      "tags": {
+        "status.paralyze": 0.2
+      }
+    },
+    {
+      "id": "thunderbolt",
+      "name": "雷擊",
+      "en": "Thunderbolt",
+      "element": "thunder",
+      "category": "magic",
+      "cost": 2,
+      "power": 95,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "10% 使對手「麻痺」。獲得 1 層「電荷」。",
+      "tags": {
+        "status.paralyze": 0.1,
+        "charges": 1
+      }
+    },
+    {
+      "id": "light_blade",
+      "name": "光刃",
+      "en": "Light Blade",
+      "element": "light",
+      "category": "physical",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本的光屬性武技。",
+      "tags": {}
+    },
+    {
+      "id": "holy_ray",
+      "name": "聖光束",
+      "en": "Holy Ray",
+      "element": "light",
+      "category": "magic",
+      "cost": 0,
+      "power": 60,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "基本魔法。",
+      "tags": {}
+    },
+    {
+      "id": "radiant_slash",
+      "name": "光輝斬",
+      "en": "Radiant Slash",
+      "element": "light",
+      "category": "physical",
+      "cost": 2,
+      "power": 105,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "以光凝成的劍斬擊。",
+      "tags": {}
+    },
+    {
+      "id": "holy_lance",
+      "name": "聖光矛",
+      "en": "Holy Lance",
+      "element": "light",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "20% 使對手「沉默」。",
+      "tags": {
+        "status.silence": 0.2
+      }
+    },
+    {
+      "id": "healing_light",
+      "name": "治癒之光",
+      "en": "Healing Light",
+      "element": "light",
+      "category": "status",
+      "cost": 2,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "回復 45% 最大生命。",
+      "tags": {
+        "heal": 45
+      }
+    },
+    {
+      "id": "shadow_claw",
+      "name": "暗影爪",
+      "en": "Shadow Claw",
+      "element": "dark",
+      "category": "physical",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "暴擊率 +20%。",
+      "tags": {
+        "critRate": 0.2
+      }
+    },
+    {
+      "id": "shadow_bolt",
+      "name": "暗影彈",
+      "en": "Shadow Bolt",
+      "element": "dark",
+      "category": "magic",
+      "cost": 0,
+      "power": 55,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "暴擊率 +20%。",
+      "tags": {
+        "critRate": 0.2
+      }
+    },
+    {
+      "id": "hex",
+      "name": "詛咒",
+      "en": "Hex",
+      "element": "dark",
+      "category": "status",
+      "cost": 1,
+      "power": 0,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "使對手「詛咒」3 回合，並驅散其所有強化。",
+      "tags": {
+        "status.curse": 1,
+        "dispel": 1
+      }
+    },
+    {
+      "id": "night_slash",
+      "name": "夜襲斬",
+      "en": "Night Slash",
+      "element": "dark",
+      "category": "physical",
+      "cost": 2,
+      "power": 95,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "暴擊率 +25%。",
+      "tags": {
+        "critRate": 0.25
+      }
+    },
+    {
+      "id": "shadow_pulse",
+      "name": "暗影脈衝",
+      "en": "Shadow Pulse",
+      "element": "dark",
+      "category": "magic",
+      "cost": 2,
+      "power": 100,
+      "accuracy": 100,
+      "priority": 0,
+      "basic": true,
+      "text": "10% 機率使對手「恐懼」。",
+      "tags": {
+        "status.fear": 0.1
+      }
+    }
+  ]
+}
